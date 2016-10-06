@@ -1,0 +1,15 @@
+# Output products list for <muladd>
+_xmsgs\pn_parser.xmsgs
+muladd.asy
+muladd.gise
+muladd.ngc
+muladd.sym
+muladd.v
+muladd.veo
+muladd.vhd
+muladd.vho
+muladd.xco
+muladd.xise
+muladd_flist.txt
+muladd_readme.txt
+muladd_xmdf.tcl

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry excluding="tp1/src/|tp2/Tp02/src/|tp5/src/|TP3/src/|TP4/TP/TP4-BEN HAJRIA_XU-Xiaofan/" kind="src" path=""/>
+	<classpathentry kind="src" path="tp1/src"/>
+	<classpathentry kind="src" path="tp2/Tp02/src"/>
+	<classpathentry kind="src" path="TP3/src"/>
+	<classpathentry kind="src" path="TP4/TP/TP4-BEN HAJRIA_XU-Xiaofan"/>
+	<classpathentry kind="src" path="tp5/src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path="TP3/bin"/>
+</classpath>

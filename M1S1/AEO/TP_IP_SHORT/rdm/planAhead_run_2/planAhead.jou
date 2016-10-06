@@ -1,0 +1,16 @@
+#-----------------------------------------------------------
+# PlanAhead v12.4
+# Build 108585 by hdbuild on Tue Nov  9 17:32:56 MST 2010
+# Start of session at: Sat Nov 22 14:48:30 2014
+# Process ID: 4460
+# Log file: E:/Travail/TP Informatique/M1S1/AEO/TP_IP_SHORT/rdm/planAhead_run_2/planAhead.log
+# Journal file: E:/Travail/TP Informatique/M1S1/AEO/TP_IP_SHORT/rdm/planAhead_run_2/planAhead.jou
+#-----------------------------------------------------------
+start_gui -source {E:/Travail/TP Informatique/M1S1/AEO/TP_IP_SHORT/rdm/pa.fromNetlist.tcl}
+# create_project -name rdm -dir "E:/Travail/TP Informatique/M1S1/AEO/TP_IP_SHORT/rdm/planAhead_run_4" -part xc6slx16csg324-3
+# set_property design_mode GateLvl [get_property srcset [current_run -impl]]
+# set_property edif_top_file "E:/Travail/TP Informatique/M1S1/AEO/TP_IP_SHORT/rdm/rdm.ngc" [ get_property srcset [ current_run ] ]
+# add_files -norecurse { {E:/Travail/TP Informatique/M1S1/AEO/TP_IP_SHORT/rdm} }
+# set_param project.paUcfFile  "const.ucf"
+# add_files "const.ucf" -fileset [get_property constrset [current_run]]
+# open_netlist_design

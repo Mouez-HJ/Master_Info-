@@ -1,0 +1,28 @@
+( test led CHENILLARD)
+
+: IP rdm
+	IP
+	IPCODE
+		8803
+	ENDIP
+/
+slave 
+start
+master 
+: main
+$ 1
+begin 
+	leddup
+	$ fffff 
+	delay
+	2*
+	dup $ 100  =
+	if 
+		drop $ 1 
+	endif
+again
+;
+start 
+main
+
+endprogram

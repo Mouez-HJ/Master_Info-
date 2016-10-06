@@ -1,0 +1,11 @@
+Ce TP était réalisé par:
+	Anis TELLO
+	Salla DIAGNE
+Groupe 1
+	
+	-Le script hmd.sh a été modifié pour qu'on puisse compiler et charger sur la carte avec une seule commande: ./hmd.sh hasmV5.fs [nom du fichier].fsh
+	-La réponse de la question 2 se trouve dans le fichier add16bit.fsh: on saisit deux numéros de 8 bits pour construire le numéro de 16bits. à chaque entrée on appuie sur un des boutons.
+	-La réponse de la question 3 se trouve dans le fichier Q3_add16_TIC.fsh: on saisit les deux numéros de 16 bits de la même façon que la question précédente -mais sans voir les valeurs de chaque numéro. On voit le résultat de la somme à la fin de la saisie et en appuyant encore une fois sur le bouton, on peut voir le nombre de cycles consommés.
+	-Le IP random se trouve dans le fichier IP_Rdm.vhd et il utilist l'entité random.vhd qui se trouve dans le fichier random.vhd
+	-La Question Monte Carlo est ambigue 
+	

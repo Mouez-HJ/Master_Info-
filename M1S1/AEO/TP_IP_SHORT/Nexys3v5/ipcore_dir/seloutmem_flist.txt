@@ -1,0 +1,17 @@
+# Output products list for <seloutmem>
+_xmsgs\pn_parser.xmsgs
+dist_mem_gen_ds322.pdf
+dist_mem_gen_readme.txt
+seloutmem.asy
+seloutmem.gise
+seloutmem.ngc
+seloutmem.sym
+seloutmem.v
+seloutmem.veo
+seloutmem.vhd
+seloutmem.vho
+seloutmem.xco
+seloutmem.xise
+seloutmem_flist.txt
+seloutmem_readme.txt
+seloutmem_xmdf.tcl

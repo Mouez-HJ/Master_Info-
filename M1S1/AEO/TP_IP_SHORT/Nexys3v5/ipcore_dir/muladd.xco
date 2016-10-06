@@ -1,0 +1,34 @@
+##############################################################
+##############################################################
+##############################################################
+SET designentry = VHDL
+SET BusFormat = BusFormatAngleBracketNotRipped
+SET devicefamily = spartan6
+SET device = xc6slx16
+SET package = csg324
+SET speedgrade = -3
+SET FlowVendor = Foundation_ISE
+SET VerilogSim = True
+SET VHDLSim = True
+SELECT Multiplier family Xilinx,_Inc. 11.2
+CSET ccmimp=Distributed_Memory
+CSET clockenable=false
+CSET component_name=muladd
+CSET constvalue=129
+CSET internaluser=0
+CSET multiplier_construction=Use_Mults
+CSET multtype=Parallel_Multiplier
+CSET optgoal=Speed
+CSET outputwidthhigh=31
+CSET outputwidthlow=0
+CSET pipestages=0
+CSET portatype=Unsigned
+CSET portawidth=16
+CSET portbtype=Signed
+CSET portbwidth=16
+CSET roundpoint=0
+CSET sclrcepriority=SCLR_Overrides_CE
+CSET syncclear=false
+CSET use_custom_output_width=false
+CSET userounding=false
+CSET zerodetect=false

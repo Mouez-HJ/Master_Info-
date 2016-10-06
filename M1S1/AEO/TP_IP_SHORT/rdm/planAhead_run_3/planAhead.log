@@ -1,0 +1,23 @@
+#-----------------------------------------------------------
+# PlanAhead v12.4
+# Build 108585 by hdbuild on Tue Nov  9 17:32:56 MST 2010
+# Start of session at: Sat Nov 22 14:48:38 2014
+# Process ID: 5284
+# Log file: E:/Travail/TP Informatique/M1S1/AEO/TP_IP_SHORT/rdm/planAhead_run_3/planAhead.log
+# Journal file: E:/Travail/TP Informatique/M1S1/AEO/TP_IP_SHORT/rdm/planAhead_run_3/planAhead.jou
+#-----------------------------------------------------------
+INFO: [HD-Licensing 0] Attempting to get a license: PlanAhead
+INFO: [HD-Licensing 1] Got a license: PlanAhead
+INFO: [HD-Licensing 3] Your PlanAhead license expires in -905 day(s)
+INFO: [HD-ArchReader 0] Loading parts and site information from C:\Xilinx\12.4\ISE_DS\PlanAhead\parts\arch.xml
+INFO: [HD-RTPRIM 0] Parsing RTL primitives file 'C:\Xilinx\12.4\ISE_DS\PlanAhead\parts\xilinx\rtl\prims\rtl_prims.xml'
+INFO: [HD-RTPRIM 1] Finished Parsing RTL primitives file 'C:\Xilinx\12.4\ISE_DS\PlanAhead\parts\xilinx\rtl\prims\rtl_prims.xml'
+start_gui -source {E:/Travail/TP Informatique/M1S1/AEO/TP_IP_SHORT/rdm/pa.fromNetlist.tcl}
+# create_project -name rdm -dir "E:/Travail/TP Informatique/M1S1/AEO/TP_IP_SHORT/rdm/planAhead_run_4" -part xc6slx16csg324-3
+# set_property design_mode GateLvl [get_property srcset [current_run -impl]]
+# set_property edif_top_file "E:/Travail/TP Informatique/M1S1/AEO/TP_IP_SHORT/rdm/rdm.ngc" [ get_property srcset [ current_run ] ]
+# add_files -norecurse { {E:/Travail/TP Informatique/M1S1/AEO/TP_IP_SHORT/rdm} }
+# set_param project.paUcfFile  "const.ucf"
+# add_files "const.ucf" -fileset [get_property constrset [current_run]]
+# open_netlist_design
+INFO: Run is defaulting to constrset part: xc6slx16csg324-3

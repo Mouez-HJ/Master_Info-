@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/home/m1/josias/Documents/AEO/TP5/Nexys3v5/Nexys3v5.ncd
+OUTFILE=/home/m1/josias/Documents/AEO/TP5/Nexys3v5/Nexys3v5.bit
+FAMILY=Spartan6
+PART=xc6slx16-3csg324
+WORKINGDIR=/home/m1/josias/Documents/AEO/TP5/Nexys3v5
+LICENSE=WebPack
+USER_INFO=0_0_579

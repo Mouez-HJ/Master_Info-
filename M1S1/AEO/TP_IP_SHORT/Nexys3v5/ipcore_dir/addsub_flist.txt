@@ -1,0 +1,15 @@
+# Output products list for <addsub>
+_xmsgs\pn_parser.xmsgs
+addsub.asy
+addsub.gise
+addsub.ngc
+addsub.sym
+addsub.v
+addsub.veo
+addsub.vhd
+addsub.vho
+addsub.xco
+addsub.xise
+addsub_flist.txt
+addsub_readme.txt
+addsub_xmdf.tcl

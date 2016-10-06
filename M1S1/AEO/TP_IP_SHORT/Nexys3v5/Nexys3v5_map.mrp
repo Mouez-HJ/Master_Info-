@@ -1,0 +1,1180 @@
+Release 12.4 Map M.81d (lin)
+Xilinx Mapping Report File for Design 'Nexys3v5'
+
+Design Information
+------------------
+Command Line   : map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -xe c -t 1 -xt 0
+-register_duplication on -r 4 -global_opt off -mt 2 -detail -ir off -pr b -ignore_keep_hierarchy -lc auto -bp -power off
+-o Nexys3v5_map.ncd Nexys3v5.ngd Nexys3v5.pcf 
+Target Device  : xc6slx16
+Target Package : csg324
+Target Speed   : -3
+Mapper Version : spartan6 -- $Revision: 1.52.76.2 $
+Mapped Date    : Tue Oct 21 17:20:07 2014
+
+Design Summary
+--------------
+Number of errors:      0
+Number of warnings:    7
+Slice Logic Utilization:
+  Number of Slice Registers:                   546 out of  18,224    2%
+    Number used as Flip Flops:                 546
+    Number used as Latches:                      0
+    Number used as Latch-thrus:                  0
+    Number used as AND/OR logics:                0
+  Number of Slice LUTs:                      2,021 out of   9,112   22%
+    Number used as logic:                    1,787 out of   9,112   19%
+      Number using O6 output only:           1,125
+      Number using O5 output only:             109
+      Number using O5 and O6:                  553
+      Number used as ROM:                        0
+    Number used as Memory:                     223 out of   2,176   10%
+      Number used as Dual Port RAM:            158
+        Number using O6 output only:           132
+        Number using O5 output only:             0
+        Number using O5 and O6:                 26
+      Number used as Single Port RAM:           64
+        Number using O6 output only:             0
+        Number using O5 output only:             0
+        Number using O5 and O6:                 64
+      Number used as Shift Register:             1
+        Number using O6 output only:             1
+        Number using O5 output only:             0
+        Number using O5 and O6:                  0
+    Number used exclusively as route-thrus:     11
+      Number with same-slice register load:      3
+      Number with same-slice carry load:         8
+      Number with other load:                    0
+
+Slice Logic Distribution:
+  Number of occupied Slices:                   638 out of   2,278   28%
+  Number of LUT Flip Flop pairs used:        2,058
+    Number with an unused Flip Flop:         1,607 out of   2,058   78%
+    Number with an unused LUT:                  37 out of   2,058    1%
+    Number of fully used LUT-FF pairs:         414 out of   2,058   20%
+    Number of unique control sets:             101
+    Number of slice register sites lost
+      to control set restrictions:             501 out of  18,224    2%
+
+  A LUT Flip Flop pair for this architecture represents one LUT paired with
+  one Flip Flop within a slice.  A control set is a unique combination of
+  clock, reset, set, and enable signals for a registered element.
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+
+IO Utilization:
+  Number of bonded IOBs:                        34 out of     232   14%
+    Number of LOCed IOBs:                       34 out of      34  100%
+    IOB Flip Flops:                             21
+
+Specific Feature Utilization:
+  Number of RAMB16BWERs:                         0 out of      32    0%
+  Number of RAMB8BWERs:                          5 out of      64    7%
+  Number of BUFIO2/BUFIO2_2CLKs:                 1 out of      32    3%
+    Number used as BUFIO2s:                      1
+    Number used as BUFIO2_2CLKs:                 0
+  Number of BUFIO2FB/BUFIO2FB_2CLKs:             1 out of      32    3%
+    Number used as BUFIO2FBs:                    1
+    Number used as BUFIO2FB_2CLKs:               0
+  Number of BUFG/BUFGMUXs:                       2 out of      16   12%
+    Number used as BUFGs:                        2
+    Number used as BUFGMUX:                      0
+  Number of DCM/DCM_CLKGENs:                     1 out of       4   25%
+    Number used as DCMs:                         1
+    Number used as DCM_CLKGENs:                  0
+  Number of ILOGIC2/ISERDES2s:                  13 out of     248    5%
+    Number used as ILOGIC2s:                    13
+    Number used as ISERDES2s:                    0
+  Number of IODELAY2/IODRP2/IODRP2_MCBs:         0 out of     248    0%
+  Number of OLOGIC2/OSERDES2s:                   8 out of     248    3%
+    Number used as OLOGIC2s:                     8
+    Number used as OSERDES2s:                    0
+  Number of BSCANs:                              0 out of       4    0%
+  Number of BUFHs:                               0 out of     128    0%
+  Number of BUFPLLs:                             0 out of       8    0%
+  Number of BUFPLL_MCBs:                         0 out of       4    0%
+  Number of DSP48A1s:                            1 out of      32    3%
+  Number of ICAPs:                               0 out of       1    0%
+  Number of MCBs:                                0 out of       2    0%
+  Number of PCILOGICSEs:                         0 out of       2    0%
+  Number of PLL_ADVs:                            0 out of       2    0%
+  Number of PMVs:                                0 out of       1    0%
+  Number of STARTUPs:                            0 out of       1    0%
+  Number of SUSPEND_SYNCs:                       0 out of       1    0%
+
+Average Fanout of Non-Clock Nets:                4.87
+
+Peak Memory Usage:  262 MB
+Total REAL time to MAP completion:  28 secs 
+Total CPU time to MAP completion (all processors):   26 secs 
+
+Table of Contents
+-----------------
+Section 1 - Errors
+Section 2 - Warnings
+Section 3 - Informational
+Section 4 - Removed Logic Summary
+Section 5 - Removed Logic
+Section 6 - IOB Properties
+Section 7 - RPMs
+Section 8 - Guide Report
+Section 9 - Area Group and Partition Summary
+Section 10 - Timing Report
+Section 11 - Configuration String Information
+Section 12 - Control Set Information
+Section 13 - Utilization by Hierarchy
+
+Section 1 - Errors
+------------------
+
+Section 2 - Warnings
+--------------------
+WARNING:Security:42 - Your software subscription period has lapsed. Your current
+version of Xilinx tools will continue to function, but you no longer qualify for
+Xilinx software updates or new releases.
+WARNING:PhysDesignRules:367 - The signal <my_Master/Mdatastack.Inst_IPdataStack/Inst_datastack/Mram_RAM2_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <my_Master/Mdatastack.Inst_IPdataStack/Inst_datastack/Mram_RAM3_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <my_Master/Mdatastack.Inst_IPdataStack/Inst_datastack/Mram_RAM4_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <my_Master/Mdatastack.Inst_IPdataStack/Inst_datastack/Mram_RAM5_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <my_Master/Mdatastack.Inst_IPdataStack/Inst_datastack/Mram_RAM1_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <my_Master/HCU_Master/Inst_returnstack/Mram_RAM2_RAMD_D1_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <my_Master/HCU_Master/Inst_returnstack/Mram_RAM1_RAMD_D1_O> is incomplete. The
+   signal does not drive any load pins in the design.
+
+Section 3 - Informational
+-------------------------
+INFO:Map:284 - Map is running with the multi-threading option on. Map currently
+   supports the use of up to 2 processors. Based on the the user options and
+   machine load, Map will use 2 processors during this run.
+INFO:Security:54 - 'xc6slx16' is a WebPack part.
+INFO:LIT:243 - Logical network slave_data has no load.
+INFO:LIT:243 - Logical network slave_W has no load.
+INFO:LIT:243 - Logical network
+   my_Master/Prom_Master/multi_bank[63].bank/Mram_RAM64bit/SPO has no load.
+INFO:LIT:243 - Logical network
+   my_Master/Prom_Master/multi_bank[62].bank/Mram_RAM64bit/SPO has no load.
+INFO:LIT:243 - Logical network
+   my_Master/Prom_Master/multi_bank[61].bank/Mram_RAM64bit/SPO has no load.
+INFO:LIT:243 - Logical network
+   my_Master/Prom_Master/multi_bank[60].bank/Mram_RAM64bit/SPO has no load.
+INFO:LIT:243 - Logical network
+   my_Master/Prom_Master/multi_bank[59].bank/Mram_RAM64bit/SPO has no load.
+INFO:LIT:243 - Logical network
+   my_Master/Prom_Master/multi_bank[58].bank/Mram_RAM64bit/SPO has no load.
+INFO:LIT:243 - Logical network
+   my_Master/Prom_Master/multi_bank[57].bank/Mram_RAM64bit/SPO has no load.
+INFO:LIT:243 - Logical network
+   my_Master/Prom_Master/multi_bank[56].bank/Mram_RAM64bit/SPO has no load.
+INFO:LIT:243 - Logical network
+   my_Master/Prom_Master/multi_bank[55].bank/Mram_RAM64bit/SPO has no load.
+INFO:LIT:243 - Logical network
+   my_Master/Prom_Master/multi_bank[54].bank/Mram_RAM64bit/SPO has no load.
+INFO:LIT:243 - Logical network
+   my_Master/Prom_Master/multi_bank[53].bank/Mram_RAM64bit/SPO has no load.
+INFO:LIT:243 - Logical network
+   my_Master/Prom_Master/multi_bank[52].bank/Mram_RAM64bit/SPO has no load.
+INFO:LIT:243 - Logical network
+   my_Master/Prom_Master/multi_bank[51].bank/Mram_RAM64bit/SPO has no load.
+INFO:LIT:243 - Logical network
+   my_Master/Prom_Master/multi_bank[50].bank/Mram_RAM64bit/SPO has no load.
+INFO:LIT:243 - Logical network
+   my_Master/Prom_Master/multi_bank[49].bank/Mram_RAM64bit/SPO has no load.
+INFO:LIT:243 - Logical network
+   my_Master/Prom_Master/multi_bank[48].bank/Mram_RAM64bit/SPO has no load.
+INFO:LIT:243 - Logical network
+   my_Master/Prom_Master/multi_bank[47].bank/Mram_RAM64bit/SPO has no load.
+INFO:LIT:243 - Logical network
+   my_Master/Prom_Master/multi_bank[46].bank/Mram_RAM64bit/SPO has no load.
+INFO:LIT:243 - Logical network
+   my_Master/Prom_Master/multi_bank[45].bank/Mram_RAM64bit/SPO has no load.
+INFO:LIT:243 - Logical network
+   my_Master/Prom_Master/multi_bank[44].bank/Mram_RAM64bit/SPO has no load.
+INFO:LIT:243 - Logical network
+   my_Master/Prom_Master/multi_bank[43].bank/Mram_RAM64bit/SPO has no load.
+INFO:LIT:243 - Logical network
+   my_Master/Prom_Master/multi_bank[42].bank/Mram_RAM64bit/SPO has no load.
+INFO:LIT:243 - Logical network
+   my_Master/Prom_Master/multi_bank[41].bank/Mram_RAM64bit/SPO has no load.
+INFO:LIT:243 - Logical network
+   my_Master/Prom_Master/multi_bank[40].bank/Mram_RAM64bit/SPO has no load.
+INFO:LIT:243 - Logical network
+   my_Master/Prom_Master/multi_bank[39].bank/Mram_RAM64bit/SPO has no load.
+INFO:LIT:243 - Logical network
+   my_Master/Prom_Master/multi_bank[38].bank/Mram_RAM64bit/SPO has no load.
+INFO:LIT:243 - Logical network
+   my_Master/Prom_Master/multi_bank[37].bank/Mram_RAM64bit/SPO has no load.
+INFO:LIT:243 - Logical network
+   my_Master/Prom_Master/multi_bank[36].bank/Mram_RAM64bit/SPO has no load.
+INFO:LIT:243 - Logical network
+   my_Master/Prom_Master/multi_bank[35].bank/Mram_RAM64bit/SPO has no load.
+INFO:LIT:243 - Logical network
+   my_Master/Prom_Master/multi_bank[34].bank/Mram_RAM64bit/SPO has no load.
+INFO:LIT:243 - Logical network
+   my_Master/Prom_Master/multi_bank[33].bank/Mram_RAM64bit/SPO has no load.
+INFO:LIT:243 - Logical network
+   my_Master/Prom_Master/multi_bank[32].bank/Mram_RAM64bit/SPO has no load.
+INFO:LIT:243 - Logical network
+   my_Master/Prom_Master/multi_bank[31].bank/Mram_RAM64bit/SPO has no load.
+INFO:LIT:243 - Logical network
+   my_Master/Prom_Master/multi_bank[30].bank/Mram_RAM64bit/SPO has no load.
+INFO:LIT:243 - Logical network
+   my_Master/Prom_Master/multi_bank[29].bank/Mram_RAM64bit/SPO has no load.
+INFO:LIT:243 - Logical network
+   my_Master/Prom_Master/multi_bank[28].bank/Mram_RAM64bit/SPO has no load.
+INFO:LIT:243 - Logical network
+   my_Master/Prom_Master/multi_bank[27].bank/Mram_RAM64bit/SPO has no load.
+INFO:LIT:243 - Logical network
+   my_Master/Prom_Master/multi_bank[26].bank/Mram_RAM64bit/SPO has no load.
+INFO:LIT:243 - Logical network
+   my_Master/Prom_Master/multi_bank[25].bank/Mram_RAM64bit/SPO has no load.
+INFO:LIT:243 - Logical network
+   my_Master/Prom_Master/multi_bank[24].bank/Mram_RAM64bit/SPO has no load.
+INFO:LIT:243 - Logical network
+   my_Master/Prom_Master/multi_bank[23].bank/Mram_RAM64bit/SPO has no load.
+INFO:LIT:243 - Logical network
+   my_Master/Prom_Master/multi_bank[22].bank/Mram_RAM64bit/SPO has no load.
+INFO:LIT:243 - Logical network
+   my_Master/Prom_Master/multi_bank[21].bank/Mram_RAM64bit/SPO has no load.
+INFO:LIT:243 - Logical network
+   my_Master/Prom_Master/multi_bank[20].bank/Mram_RAM64bit/SPO has no load.
+INFO:LIT:243 - Logical network
+   my_Master/Prom_Master/multi_bank[19].bank/Mram_RAM64bit/SPO has no load.
+INFO:LIT:243 - Logical network
+   my_Master/Prom_Master/multi_bank[18].bank/Mram_RAM64bit/SPO has no load.
+INFO:LIT:243 - Logical network
+   my_Master/Prom_Master/multi_bank[17].bank/Mram_RAM64bit/SPO has no load.
+INFO:LIT:243 - Logical network
+   my_Master/Prom_Master/multi_bank[16].bank/Mram_RAM64bit/SPO has no load.
+INFO:LIT:243 - Logical network
+   my_Master/Prom_Master/multi_bank[15].bank/Mram_RAM64bit/SPO has no load.
+INFO:LIT:243 - Logical network
+   my_Master/Prom_Master/multi_bank[14].bank/Mram_RAM64bit/SPO has no load.
+INFO:LIT:243 - Logical network
+   my_Master/Prom_Master/multi_bank[13].bank/Mram_RAM64bit/SPO has no load.
+INFO:LIT:243 - Logical network
+   my_Master/Prom_Master/multi_bank[12].bank/Mram_RAM64bit/SPO has no load.
+INFO:LIT:243 - Logical network
+   my_Master/Prom_Master/multi_bank[11].bank/Mram_RAM64bit/SPO has no load.
+INFO:LIT:243 - Logical network
+   my_Master/Prom_Master/multi_bank[10].bank/Mram_RAM64bit/SPO has no load.
+INFO:LIT:243 - Logical network
+   my_Master/Prom_Master/multi_bank[9].bank/Mram_RAM64bit/SPO has no load.
+INFO:LIT:243 - Logical network
+   my_Master/Prom_Master/multi_bank[8].bank/Mram_RAM64bit/SPO has no load.
+INFO:LIT:243 - Logical network
+   my_Master/Prom_Master/multi_bank[7].bank/Mram_RAM64bit/SPO has no load.
+INFO:LIT:243 - Logical network
+   my_Master/Prom_Master/multi_bank[6].bank/Mram_RAM64bit/SPO has no load.
+INFO:LIT:243 - Logical network
+   my_Master/Prom_Master/multi_bank[5].bank/Mram_RAM64bit/SPO has no load.
+INFO:LIT:243 - Logical network
+   my_Master/Prom_Master/multi_bank[4].bank/Mram_RAM64bit/SPO has no load.
+INFO:LIT:243 - Logical network
+   my_Master/Prom_Master/multi_bank[3].bank/Mram_RAM64bit/SPO has no load.
+INFO:LIT:243 - Logical network
+   my_Master/Prom_Master/multi_bank[2].bank/Mram_RAM64bit/SPO has no load.
+INFO:LIT:243 - Logical network
+   my_Master/Prom_Master/multi_bank[1].bank/Mram_RAM64bit/SPO has no load.
+INFO:LIT:243 - Logical network
+   my_Master/Prom_Master/multi_bank[0].bank/Mram_RAM64bit/SPO has no load.
+INFO:LIT:243 - Logical network my_Master/Stack_Master/XLXN_269<31> has no load.
+INFO:LIT:243 - Logical network my_Master/Stack_Master/XLXN_269<30> has no load.
+INFO:LIT:243 - Logical network my_Master/Stack_Master/XLXN_269<29> has no load.
+INFO:LIT:243 - Logical network my_Master/Stack_Master/XLXN_269<28> has no load.
+INFO:LIT:243 - Logical network my_Master/Stack_Master/XLXN_269<27> has no load.
+INFO:LIT:243 - Logical network my_Master/Stack_Master/XLXN_269<26> has no load.
+INFO:LIT:243 - Logical network my_Master/Stack_Master/XLXN_269<25> has no load.
+INFO:LIT:243 - Logical network my_Master/Stack_Master/XLXN_269<24> has no load.
+INFO:LIT:243 - Logical network my_Master/Stack_Master/XLXN_269<23> has no load.
+INFO:LIT:243 - Logical network my_Master/Stack_Master/XLXN_269<22> has no load.
+INFO:LIT:243 - Logical network my_Master/Stack_Master/XLXN_269<21> has no load.
+INFO:LIT:243 - Logical network my_Master/Stack_Master/XLXN_269<20> has no load.
+INFO:LIT:243 - Logical network my_Master/Stack_Master/XLXN_269<19> has no load.
+INFO:LIT:243 - Logical network my_Master/Stack_Master/XLXN_269<18> has no load.
+INFO:LIT:243 - Logical network my_Master/Stack_Master/XLXN_269<17> has no load.
+INFO:LIT:243 - Logical network my_Master/Stack_Master/XLXN_269<16> has no load.
+INFO:LIT:243 - Logical network my_Master/Stack_Master/XLXN_269<15> has no load.
+INFO:LIT:243 - Logical network my_Master/Stack_Master/XLXN_269<14> has no load.
+INFO:LIT:243 - Logical network my_Master/Stack_Master/XLXN_269<13> has no load.
+INFO:LIT:243 - Logical network my_Master/Stack_Master/XLXN_269<12> has no load.
+INFO:LIT:243 - Logical network my_Master/Stack_Master/count<7> has no load.
+INFO:LIT:243 - Logical network my_Master/Stack_Master/count<6> has no load.
+INFO:LIT:243 - Logical network
+   my_Master/Mdatastack.Inst_IPdataStack/Inst_datastack/Mram_RAM62/SPO has no
+   load.
+INFO:LIT:243 - Logical network
+   my_Master/Mdatastack.Inst_IPdataStack/Inst_datastack/Mram_RAM61/SPO has no
+   load.
+INFO:LIT:243 - Logical network my_Master/Mfunit.Inst_IPFunit/my_incdec/BU2/c_out
+   has no load.
+INFO:LIT:243 - Logical network my_Master/Mfunit.Inst_IPFunit/my_addsub/BU2/c_out
+   has no load.
+INFO:LIT:243 - Logical network D7seg_display/XLXI_3/XLXN_42 has no load.
+INFO:MapLib:562 - No environment variables are currently set.
+INFO:LIT:244 - All of the single ended outputs in this design are using slew
+   rate limited output drivers. The delay on speed critical single ended outputs
+   can be dramatically reduced by designating them as fast outputs.
+INFO:Pack:1716 - Initializing temperature to 85.000 Celsius. (default - Range:
+   0.000 to 85.000 Celsius)
+INFO:Pack:1720 - Initializing voltage to 1.140 Volts. (default - Range: 1.140 to
+   1.260 Volts)
+INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
+   (.mrp).
+INFO:Pack:1650 - Map created a placed design.
+
+Section 4 - Removed Logic Summary
+---------------------------------
+  69 block(s) removed
+  26 block(s) optimized away
+  70 signal(s) removed
+ 128 Block(s) redundant
+
+Section 5 - Removed Logic
+-------------------------
+
+The trimmed logic report below shows the logic removed from your design due to
+sourceless or loadless signals, and VCC or ground connections.  If the removal
+of a signal or symbol results in the subsequent removal of an additional signal
+or symbol, the message explaining that second removal will be indented.  This
+indentation will be repeated as a chain of related logic is removed.
+
+To quickly locate the original cause for the removal of a chain of logic, look
+above the place where that logic is listed in the trimming report, then locate
+the lines that are least indented (begin at the leftmost edge).
+
+The signal "my_Master/HCU_Master/etat[1]_Startadres[31]_mux_106_OUT<11>" is
+sourceless and has been removed.
+ Sourceless block "my_Master/HCU_Master/PC_adr_11" (SFF) removed.
+  The signal "my_Master/HCU_Master/PC_adr<11>" is sourceless and has been removed.
+   Sourceless block
+"my_Master/HCU_Master/Madd_PC_adr[31]_PC_adr[1]_add_24_OUT_lut<11>" (ROM)
+removed.
+    The signal "my_Master/HCU_Master/Madd_PC_adr[31]_PC_adr[1]_add_24_OUT_lut<11>"
+is sourceless and has been removed.
+     Sourceless block
+"my_Master/HCU_Master/Madd_PC_adr[31]_PC_adr[1]_add_24_OUT_xor<11>" (XOR)
+removed.
+      The signal "my_Master/HCU_Master/PC_adr[31]_PC_adr[1]_add_24_OUT<11>" is
+sourceless and has been removed.
+       Sourceless block
+"my_Master/HCU_Master/Mmux_etat[1]_Startadres[31]_mux_106_OUT61" (ROM) removed.
+        The signal "my_Master/HCU_Master/Mmux_etat[1]_Startadres[31]_mux_106_OUT6" is
+sourceless and has been removed.
+         Sourceless block
+"my_Master/HCU_Master/Mmux_etat[1]_Startadres[31]_mux_106_OUT63" (ROM) removed.
+          The signal "my_Master/HCU_Master/Mmux_etat[1]_Startadres[31]_mux_106_OUT61" is
+sourceless and has been removed.
+           Sourceless block
+"my_Master/HCU_Master/Mmux_etat[1]_Startadres[31]_mux_106_OUT66" (ROM) removed.
+The signal "my_Master/HCU_Master/etat[1]_Startadres[31]_mux_106_OUT<10>" is
+sourceless and has been removed.
+ Sourceless block "my_Master/HCU_Master/PC_adr_10" (SFF) removed.
+  The signal "my_Master/HCU_Master/PC_adr<10>" is sourceless and has been removed.
+   Sourceless block
+"my_Master/HCU_Master/Madd_PC_adr[31]_PC_adr[1]_add_24_OUT_lut<10>" (ROM)
+removed.
+    The signal "my_Master/HCU_Master/Madd_PC_adr[31]_PC_adr[1]_add_24_OUT_lut<10>"
+is sourceless and has been removed.
+     Sourceless block
+"my_Master/HCU_Master/Madd_PC_adr[31]_PC_adr[1]_add_24_OUT_cy<10>" (MUX)
+removed.
+      The signal "my_Master/HCU_Master/Madd_PC_adr[31]_PC_adr[1]_add_24_OUT_cy<10>" is
+sourceless and has been removed.
+     Sourceless block
+"my_Master/HCU_Master/Madd_PC_adr[31]_PC_adr[1]_add_24_OUT_xor<10>" (XOR)
+removed.
+      The signal "my_Master/HCU_Master/PC_adr[31]_PC_adr[1]_add_24_OUT<10>" is
+sourceless and has been removed.
+       Sourceless block
+"my_Master/HCU_Master/Mmux_etat[1]_Startadres[31]_mux_106_OUT41" (ROM) removed.
+        The signal "my_Master/HCU_Master/Mmux_etat[1]_Startadres[31]_mux_106_OUT4" is
+sourceless and has been removed.
+         Sourceless block
+"my_Master/HCU_Master/Mmux_etat[1]_Startadres[31]_mux_106_OUT42" (ROM) removed.
+          The signal "my_Master/HCU_Master/Mmux_etat[1]_Startadres[31]_mux_106_OUT41" is
+sourceless and has been removed.
+           Sourceless block
+"my_Master/HCU_Master/Mmux_etat[1]_Startadres[31]_mux_106_OUT44" (ROM) removed.
+The signal "my_Master/HCU_Master/etat[1]_Startadres[31]_mux_106_OUT<9>" is
+sourceless and has been removed.
+ Sourceless block "my_Master/HCU_Master/PC_adr_9" (SFF) removed.
+  The signal "my_Master/HCU_Master/PC_adr<9>" is sourceless and has been removed.
+   Sourceless block
+"my_Master/HCU_Master/Madd_PC_adr[31]_PC_adr[1]_add_24_OUT_lut<9>" (ROM)
+removed.
+    The signal "my_Master/HCU_Master/Madd_PC_adr[31]_PC_adr[1]_add_24_OUT_lut<9>" is
+sourceless and has been removed.
+     Sourceless block
+"my_Master/HCU_Master/Madd_PC_adr[31]_PC_adr[1]_add_24_OUT_cy<9>" (MUX) removed.
+      The signal "my_Master/HCU_Master/Madd_PC_adr[31]_PC_adr[1]_add_24_OUT_cy<9>" is
+sourceless and has been removed.
+     Sourceless block
+"my_Master/HCU_Master/Madd_PC_adr[31]_PC_adr[1]_add_24_OUT_xor<9>" (XOR)
+removed.
+      The signal "my_Master/HCU_Master/PC_adr[31]_PC_adr[1]_add_24_OUT<9>" is
+sourceless and has been removed.
+       Sourceless block
+"my_Master/HCU_Master/Mmux_etat[1]_Startadres[31]_mux_106_OUT641" (ROM) removed.
+        The signal "my_Master/HCU_Master/Mmux_etat[1]_Startadres[31]_mux_106_OUT64" is
+sourceless and has been removed.
+         Sourceless block
+"my_Master/HCU_Master/Mmux_etat[1]_Startadres[31]_mux_106_OUT642" (ROM) removed.
+          The signal "my_Master/HCU_Master/Mmux_etat[1]_Startadres[31]_mux_106_OUT641" is
+sourceless and has been removed.
+           Sourceless block
+"my_Master/HCU_Master/Mmux_etat[1]_Startadres[31]_mux_106_OUT644" (ROM) removed.
+The signal "my_Master/HCU_Master/etat[1]_Startadres[31]_mux_106_OUT<8>" is
+sourceless and has been removed.
+ Sourceless block "my_Master/HCU_Master/PC_adr_8" (SFF) removed.
+  The signal "my_Master/HCU_Master/PC_adr<8>" is sourceless and has been removed.
+   Sourceless block
+"my_Master/HCU_Master/Madd_PC_adr[31]_PC_adr[1]_add_24_OUT_lut<8>" (ROM)
+removed.
+    The signal "my_Master/HCU_Master/Madd_PC_adr[31]_PC_adr[1]_add_24_OUT_lut<8>" is
+sourceless and has been removed.
+     Sourceless block
+"my_Master/HCU_Master/Madd_PC_adr[31]_PC_adr[1]_add_24_OUT_cy<8>" (MUX) removed.
+      The signal "my_Master/HCU_Master/Madd_PC_adr[31]_PC_adr[1]_add_24_OUT_cy<8>" is
+sourceless and has been removed.
+     Sourceless block
+"my_Master/HCU_Master/Madd_PC_adr[31]_PC_adr[1]_add_24_OUT_xor<8>" (XOR)
+removed.
+      The signal "my_Master/HCU_Master/PC_adr[31]_PC_adr[1]_add_24_OUT<8>" is
+sourceless and has been removed.
+       Sourceless block
+"my_Master/HCU_Master/Mmux_etat[1]_Startadres[31]_mux_106_OUT621" (ROM) removed.
+        The signal "my_Master/HCU_Master/Mmux_etat[1]_Startadres[31]_mux_106_OUT621" is
+sourceless and has been removed.
+         Sourceless block
+"my_Master/HCU_Master/Mmux_etat[1]_Startadres[31]_mux_106_OUT622" (ROM) removed.
+          The signal "my_Master/HCU_Master/Mmux_etat[1]_Startadres[31]_mux_106_OUT622" is
+sourceless and has been removed.
+           Sourceless block
+"my_Master/HCU_Master/Mmux_etat[1]_Startadres[31]_mux_106_OUT624" (ROM) removed.
+The signal "my_Master/HCU_Master/retbus<11>" is sourceless and has been removed.
+The signal "my_Master/HCU_Master/retbus<10>" is sourceless and has been removed.
+The signal "my_Master/HCU_Master/retbus<9>" is sourceless and has been removed.
+The signal "my_Master/HCU_Master/retbus<8>" is sourceless and has been removed.
+The signal "my_Master/HCU_Master/PC_ret<11>" is sourceless and has been removed.
+The signal "my_Master/HCU_Master/PC_ret<10>" is sourceless and has been removed.
+The signal "my_Master/HCU_Master/PC_ret<9>" is sourceless and has been removed.
+The signal "my_Master/HCU_Master/PC_ret<8>" is sourceless and has been removed.
+The signal "my_Master/HCU_Master/PC_adr[31]_GND_33_o_add_19_OUT<11>" is
+sourceless and has been removed.
+ Sourceless block "my_Master/HCU_Master/PC_ret_11" (FF) removed.
+The signal "my_Master/HCU_Master/PC_adr[31]_GND_33_o_add_19_OUT<10>" is
+sourceless and has been removed.
+ Sourceless block "my_Master/HCU_Master/PC_ret_10" (FF) removed.
+The signal "my_Master/HCU_Master/PC_adr[31]_GND_33_o_add_19_OUT<9>" is
+sourceless and has been removed.
+ Sourceless block "my_Master/HCU_Master/PC_ret_9" (FF) removed.
+The signal "my_Master/HCU_Master/PC_adr[31]_GND_33_o_add_19_OUT<8>" is
+sourceless and has been removed.
+ Sourceless block "my_Master/HCU_Master/PC_ret_8" (FF) removed.
+The signal "my_Master/HCU_Master/PC_adr[31]_GND_33_o_add_48_OUT<11>" is
+sourceless and has been removed.
+ Sourceless block
+"my_Master/HCU_Master/Mmux_etat[1]_Startadres[31]_mux_106_OUT65" (ROM) removed.
+  The signal "my_Master/HCU_Master/Mmux_etat[1]_Startadres[31]_mux_106_OUT62" is
+sourceless and has been removed.
+The signal "my_Master/HCU_Master/PC_adr[31]_GND_33_o_add_48_OUT<10>" is
+sourceless and has been removed.
+ Sourceless block
+"my_Master/HCU_Master/Mmux_etat[1]_Startadres[31]_mux_106_OUT43" (ROM) removed.
+  The signal "my_Master/HCU_Master/Mmux_etat[1]_Startadres[31]_mux_106_OUT42" is
+sourceless and has been removed.
+The signal "my_Master/HCU_Master/PC_adr[31]_GND_33_o_add_48_OUT<9>" is
+sourceless and has been removed.
+ Sourceless block
+"my_Master/HCU_Master/Mmux_etat[1]_Startadres[31]_mux_106_OUT643" (ROM) removed.
+  The signal "my_Master/HCU_Master/Mmux_etat[1]_Startadres[31]_mux_106_OUT642" is
+sourceless and has been removed.
+The signal "my_Master/HCU_Master/PC_adr[31]_GND_33_o_add_48_OUT<8>" is
+sourceless and has been removed.
+ Sourceless block
+"my_Master/HCU_Master/Mmux_etat[1]_Startadres[31]_mux_106_OUT623" (ROM) removed.
+  The signal "my_Master/HCU_Master/Mmux_etat[1]_Startadres[31]_mux_106_OUT623" is
+sourceless and has been removed.
+The signal "my_Master/HCU_Master/PC_adr[31]_GND_33_o_add_83_OUT<11>" is
+sourceless and has been removed.
+The signal "my_Master/HCU_Master/PC_adr[31]_GND_33_o_add_83_OUT<10>" is
+sourceless and has been removed.
+The signal "my_Master/HCU_Master/PC_adr[31]_GND_33_o_add_83_OUT<9>" is
+sourceless and has been removed.
+The signal "my_Master/HCU_Master/PC_adr[31]_GND_33_o_add_83_OUT<8>" is
+sourceless and has been removed.
+The signal "my_Master/HCU_Master/Madd_PC_adr[31]_GND_33_o_add_19_OUT_cy<7>" is
+sourceless and has been removed.
+ Sourceless block
+"my_Master/HCU_Master/Madd_PC_adr[31]_GND_33_o_add_19_OUT_cy<8>" (MUX) removed.
+  The signal "my_Master/HCU_Master/Madd_PC_adr[31]_GND_33_o_add_19_OUT_cy<8>" is
+sourceless and has been removed.
+   Sourceless block
+"my_Master/HCU_Master/Madd_PC_adr[31]_GND_33_o_add_19_OUT_cy<9>" (MUX) removed.
+    The signal "my_Master/HCU_Master/Madd_PC_adr[31]_GND_33_o_add_19_OUT_cy<9>" is
+sourceless and has been removed.
+     Sourceless block
+"my_Master/HCU_Master/Madd_PC_adr[31]_GND_33_o_add_19_OUT_cy<10>" (MUX) removed.
+      The signal "my_Master/HCU_Master/Madd_PC_adr[31]_GND_33_o_add_19_OUT_cy<10>" is
+sourceless and has been removed.
+       Sourceless block
+"my_Master/HCU_Master/Madd_PC_adr[31]_GND_33_o_add_19_OUT_xor<11>" (XOR)
+removed.
+     Sourceless block
+"my_Master/HCU_Master/Madd_PC_adr[31]_GND_33_o_add_19_OUT_xor<10>" (XOR)
+removed.
+   Sourceless block
+"my_Master/HCU_Master/Madd_PC_adr[31]_GND_33_o_add_19_OUT_xor<9>" (XOR) removed.
+ Sourceless block
+"my_Master/HCU_Master/Madd_PC_adr[31]_GND_33_o_add_19_OUT_xor<8>" (XOR) removed.
+The signal "my_Master/HCU_Master/Madd_PC_adr[31]_GND_33_o_add_48_OUT_cy<7>" is
+sourceless and has been removed.
+ Sourceless block
+"my_Master/HCU_Master/Madd_PC_adr[31]_GND_33_o_add_48_OUT_cy<8>" (MUX) removed.
+  The signal "my_Master/HCU_Master/Madd_PC_adr[31]_GND_33_o_add_48_OUT_cy<8>" is
+sourceless and has been removed.
+   Sourceless block
+"my_Master/HCU_Master/Madd_PC_adr[31]_GND_33_o_add_48_OUT_cy<9>" (MUX) removed.
+    The signal "my_Master/HCU_Master/Madd_PC_adr[31]_GND_33_o_add_48_OUT_cy<9>" is
+sourceless and has been removed.
+     Sourceless block
+"my_Master/HCU_Master/Madd_PC_adr[31]_GND_33_o_add_48_OUT_cy<10>" (MUX) removed.
+      The signal "my_Master/HCU_Master/Madd_PC_adr[31]_GND_33_o_add_48_OUT_cy<10>" is
+sourceless and has been removed.
+       Sourceless block
+"my_Master/HCU_Master/Madd_PC_adr[31]_GND_33_o_add_48_OUT_xor<11>" (XOR)
+removed.
+     Sourceless block
+"my_Master/HCU_Master/Madd_PC_adr[31]_GND_33_o_add_48_OUT_xor<10>" (XOR)
+removed.
+   Sourceless block
+"my_Master/HCU_Master/Madd_PC_adr[31]_GND_33_o_add_48_OUT_xor<9>" (XOR) removed.
+ Sourceless block
+"my_Master/HCU_Master/Madd_PC_adr[31]_GND_33_o_add_48_OUT_xor<8>" (XOR) removed.
+The signal "my_Master/HCU_Master/Madd_PC_adr[31]_PC_adr[1]_add_24_OUT_cy<7>" is
+sourceless and has been removed.
+The signal "my_Master/HCU_Master/Madd_PC_adr[31]_GND_33_o_add_83_OUT_cy<7>" is
+sourceless and has been removed.
+ Sourceless block
+"my_Master/HCU_Master/Madd_PC_adr[31]_GND_33_o_add_83_OUT_cy<8>" (MUX) removed.
+  The signal "my_Master/HCU_Master/Madd_PC_adr[31]_GND_33_o_add_83_OUT_cy<8>" is
+sourceless and has been removed.
+   Sourceless block
+"my_Master/HCU_Master/Madd_PC_adr[31]_GND_33_o_add_83_OUT_cy<9>" (MUX) removed.
+    The signal "my_Master/HCU_Master/Madd_PC_adr[31]_GND_33_o_add_83_OUT_cy<9>" is
+sourceless and has been removed.
+     Sourceless block
+"my_Master/HCU_Master/Madd_PC_adr[31]_GND_33_o_add_83_OUT_cy<10>" (MUX) removed.
+      The signal "my_Master/HCU_Master/Madd_PC_adr[31]_GND_33_o_add_83_OUT_cy<10>" is
+sourceless and has been removed.
+       Sourceless block
+"my_Master/HCU_Master/Madd_PC_adr[31]_GND_33_o_add_83_OUT_xor<11>" (XOR)
+removed.
+     Sourceless block
+"my_Master/HCU_Master/Madd_PC_adr[31]_GND_33_o_add_83_OUT_xor<10>" (XOR)
+removed.
+   Sourceless block
+"my_Master/HCU_Master/Madd_PC_adr[31]_GND_33_o_add_83_OUT_xor<9>" (XOR) removed.
+ Sourceless block
+"my_Master/HCU_Master/Madd_PC_adr[31]_GND_33_o_add_83_OUT_xor<8>" (XOR) removed.
+The signal "my_Master/Mfunit.Inst_IPFunit/my_incdec/BU2/c_out" is sourceless and
+has been removed.
+The signal "my_Master/Mfunit.Inst_IPFunit/my_addsub/BU2/c_out" is sourceless and
+has been removed.
+The signal "D7seg_display/XLXI_2_CLR_openSignal" is sourceless and has been
+removed.
+The signal "D7seg_display/XLXI_3/XLXN_42" is sourceless and has been removed.
+The signal "My_E190/XLXI_29_CLR_openSignal" is sourceless and has been removed.
+The signal "My_E190/XLXN_17" is sourceless and has been removed.
+Unused block "D7seg_display/XLXI_3/XLXI_9" (ONE) removed.
+Unused block "my_Master/Mfunit.Inst_IPFunit/my_addsub/BU2/XST_GND" (ZERO)
+removed.
+Unused block "my_Master/Mfunit.Inst_IPFunit/my_addsub/GND" (ZERO) removed.
+Unused block "my_Master/Mfunit.Inst_IPFunit/my_addsub/VCC" (ONE) removed.
+Unused block "my_Master/Mfunit.Inst_IPFunit/my_incdec/BU2/XST_GND" (ZERO)
+removed.
+Unused block "my_Master/Mfunit.Inst_IPFunit/my_incdec/GND" (ZERO) removed.
+Unused block "my_Master/Mfunit.Inst_IPFunit/my_incdec/VCC" (ONE) removed.
+Unused block "my_Master/Mmul16.Inst_IP_mul16/your_instance_name/blk00000001"
+(ONE) removed.
+Unused block "my_Master/Mmul16.Inst_IP_mul16/your_instance_name/blk00000002"
+(ZERO) removed.
+Unused block "my_Master/HCU_Master/Madd_PC_adr[31]_GND_33_o_add_19_OUT_cy<7>"
+(MUX) removed.
+Unused block "my_Master/HCU_Master/Madd_PC_adr[31]_GND_33_o_add_48_OUT_cy<7>"
+(MUX) removed.
+Unused block "my_Master/HCU_Master/Madd_PC_adr[31]_GND_33_o_add_83_OUT_cy<7>"
+(MUX) removed.
+Unused block "my_Master/HCU_Master/Madd_PC_adr[31]_PC_adr[1]_add_24_OUT_cy<7>"
+(MUX) removed.
+
+Optimized Block(s):
+TYPE 		BLOCK
+GND 		D7seg_display/XST_GND
+GND 		My_E190/XLXI_1/XST_GND
+VCC 		My_E190/XLXI_1/XST_VCC
+VCC 		My_E190/XLXI_2
+GND 		My_E190/XST_GND
+GND 		UART_Wrapper/Inst_uart_dispatch/XST_GND
+VCC 		UART_Wrapper/Inst_uart_dispatch/XST_VCC
+GND 		UART_Wrapper/Inst_uart_rx/XST_GND
+VCC 		UART_Wrapper/Inst_uart_rx/XST_VCC
+GND 		UART_Wrapper/uart_baudClock_inst/XST_GND
+VCC 		UART_Wrapper/uart_baudClock_inst/XST_VCC
+VCC 		XST_VCC
+GND 		clk_gen/XST_GND
+GND 		my_Master/HCU_Master/Inst_returnstack/XST_GND
+GND 		my_Master/HCU_Master/XST_GND
+VCC 		my_Master/HCU_Master/XST_VCC
+GND 		my_Master/Inst_add_gen/XST_GND
+VCC 		my_Master/Inst_add_gen/XST_VCC
+GND 		my_Master/Mdatastack.Inst_IPdataStack/Inst_datastack/XST_GND
+GND 		my_Master/Mdelay.Inst_IP_delay/XST_GND
+VCC 		my_Master/Mdelay.Inst_IP_delay/XST_VCC
+GND 		my_Master/Mmul16.Inst_IP_mul16/your_instance_name/blk00000003/blk00000004
+VCC 		my_Master/Mmul16.Inst_IP_mul16/your_instance_name/blk00000003/blk00000005
+GND 		my_Master/Stack_Master/update_counter/XST_GND
+GND 		my_Master/XST_GND
+VCC 		my_Master/XST_VCC
+
+Redundant Block(s):
+TYPE 		BLOCK
+LUT1 		my_Master/HCU_Master/Madd_PC_adr[31]_GND_33_o_add_19_OUT_cy<8>_rt
+LUT1 		my_Master/HCU_Master/Madd_PC_adr[31]_GND_33_o_add_48_OUT_cy<8>_rt
+LUT1 		my_Master/HCU_Master/Madd_PC_adr[31]_GND_33_o_add_83_OUT_cy<8>_rt
+LUT1 		my_Master/HCU_Master/Madd_PC_adr[31]_GND_33_o_add_19_OUT_cy<9>_rt
+LUT1 		my_Master/HCU_Master/Madd_PC_adr[31]_GND_33_o_add_48_OUT_cy<9>_rt
+LUT1 		my_Master/HCU_Master/Madd_PC_adr[31]_GND_33_o_add_83_OUT_cy<9>_rt
+LUT1 		my_Master/HCU_Master/Madd_PC_adr[31]_GND_33_o_add_19_OUT_cy<10>_rt
+LUT1 		my_Master/HCU_Master/Madd_PC_adr[31]_GND_33_o_add_48_OUT_cy<10>_rt
+LUT1 		my_Master/HCU_Master/Madd_PC_adr[31]_GND_33_o_add_83_OUT_cy<10>_rt
+LUT1 		my_Master/HCU_Master/Madd_PC_adr[31]_GND_33_o_add_19_OUT_xor<11>_rt
+LUT1 		my_Master/HCU_Master/Madd_PC_adr[31]_GND_33_o_add_48_OUT_xor<11>_rt
+LUT1 		my_Master/HCU_Master/Madd_PC_adr[31]_GND_33_o_add_83_OUT_xor<11>_rt
+INV 		my_Master/Mwaitbtn.Inst_IPwaitBt/pls0/XLXI_5
+INV 		my_Master/Mwaitbtn.Inst_IPwaitBt/pls1/XLXI_5
+INV 		my_Master/Mwaitbtn.Inst_IPwaitBt/pls2/XLXI_5
+INV 		my_Master/Mwaitbtn.Inst_IPwaitBt/pls3/XLXI_5
+INV 		my_Master/Mwaitbtn.Inst_IPwaitBt/pls4/XLXI_5
+LUT1 		my_Master/Inst_add_gen/Mcount_count_cy<1>_rt
+LUT1 		my_Master/Inst_add_gen/Mcount_count_cy<2>_rt
+LUT1 		my_Master/Inst_add_gen/Mcount_count_cy<3>_rt
+LUT1 		my_Master/Inst_add_gen/Mcount_count_cy<4>_rt
+LUT1 		my_Master/Inst_add_gen/Mcount_count_cy<5>_rt
+LUT1 		my_Master/Inst_add_gen/Mcount_count_cy<6>_rt
+LUT1 		my_Master/Inst_add_gen/Mcount_count_cy<7>_rt
+LUT1 		my_Master/Inst_add_gen/Mcount_count_cy<8>_rt
+LUT1 		my_Master/Inst_add_gen/Mcount_count_cy<9>_rt
+LUT1 		my_Master/Inst_add_gen/Mcount_count_cy<10>_rt
+INV 		my_Master/rst_mem/XLXI_5
+INV 		my_Master/Stack_Master/sel_out/selN2out<0>1_INV_0
+INV 		my_Master/Stack_Master/sel_out/Mram_n000231_INV_0
+INV 		my_Master/HCU_Master/Inst_returnstack/clk_inv_INV_0
+INV 		my_Master/HCU_Master/Inst_returnstack/clk_inv1_INV_0
+INV 		my_Master/Mdatastack.Inst_IPdataStack/Inst_datastack/clk_inv1_INV_0
+INV 		my_Master/Mdatastack.Inst_IPdataStack/Inst_datastack/clk_inv2_INV_0
+INV 		my_Master/Mdatastack.Inst_IPdataStack/Inst_datastack/clk_inv3_INV_0
+INV 		my_Master/Mdatastack.Inst_IPdataStack/Inst_datastack/clk_inv4_INV_0
+INV 		my_Master/Mdatastack.Inst_IPdataStack/Inst_datastack/clk_inv5_INV_0
+INV 		my_Master/Mdatastack.Inst_IPdataStack/Inst_datastack/clk_inv6_INV_0
+INV 		my_Master/Mdatastack.Inst_IPdataStack/Inst_datastack/clk_inv7_INV_0
+INV 		my_Master/Mdatastack.Inst_IPdataStack/Inst_datastack/clk_inv8_INV_0
+LUT1 		my_Master/HCU_Master/Madd_PC_adr[31]_GND_33_o_add_19_OUT_cy<3>_rt
+LUT1 		my_Master/HCU_Master/Madd_PC_adr[31]_GND_33_o_add_48_OUT_cy<3>_rt
+LUT1 		my_Master/HCU_Master/Madd_PC_adr[31]_GND_33_o_add_83_OUT_cy<3>_rt
+LUT1 		my_Master/HCU_Master/Madd_PC_adr[31]_GND_33_o_add_19_OUT_cy<4>_rt
+LUT1 		my_Master/HCU_Master/Madd_PC_adr[31]_GND_33_o_add_48_OUT_cy<4>_rt
+LUT1 		my_Master/HCU_Master/Madd_PC_adr[31]_GND_33_o_add_83_OUT_cy<4>_rt
+LUT1 		my_Master/HCU_Master/Madd_PC_adr[31]_GND_33_o_add_19_OUT_cy<5>_rt
+LUT1 		my_Master/HCU_Master/Madd_PC_adr[31]_GND_33_o_add_48_OUT_cy<5>_rt
+LUT1 		my_Master/HCU_Master/Madd_PC_adr[31]_GND_33_o_add_83_OUT_cy<5>_rt
+LUT1 		my_Master/HCU_Master/Madd_PC_adr[31]_GND_33_o_add_19_OUT_cy<6>_rt
+LUT1 		my_Master/HCU_Master/Madd_PC_adr[31]_GND_33_o_add_48_OUT_cy<6>_rt
+LUT1 		my_Master/HCU_Master/Madd_PC_adr[31]_GND_33_o_add_83_OUT_cy<6>_rt
+LUT1 		my_Master/HCU_Master/Madd_PC_adr[31]_GND_33_o_add_19_OUT_cy<7>_rt
+LUT1 		my_Master/HCU_Master/Madd_PC_adr[31]_GND_33_o_add_48_OUT_cy<7>_rt
+LUT1 		my_Master/HCU_Master/Madd_PC_adr[31]_GND_33_o_add_83_OUT_cy<7>_rt
+LUT1 		my_Master/MTic.Inst_IP_Tic/Madd_busreg_cy<30>_rt
+LUT1 		my_Master/MTic.Inst_IP_Tic/Madd_busreg_cy<29>_rt
+LUT1 		my_Master/MTic.Inst_IP_Tic/Madd_busreg_cy<28>_rt
+LUT1 		my_Master/MTic.Inst_IP_Tic/Madd_busreg_cy<27>_rt
+LUT1 		my_Master/MTic.Inst_IP_Tic/Madd_busreg_cy<26>_rt
+LUT1 		my_Master/MTic.Inst_IP_Tic/Madd_busreg_cy<25>_rt
+LUT1 		my_Master/MTic.Inst_IP_Tic/Madd_busreg_cy<24>_rt
+LUT1 		my_Master/MTic.Inst_IP_Tic/Madd_busreg_cy<23>_rt
+LUT1 		my_Master/MTic.Inst_IP_Tic/Madd_busreg_cy<22>_rt
+LUT1 		my_Master/MTic.Inst_IP_Tic/Madd_busreg_cy<21>_rt
+LUT1 		my_Master/MTic.Inst_IP_Tic/Madd_busreg_cy<20>_rt
+LUT1 		my_Master/MTic.Inst_IP_Tic/Madd_busreg_cy<19>_rt
+LUT1 		my_Master/MTic.Inst_IP_Tic/Madd_busreg_cy<18>_rt
+LUT1 		my_Master/MTic.Inst_IP_Tic/Madd_busreg_cy<17>_rt
+LUT1 		my_Master/MTic.Inst_IP_Tic/Madd_busreg_cy<16>_rt
+LUT1 		my_Master/MTic.Inst_IP_Tic/Madd_busreg_cy<15>_rt
+LUT1 		my_Master/MTic.Inst_IP_Tic/Madd_busreg_cy<14>_rt
+LUT1 		my_Master/MTic.Inst_IP_Tic/Madd_busreg_cy<13>_rt
+LUT1 		my_Master/MTic.Inst_IP_Tic/Madd_busreg_cy<12>_rt
+LUT1 		my_Master/MTic.Inst_IP_Tic/Madd_busreg_cy<11>_rt
+LUT1 		my_Master/MTic.Inst_IP_Tic/Madd_busreg_cy<10>_rt
+LUT1 		my_Master/MTic.Inst_IP_Tic/Madd_busreg_cy<9>_rt
+LUT1 		my_Master/MTic.Inst_IP_Tic/Madd_busreg_cy<8>_rt
+LUT1 		my_Master/MTic.Inst_IP_Tic/Madd_busreg_cy<7>_rt
+LUT1 		my_Master/MTic.Inst_IP_Tic/Madd_busreg_cy<6>_rt
+LUT1 		my_Master/MTic.Inst_IP_Tic/Madd_busreg_cy<5>_rt
+LUT1 		my_Master/MTic.Inst_IP_Tic/Madd_busreg_cy<4>_rt
+LUT1 		my_Master/MTic.Inst_IP_Tic/Madd_busreg_cy<3>_rt
+LUT1 		my_Master/MTic.Inst_IP_Tic/Madd_busreg_cy<2>_rt
+LUT1 		my_Master/MTic.Inst_IP_Tic/Madd_busreg_cy<1>_rt
+LUT1 		my_Master/MTic.Inst_IP_Tic/Madd_busreg_xor<31>_rt
+LUT1 		my_Master/Mfunit.Inst_IPFunit/Madd_Tbus14_cy<0>_rt
+INV
+		my_Master/Mfunit.Inst_IPFunit/my_incdec/BU2/U0/i_baseblox.i_baseblox_addsub/no
+_pipelining.the_addsub/i_lut4.i_lut4_addsub/_n00221_INV_0
+INV
+		my_Master/Mfunit.Inst_IPFunit/my_addsub/BU2/U0/i_baseblox.i_baseblox_addsub/no
+_pipelining.the_addsub/i_lut4.i_lut4_addsub/c_in_i1_INV_0
+INV 		UART_Wrapper/pulse_shift/XLXI_5
+INV 		UART_Wrapper/Inst_uart_rx/pulse_shift/XLXI_5
+LUT1
+		UART_Wrapper/uart_baudClock_inst/Madd_baudRate_process.count[10]_GND_13_o_add_
+0_OUT_cy<1>_rt
+LUT1 		UART_Wrapper/uart_baudClock_inst/Mcount_baudRate_process.count_cy<1>_rt
+LUT1
+		UART_Wrapper/uart_baudClock_inst/Madd_baudRate_process.count[10]_GND_13_o_add_
+0_OUT_cy<2>_rt
+LUT1 		UART_Wrapper/uart_baudClock_inst/Mcount_baudRate_process.count_cy<2>_rt
+LUT1
+		UART_Wrapper/uart_baudClock_inst/Madd_baudRate_process.count[10]_GND_13_o_add_
+0_OUT_cy<3>_rt
+LUT1 		UART_Wrapper/uart_baudClock_inst/Mcount_baudRate_process.count_cy<3>_rt
+LUT1
+		UART_Wrapper/uart_baudClock_inst/Madd_baudRate_process.count[10]_GND_13_o_add_
+0_OUT_cy<4>_rt
+LUT1 		UART_Wrapper/uart_baudClock_inst/Mcount_baudRate_process.count_cy<4>_rt
+LUT1
+		UART_Wrapper/uart_baudClock_inst/Madd_baudRate_process.count[10]_GND_13_o_add_
+0_OUT_cy<5>_rt
+LUT1 		UART_Wrapper/uart_baudClock_inst/Mcount_baudRate_process.count_cy<5>_rt
+LUT1
+		UART_Wrapper/uart_baudClock_inst/Madd_baudRate_process.count[10]_GND_13_o_add_
+0_OUT_cy<6>_rt
+LUT1 		UART_Wrapper/uart_baudClock_inst/Mcount_baudRate_process.count_cy<6>_rt
+LUT1
+		UART_Wrapper/uart_baudClock_inst/Madd_baudRate_process.count[10]_GND_13_o_add_
+0_OUT_cy<7>_rt
+LUT1 		UART_Wrapper/uart_baudClock_inst/Mcount_baudRate_process.count_cy<7>_rt
+LUT1
+		UART_Wrapper/uart_baudClock_inst/Madd_baudRate_process.count[10]_GND_13_o_add_
+0_OUT_cy<8>_rt
+LUT1 		UART_Wrapper/uart_baudClock_inst/Mcount_baudRate_process.count_cy<8>_rt
+LUT1
+		UART_Wrapper/uart_baudClock_inst/Madd_baudRate_process.count[10]_GND_13_o_add_
+0_OUT_cy<9>_rt
+LUT1 		UART_Wrapper/uart_baudClock_inst/Mcount_baudRate_process.count_cy<9>_rt
+LUT1
+		UART_Wrapper/uart_baudClock_inst/Madd_baudRate_process.count[10]_GND_13_o_add_
+0_OUT_xor<10>_rt
+LUT1 		UART_Wrapper/uart_baudClock_inst/Mcount_baudRate_process.count_xor<10>_rt
+INV 		UART_Wrapper/Inst_uart_dispatch/rxe_inv_INV_0
+INV 		My_E190/XLXI_24
+LUT1 		My_E190/XLXI_1/Mcount_COUNT_cy<1>_rt
+LUT1 		My_E190/XLXI_1/Mcount_COUNT_cy<2>_rt
+LUT1 		My_E190/XLXI_1/Mcount_COUNT_cy<3>_rt
+LUT1 		My_E190/XLXI_1/Mcount_COUNT_cy<4>_rt
+LUT1 		My_E190/XLXI_1/Mcount_COUNT_cy<5>_rt
+LUT1 		My_E190/XLXI_1/Mcount_COUNT_cy<6>_rt
+LUT1 		My_E190/XLXI_1/Mcount_COUNT_cy<7>_rt
+LUT1 		My_E190/XLXI_1/Mcount_COUNT_cy<8>_rt
+LUT1 		My_E190/XLXI_1/Mcount_COUNT_cy<9>_rt
+LUT1 		My_E190/XLXI_1/Mcount_COUNT_cy<10>_rt
+LUT1 		My_E190/XLXI_1/Mcount_COUNT_cy<11>_rt
+LUT1 		My_E190/XLXI_1/Mcount_COUNT_cy<12>_rt
+LUT1 		My_E190/XLXI_1/Mcount_COUNT_cy<13>_rt
+LUT1 		My_E190/XLXI_1/Mcount_COUNT_cy<14>_rt
+LUT1 		My_E190/XLXI_1/Mcount_COUNT_xor<15>_rt
+
+Section 6 - IOB Properties
+--------------------------
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| IOB Name                           | Type             | Direction | IO Standard          | Diff  | Drive    | Slew | Reg (s)      | Resistor | IOB      |
+|                                    |                  |           |                      | Term  | Strength | Rate |              |          | Delay    |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| a_to_g<0>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| a_to_g<1>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| a_to_g<2>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| a_to_g<3>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| a_to_g<4>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| a_to_g<5>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| a_to_g<6>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| an<0>                              | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| an<1>                              | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| an<2>                              | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| an<3>                              | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| btn<0>                             | IOB              | INPUT     | LVCMOS25             |       |          |      | IFF          |          |          |
+| btn<1>                             | IOB              | INPUT     | LVCMOS25             |       |          |      | IFF          |          |          |
+| btn<2>                             | IOB              | INPUT     | LVCMOS25             |       |          |      | IFF          |          |          |
+| btn<3>                             | IOB              | INPUT     | LVCMOS25             |       |          |      | IFF          |          |          |
+| btn<4>                             | IOB              | INPUT     | LVCMOS25             |       |          |      | IFF          |          |          |
+| led<0>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF          |          |          |
+| led<1>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF          |          |          |
+| led<2>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF          |          |          |
+| led<3>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF          |          |          |
+| led<4>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF          |          |          |
+| led<5>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF          |          |          |
+| led<6>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF          |          |          |
+| led<7>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF          |          |          |
+| mclk                               | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| rx_in                              | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| sw<0>                              | IOB              | INPUT     | LVCMOS25             |       |          |      | IFF          |          |          |
+| sw<1>                              | IOB              | INPUT     | LVCMOS25             |       |          |      | IFF          |          |          |
+| sw<2>                              | IOB              | INPUT     | LVCMOS25             |       |          |      | IFF          |          |          |
+| sw<3>                              | IOB              | INPUT     | LVCMOS25             |       |          |      | IFF          |          |          |
+| sw<4>                              | IOB              | INPUT     | LVCMOS25             |       |          |      | IFF          |          |          |
+| sw<5>                              | IOB              | INPUT     | LVCMOS25             |       |          |      | IFF          |          |          |
+| sw<6>                              | IOB              | INPUT     | LVCMOS25             |       |          |      | IFF          |          |          |
+| sw<7>                              | IOB              | INPUT     | LVCMOS25             |       |          |      | IFF          |          |          |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Section 7 - RPMs
+----------------
+
+Section 8 - Guide Report
+------------------------
+Guide not run on this design.
+
+Section 9 - Area Group and Partition Summary
+--------------------------------------------
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Area Group Information
+----------------------
+
+  No area groups were found in this design.
+
+----------------------
+
+Section 10 - Timing Report
+--------------------------
+A logic-level (pre-route) timing report can be generated by using Xilinx static
+timing analysis tools, Timing Analyzer (GUI) or TRCE (command line), with the
+mapped NCD and PCF files. Please note that this timing report will be generated
+using estimated delay information. For accurate numbers, please generate a
+timing report with the post Place and Route NCD file.
+
+For more information about the Timing Analyzer, consult the Xilinx Timing
+Analyzer Reference Manual; for more information about TRCE, consult the Xilinx
+Command Line Tools User Guide "TRACE" chapter.
+
+Section 11 - Configuration String Details
+-----------------------------------------
+DCM "clk_gen/dcm_sp_inst":
+CLKDV_DIVIDE:2.0
+CLKIN_DIVIDE_BY_2:FALSE
+CLKOUT_PHASE_SHIFT:NONE
+CLK_FEEDBACK:1X
+DESKEW_ADJUST:5
+DFS_FREQUENCY_MODE:LOW
+DLL_FREQUENCY_MODE:LOW
+DSS_MODE:NONE
+DUTY_CYCLE_CORRECTION:TRUE
+STARTUP_WAIT:FALSE
+VERY_HIGH_FREQUENCY:FALSE
+CLKFX_DIVIDE = 1
+CLKFX_MULTIPLY = 4
+CLKIN_PERIOD = 10.000000
+PHASE_SHIFT = 0
+
+
+
+Section 12 - Control Set Information
+------------------------------------
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Clock Signal          | Reset Signal                                               | Set Signal | Enable Signal                                                                      | Slice Load Count | Bel Load Count |
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| UART_Wrapper/baud_clk |                                                            |            |                                                                                    | 1                | 1              |
+| UART_Wrapper/baud_clk |                                                            |            | GLOBAL_LOGIC1                                                                      | 1                | 1              |
+| UART_Wrapper/baud_clk | UART_Wrapper/Inst_uart_rx/GND_7_o_GND_7_o_equal_4_o_inv1_0 |            |                                                                                    | 1                | 2              |
+| UART_Wrapper/baud_clk | UART_Wrapper/Inst_uart_rx/Reset_OR_DriverANDClockEnable    |            | UART_Wrapper/Inst_uart_rx/_n0100_inv1                                              | 1                | 1              |
+| UART_Wrapper/baud_clk | UART_Wrapper/Inst_uart_rx/_n0083                           |            |                                                                                    | 2                | 4              |
+| UART_Wrapper/baud_clk | UART_Wrapper/Inst_uart_rx/_n0086                           |            | UART_Wrapper/Inst_uart_rx/rx_busy                                                  | 1                | 4              |
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| clk50                 |                                                            |            |                                                                                    | 34               | 113            |
+| clk50                 |                                                            |            | UART_Wrapper/Inst_uart_dispatch/_n0129_inv                                         | 2                | 7              |
+| clk50                 |                                                            |            | UART_Wrapper/Inst_uart_rx/shiftep                                                  | 2                | 8              |
+| clk50                 |                                                            |            | UART_Wrapper/buf8E                                                                 | 17               | 67             |
+| clk50                 |                                                            |            | my_Master/HCU_Master/N231                                                          | 2                | 8              |
+| clk50                 |                                                            |            | my_Master/HCU_Master/_n0345_inv                                                    | 9                | 30             |
+| clk50                 |                                                            |            | my_Master/HCU_Master/_n0389_inv                                                    | 2                | 4              |
+| clk50                 |                                                            |            | my_Master/Prom_Master/chipselect<0>                                                | 1                | 2              |
+| clk50                 |                                                            |            | my_Master/Prom_Master/chipselect<1>                                                | 1                | 2              |
+| clk50                 |                                                            |            | my_Master/Prom_Master/chipselect<2>                                                | 1                | 2              |
+| clk50                 |                                                            |            | my_Master/Prom_Master/chipselect<3>                                                | 1                | 2              |
+| clk50                 |                                                            |            | my_Master/Prom_Master/chipselect<4>                                                | 1                | 2              |
+| clk50                 |                                                            |            | my_Master/Prom_Master/chipselect<5>                                                | 1                | 2              |
+| clk50                 |                                                            |            | my_Master/Prom_Master/chipselect<6>                                                | 1                | 2              |
+| clk50                 |                                                            |            | my_Master/Prom_Master/chipselect<7>                                                | 1                | 2              |
+| clk50                 |                                                            |            | my_Master/Prom_Master/chipselect<8>                                                | 1                | 2              |
+| clk50                 |                                                            |            | my_Master/Prom_Master/chipselect<9>                                                | 1                | 2              |
+| clk50                 |                                                            |            | my_Master/Prom_Master/chipselect<10>                                               | 1                | 2              |
+| clk50                 |                                                            |            | my_Master/Prom_Master/chipselect<11>                                               | 1                | 2              |
+| clk50                 |                                                            |            | my_Master/Prom_Master/chipselect<12>                                               | 1                | 2              |
+| clk50                 |                                                            |            | my_Master/Prom_Master/chipselect<13>                                               | 1                | 2              |
+| clk50                 |                                                            |            | my_Master/Prom_Master/chipselect<14>                                               | 1                | 2              |
+| clk50                 |                                                            |            | my_Master/Prom_Master/chipselect<15>                                               | 1                | 2              |
+| clk50                 |                                                            |            | my_Master/Prom_Master/chipselect<16>                                               | 1                | 2              |
+| clk50                 |                                                            |            | my_Master/Prom_Master/chipselect<17>                                               | 1                | 2              |
+| clk50                 |                                                            |            | my_Master/Prom_Master/chipselect<18>                                               | 1                | 2              |
+| clk50                 |                                                            |            | my_Master/Prom_Master/chipselect<19>                                               | 1                | 2              |
+| clk50                 |                                                            |            | my_Master/Prom_Master/chipselect<20>                                               | 1                | 2              |
+| clk50                 |                                                            |            | my_Master/Prom_Master/chipselect<21>                                               | 1                | 2              |
+| clk50                 |                                                            |            | my_Master/Prom_Master/chipselect<22>                                               | 1                | 2              |
+| clk50                 |                                                            |            | my_Master/Prom_Master/chipselect<23>                                               | 1                | 2              |
+| clk50                 |                                                            |            | my_Master/Prom_Master/chipselect<24>                                               | 1                | 2              |
+| clk50                 |                                                            |            | my_Master/Prom_Master/chipselect<25>                                               | 1                | 2              |
+| clk50                 |                                                            |            | my_Master/Prom_Master/chipselect<26>                                               | 1                | 2              |
+| clk50                 |                                                            |            | my_Master/Prom_Master/chipselect<27>                                               | 1                | 2              |
+| clk50                 |                                                            |            | my_Master/Prom_Master/chipselect<28>                                               | 1                | 2              |
+| clk50                 |                                                            |            | my_Master/Prom_Master/chipselect<29>                                               | 1                | 2              |
+| clk50                 |                                                            |            | my_Master/Prom_Master/chipselect<30>                                               | 1                | 2              |
+| clk50                 |                                                            |            | my_Master/Prom_Master/chipselect<31>                                               | 1                | 2              |
+| clk50                 |                                                            |            | my_Master/Prom_Master/chipselect<32>                                               | 1                | 2              |
+| clk50                 |                                                            |            | my_Master/Prom_Master/chipselect<33>                                               | 1                | 2              |
+| clk50                 |                                                            |            | my_Master/Prom_Master/chipselect<34>                                               | 1                | 2              |
+| clk50                 |                                                            |            | my_Master/Prom_Master/chipselect<35>                                               | 1                | 2              |
+| clk50                 |                                                            |            | my_Master/Prom_Master/chipselect<36>                                               | 1                | 2              |
+| clk50                 |                                                            |            | my_Master/Prom_Master/chipselect<37>                                               | 1                | 2              |
+| clk50                 |                                                            |            | my_Master/Prom_Master/chipselect<38>                                               | 1                | 2              |
+| clk50                 |                                                            |            | my_Master/Prom_Master/chipselect<39>                                               | 1                | 2              |
+| clk50                 |                                                            |            | my_Master/Prom_Master/chipselect<40>                                               | 1                | 2              |
+| clk50                 |                                                            |            | my_Master/Prom_Master/chipselect<41>                                               | 1                | 2              |
+| clk50                 |                                                            |            | my_Master/Prom_Master/chipselect<42>                                               | 1                | 2              |
+| clk50                 |                                                            |            | my_Master/Prom_Master/chipselect<43>                                               | 1                | 2              |
+| clk50                 |                                                            |            | my_Master/Prom_Master/chipselect<44>                                               | 1                | 2              |
+| clk50                 |                                                            |            | my_Master/Prom_Master/chipselect<45>                                               | 1                | 2              |
+| clk50                 |                                                            |            | my_Master/Prom_Master/chipselect<46>                                               | 1                | 2              |
+| clk50                 |                                                            |            | my_Master/Prom_Master/chipselect<47>                                               | 1                | 2              |
+| clk50                 |                                                            |            | my_Master/Prom_Master/chipselect<48>                                               | 1                | 2              |
+| clk50                 |                                                            |            | my_Master/Prom_Master/chipselect<49>                                               | 1                | 2              |
+| clk50                 |                                                            |            | my_Master/Prom_Master/chipselect<50>                                               | 1                | 2              |
+| clk50                 |                                                            |            | my_Master/Prom_Master/chipselect<51>                                               | 1                | 2              |
+| clk50                 |                                                            |            | my_Master/Prom_Master/chipselect<52>                                               | 1                | 2              |
+| clk50                 |                                                            |            | my_Master/Prom_Master/chipselect<53>                                               | 1                | 2              |
+| clk50                 |                                                            |            | my_Master/Prom_Master/chipselect<54>                                               | 1                | 2              |
+| clk50                 |                                                            |            | my_Master/Prom_Master/chipselect<55>                                               | 1                | 2              |
+| clk50                 |                                                            |            | my_Master/Prom_Master/chipselect<56>                                               | 1                | 2              |
+| clk50                 |                                                            |            | my_Master/Prom_Master/chipselect<57>                                               | 1                | 2              |
+| clk50                 |                                                            |            | my_Master/Prom_Master/chipselect<58>                                               | 1                | 2              |
+| clk50                 |                                                            |            | my_Master/Prom_Master/chipselect<59>                                               | 1                | 2              |
+| clk50                 |                                                            |            | my_Master/Prom_Master/chipselect<60>                                               | 1                | 2              |
+| clk50                 |                                                            |            | my_Master/Prom_Master/chipselect<61>                                               | 1                | 2              |
+| clk50                 |                                                            |            | my_Master/Prom_Master/chipselect<62>                                               | 1                | 2              |
+| clk50                 |                                                            |            | my_Master/Prom_Master/chipselect<63>                                               | 1                | 2              |
+| clk50                 |                                                            |            | my_Master/Stack_Master/XLXN_332                                                    | 16               | 32             |
+| clk50                 |                                                            |            | my_Master/Stack_Master/XLXN_338                                                    | 16               | 32             |
+| clk50                 |                                                            |            | my_Master/Stack_Master/XLXN_340                                                    | 16               | 32             |
+| clk50                 |                                                            |            | my_Master/Stack_Master/XLXN_342                                                    | 16               | 32             |
+| clk50                 |                                                            |            | my_Master/Stack_Master/we0                                                         | 4                | 32             |
+| clk50                 |                                                            |            | my_Master/Stack_Master/we1                                                         | 4                | 32             |
+| clk50                 |                                                            |            | my_Master/Stack_Master/we2                                                         | 4                | 32             |
+| clk50                 |                                                            |            | my_Master/Stack_Master/we3                                                         | 4                | 32             |
+| clk50                 | my_Master/MTic.Inst_IP_Tic/rstbus                          |            |                                                                                    | 8                | 32             |
+| clk50                 | my_Master/reset_clearstack_OR_33_o                         |            |                                                                                    | 2                | 6              |
+| clk50                 | my_Master/resetmem                                         |            | master_W                                                                           | 3                | 12             |
+| clk50                 | next_state                                                 |            |                                                                                    | 1                | 1              |
+| clk50                 | reset_Homade                                               |            |                                                                                    | 5                | 13             |
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| clk100                |                                                            |            |                                                                                    | 5                | 18             |
+| clk100                |                                                            |            | E190                                                                               | 2                | 6              |
+| clk100                |                                                            |            | My_E190/XLXN_14                                                                    | 1                | 3              |
+| clk100                |                                                            |            | UART_Wrapper/uart_baudClock_inst/GND_13_o_baudRate_process.count[10]_equal_2_o_inv | 1                | 1              |
+| clk100                | UART_Wrapper/uart_baudClock_inst/_n0017                    |            |                                                                                    | 3                | 11             |
+| clk100                | reset_Homade                                               |            | E190                                                                               | 3                | 10             |
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| ~clk50                |                                                            |            | my_Master/HCU_Master/Inst_returnstack/BUS_0033                                     | 2                | 12             |
+| ~clk50                |                                                            |            | my_Master/HCU_Master/Inst_returnstack/_n0053_inv                                   | 1                | 4              |
+| ~clk50                |                                                            |            | my_Master/Mdatastack.Inst_IPdataStack/pushld                                       | 6                | 44             |
+| ~clk50                | reset_Homade                                               |            |                                                                                    | 13               | 36             |
+| ~clk50                | reset_Homade                                               |            | my_Master/BufOld                                                                   | 6                | 16             |
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Section 13 - Utilization by Hierarchy
+-------------------------------------
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Module                             | Partition | Slices*       | Slice Reg     | LUTs          | LUTRAM        | BRAM/FIFO | DSP48A1 | BUFG  | BUFIO | BUFR  | DCM   | PLL_ADV   | Full Hierarchical Name                                                                                                              |
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Nexys3v5/                          |           | 47/1053       | 2/546         | 0/1906        | 0/223         | 0/5       | 0/1     | 0/2   | 0/0   | 0/0   | 0/1   | 0/0       | Nexys3v5                                                                                                                            |
+| +D7seg_display                     |           | 0/10          | 0/6           | 0/9           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/D7seg_display                                                                                                              |
+| ++XLXI_1                           |           | 4/4           | 0/0           | 4/4           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/D7seg_display/XLXI_1                                                                                                       |
+| ++XLXI_2                           |           | 1/1           | 2/2           | 1/1           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/D7seg_display/XLXI_2                                                                                                       |
+| ++XLXI_3                           |           | 0/4           | 0/0           | 0/4           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/D7seg_display/XLXI_3                                                                                                       |
+| +++XLXI_1                          |           | 1/1           | 0/0           | 1/1           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/D7seg_display/XLXI_3/XLXI_1                                                                                                |
+| +++XLXI_2                          |           | 1/1           | 0/0           | 1/1           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/D7seg_display/XLXI_3/XLXI_2                                                                                                |
+| +++XLXI_3                          |           | 1/1           | 0/0           | 1/1           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/D7seg_display/XLXI_3/XLXI_3                                                                                                |
+| +++XLXI_4                          |           | 1/1           | 0/0           | 1/1           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/D7seg_display/XLXI_3/XLXI_4                                                                                                |
+| ++XLXI_34                          |           | 1/1           | 4/4           | 0/0           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/D7seg_display/XLXI_34                                                                                                      |
+| +Inst_debounce4                    |           | 8/8           | 10/10         | 5/5           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/Inst_debounce4                                                                                                             |
+| +My_E190                           |           | 2/9           | 2/21          | 1/7           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/My_E190                                                                                                                    |
+| ++XLXI_1                           |           | 6/6           | 16/16         | 4/4           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/My_E190/XLXI_1                                                                                                             |
+| ++XLXI_29                          |           | 1/1           | 3/3           | 2/2           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/My_E190/XLXI_29                                                                                                            |
+| +UART_Wrapper                      |           | 0/52          | 0/112         | 0/120         | 0/1           | 0/2       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/UART_Wrapper                                                                                                               |
+| ++Inst_uart_dispatch               |           | 32/32         | 74/74         | 99/99         | 0/0           | 2/2       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/UART_Wrapper/Inst_uart_dispatch                                                                                            |
+| ++Inst_uart_rx                     |           | 6/10          | 12/23         | 12/13         | 1/1           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/UART_Wrapper/Inst_uart_rx                                                                                                  |
+| +++buf8                            |           | 2/2           | 8/8           | 0/0           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/UART_Wrapper/Inst_uart_rx/buf8                                                                                             |
+| +++pulse_shift                     |           | 2/2           | 3/3           | 1/1           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/UART_Wrapper/Inst_uart_rx/pulse_shift                                                                                      |
+| ++pulse_shift                      |           | 2/2           | 3/3           | 1/1           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/UART_Wrapper/pulse_shift                                                                                                   |
+| ++uart_baudClock_inst              |           | 8/8           | 12/12         | 7/7           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/UART_Wrapper/uart_baudClock_inst                                                                                           |
+| +clk_gen                           |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/0       | 0/0     | 2/2   | 0/0   | 0/0   | 1/1   | 0/0       | Nexys3v5/clk_gen                                                                                                                    |
+| +my_Master                         |           | 161/927       | 0/395         | 498/1765      | 0/222         | 0/3       | 0/1     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master                                                                                                                  |
+| ++BufLed_reg                       |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/BufLed_reg                                                                                                       |
+| ++BufO_reg                         |           | 6/6           | 16/16         | 0/0           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/BufO_reg                                                                                                         |
+| ++BufSwitch_reg                    |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/BufSwitch_reg                                                                                                    |
+| ++HCU_Master                       |           | 67/73         | 106/110       | 174/189       | 0/6           | 1/1       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/HCU_Master                                                                                                       |
+| +++Inst_returnstack                |           | 6/6           | 4/4           | 15/15         | 6/6           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/HCU_Master/Inst_returnstack                                                                                      |
+| ++Inst_add_gen                     |           | 3/3           | 12/12         | 1/1           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Inst_add_gen                                                                                                     |
+| ++MTic.Inst_IP_Tic                 |           | 10/18         | 0/32          | 4/4           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/MTic.Inst_IP_Tic                                                                                                 |
+| +++Tic_count                       |           | 8/8           | 32/32         | 0/0           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/MTic.Inst_IP_Tic/Tic_count                                                                                       |
+| ++Mbufout.Inst_IPBufO              |           | 1/1           | 0/0           | 2/2           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Mbufout.Inst_IPBufO                                                                                              |
+| ++Mdatastack.Inst_IPdataStack      |           | 13/34         | 0/36          | 19/48         | 0/24          | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Mdatastack.Inst_IPdataStack                                                                                      |
+| +++DatastackTop_reg                |           | 11/11         | 32/32         | 0/0           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Mdatastack.Inst_IPdataStack/DatastackTop_reg                                                                     |
+| +++Inst_datastack                  |           | 10/10         | 4/4           | 29/29         | 24/24         | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Mdatastack.Inst_IPdataStack/Inst_datastack                                                                       |
+| ++Mdelay.Inst_IP_delay             |           | 10/18         | 1/33          | 34/34         | 0/0           | 1/1       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Mdelay.Inst_IP_delay                                                                                             |
+| +++Wait_reg                        |           | 8/8           | 32/32         | 0/0           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Mdelay.Inst_IP_delay/Wait_reg                                                                                    |
+| ++Mfunit.Inst_IPFunit              |           | 103/119       | 0/0           | 227/291       | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Mfunit.Inst_IPFunit                                                                                              |
+| +++my_addsub                       |           | 0/8           | 0/0           | 0/32          | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Mfunit.Inst_IPFunit/my_addsub                                                                                    |
+| ++++BU2                            |           | 0/8           | 0/0           | 0/32          | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Mfunit.Inst_IPFunit/my_addsub/BU2                                                                                |
+| +++++U0                            |           | 0/8           | 0/0           | 0/32          | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Mfunit.Inst_IPFunit/my_addsub/BU2/U0                                                                             |
+| ++++++i_baseblox.i_baseblox_addsub |           | 0/8           | 0/0           | 0/32          | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Mfunit.Inst_IPFunit/my_addsub/BU2/U0/i_baseblox.i_baseblox_addsub                                                |
+| +++++++no_pipelining.the_addsub    |           | 0/8           | 0/0           | 0/32          | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Mfunit.Inst_IPFunit/my_addsub/BU2/U0/i_baseblox.i_baseblox_addsub/no_pipelining.the_addsub                       |
+| ++++++++i_lut4.i_lut4_addsub       |           | 8/8           | 0/0           | 32/32         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Mfunit.Inst_IPFunit/my_addsub/BU2/U0/i_baseblox.i_baseblox_addsub/no_pipelining.the_addsub/i_lut4.i_lut4_addsub  |
+| +++my_incdec                       |           | 0/8           | 0/0           | 0/32          | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Mfunit.Inst_IPFunit/my_incdec                                                                                    |
+| ++++BU2                            |           | 0/8           | 0/0           | 0/32          | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Mfunit.Inst_IPFunit/my_incdec/BU2                                                                                |
+| +++++U0                            |           | 0/8           | 0/0           | 0/32          | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Mfunit.Inst_IPFunit/my_incdec/BU2/U0                                                                             |
+| ++++++i_baseblox.i_baseblox_addsub |           | 0/8           | 0/0           | 0/32          | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Mfunit.Inst_IPFunit/my_incdec/BU2/U0/i_baseblox.i_baseblox_addsub                                                |
+| +++++++no_pipelining.the_addsub    |           | 0/8           | 0/0           | 0/32          | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Mfunit.Inst_IPFunit/my_incdec/BU2/U0/i_baseblox.i_baseblox_addsub/no_pipelining.the_addsub                       |
+| ++++++++i_lut4.i_lut4_addsub       |           | 8/8           | 0/0           | 32/32         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Mfunit.Inst_IPFunit/my_incdec/BU2/U0/i_baseblox.i_baseblox_addsub/no_pipelining.the_addsub/i_lut4.i_lut4_addsub  |
+| ++Midentity.Inst_IPidentity        |           | 1/1           | 0/0           | 2/2           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Midentity.Inst_IPidentity                                                                                        |
+| ++Mled.Inst_IP_Led                 |           | 1/1           | 0/0           | 2/2           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Mled.Inst_IP_Led                                                                                                 |
+| ++Mmul16.Inst_IP_mul16             |           | 2/2           | 0/0           | 2/2           | 0/0           | 0/0       | 0/1     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Mmul16.Inst_IP_mul16                                                                                             |
+| +++your_instance_name              |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/0       | 0/1     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Mmul16.Inst_IP_mul16/your_instance_name                                                                          |
+| ++++blk00000003                    |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/0       | 1/1     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Mmul16.Inst_IP_mul16/your_instance_name/blk00000003                                                              |
+| ++Mstack.Inst_IPStack              |           | 32/32         | 0/0           | 33/33         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Mstack.Inst_IPStack                                                                                              |
+| ++Mswitch.Inst_IP_Switch           |           | 1/1           | 0/0           | 2/2           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Mswitch.Inst_IP_Switch                                                                                           |
+| ++Mwaitbtn.Inst_IPwaitBt           |           | 2/14          | 0/20          | 3/8           | 0/0           | 1/1       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Mwaitbtn.Inst_IPwaitBt                                                                                           |
+| +++BufO_reg                        |           | 2/2           | 5/5           | 0/0           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Mwaitbtn.Inst_IPwaitBt/BufO_reg                                                                                  |
+| +++pls0                            |           | 2/2           | 3/3           | 1/1           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Mwaitbtn.Inst_IPwaitBt/pls0                                                                                      |
+| +++pls1                            |           | 2/2           | 3/3           | 1/1           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Mwaitbtn.Inst_IPwaitBt/pls1                                                                                      |
+| +++pls2                            |           | 2/2           | 3/3           | 1/1           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Mwaitbtn.Inst_IPwaitBt/pls2                                                                                      |
+| +++pls3                            |           | 2/2           | 3/3           | 1/1           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Mwaitbtn.Inst_IPwaitBt/pls3                                                                                      |
+| +++pls4                            |           | 2/2           | 3/3           | 1/1           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Mwaitbtn.Inst_IPwaitBt/pls4                                                                                      |
+| ++Prom_Master                      |           | 55/119        | 0/0           | 99/227        | 0/128         | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Prom_Master                                                                                                      |
+| +++multi_bank[0].bank              |           | 1/1           | 0/0           | 2/2           | 2/2           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Prom_Master/multi_bank[0].bank                                                                                   |
+| +++multi_bank[10].bank             |           | 1/1           | 0/0           | 2/2           | 2/2           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Prom_Master/multi_bank[10].bank                                                                                  |
+| +++multi_bank[11].bank             |           | 1/1           | 0/0           | 2/2           | 2/2           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Prom_Master/multi_bank[11].bank                                                                                  |
+| +++multi_bank[12].bank             |           | 1/1           | 0/0           | 2/2           | 2/2           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Prom_Master/multi_bank[12].bank                                                                                  |
+| +++multi_bank[13].bank             |           | 1/1           | 0/0           | 2/2           | 2/2           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Prom_Master/multi_bank[13].bank                                                                                  |
+| +++multi_bank[14].bank             |           | 1/1           | 0/0           | 2/2           | 2/2           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Prom_Master/multi_bank[14].bank                                                                                  |
+| +++multi_bank[15].bank             |           | 1/1           | 0/0           | 2/2           | 2/2           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Prom_Master/multi_bank[15].bank                                                                                  |
+| +++multi_bank[16].bank             |           | 1/1           | 0/0           | 2/2           | 2/2           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Prom_Master/multi_bank[16].bank                                                                                  |
+| +++multi_bank[17].bank             |           | 1/1           | 0/0           | 2/2           | 2/2           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Prom_Master/multi_bank[17].bank                                                                                  |
+| +++multi_bank[18].bank             |           | 1/1           | 0/0           | 2/2           | 2/2           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Prom_Master/multi_bank[18].bank                                                                                  |
+| +++multi_bank[19].bank             |           | 1/1           | 0/0           | 2/2           | 2/2           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Prom_Master/multi_bank[19].bank                                                                                  |
+| +++multi_bank[1].bank              |           | 1/1           | 0/0           | 2/2           | 2/2           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Prom_Master/multi_bank[1].bank                                                                                   |
+| +++multi_bank[20].bank             |           | 1/1           | 0/0           | 2/2           | 2/2           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Prom_Master/multi_bank[20].bank                                                                                  |
+| +++multi_bank[21].bank             |           | 1/1           | 0/0           | 2/2           | 2/2           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Prom_Master/multi_bank[21].bank                                                                                  |
+| +++multi_bank[22].bank             |           | 1/1           | 0/0           | 2/2           | 2/2           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Prom_Master/multi_bank[22].bank                                                                                  |
+| +++multi_bank[23].bank             |           | 1/1           | 0/0           | 2/2           | 2/2           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Prom_Master/multi_bank[23].bank                                                                                  |
+| +++multi_bank[24].bank             |           | 1/1           | 0/0           | 2/2           | 2/2           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Prom_Master/multi_bank[24].bank                                                                                  |
+| +++multi_bank[25].bank             |           | 1/1           | 0/0           | 2/2           | 2/2           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Prom_Master/multi_bank[25].bank                                                                                  |
+| +++multi_bank[26].bank             |           | 1/1           | 0/0           | 2/2           | 2/2           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Prom_Master/multi_bank[26].bank                                                                                  |
+| +++multi_bank[27].bank             |           | 1/1           | 0/0           | 2/2           | 2/2           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Prom_Master/multi_bank[27].bank                                                                                  |
+| +++multi_bank[28].bank             |           | 1/1           | 0/0           | 2/2           | 2/2           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Prom_Master/multi_bank[28].bank                                                                                  |
+| +++multi_bank[29].bank             |           | 1/1           | 0/0           | 2/2           | 2/2           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Prom_Master/multi_bank[29].bank                                                                                  |
+| +++multi_bank[2].bank              |           | 1/1           | 0/0           | 2/2           | 2/2           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Prom_Master/multi_bank[2].bank                                                                                   |
+| +++multi_bank[30].bank             |           | 1/1           | 0/0           | 2/2           | 2/2           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Prom_Master/multi_bank[30].bank                                                                                  |
+| +++multi_bank[31].bank             |           | 1/1           | 0/0           | 2/2           | 2/2           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Prom_Master/multi_bank[31].bank                                                                                  |
+| +++multi_bank[32].bank             |           | 1/1           | 0/0           | 2/2           | 2/2           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Prom_Master/multi_bank[32].bank                                                                                  |
+| +++multi_bank[33].bank             |           | 1/1           | 0/0           | 2/2           | 2/2           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Prom_Master/multi_bank[33].bank                                                                                  |
+| +++multi_bank[34].bank             |           | 1/1           | 0/0           | 2/2           | 2/2           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Prom_Master/multi_bank[34].bank                                                                                  |
+| +++multi_bank[35].bank             |           | 1/1           | 0/0           | 2/2           | 2/2           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Prom_Master/multi_bank[35].bank                                                                                  |
+| +++multi_bank[36].bank             |           | 1/1           | 0/0           | 2/2           | 2/2           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Prom_Master/multi_bank[36].bank                                                                                  |
+| +++multi_bank[37].bank             |           | 1/1           | 0/0           | 2/2           | 2/2           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Prom_Master/multi_bank[37].bank                                                                                  |
+| +++multi_bank[38].bank             |           | 1/1           | 0/0           | 2/2           | 2/2           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Prom_Master/multi_bank[38].bank                                                                                  |
+| +++multi_bank[39].bank             |           | 1/1           | 0/0           | 2/2           | 2/2           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Prom_Master/multi_bank[39].bank                                                                                  |
+| +++multi_bank[3].bank              |           | 1/1           | 0/0           | 2/2           | 2/2           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Prom_Master/multi_bank[3].bank                                                                                   |
+| +++multi_bank[40].bank             |           | 1/1           | 0/0           | 2/2           | 2/2           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Prom_Master/multi_bank[40].bank                                                                                  |
+| +++multi_bank[41].bank             |           | 1/1           | 0/0           | 2/2           | 2/2           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Prom_Master/multi_bank[41].bank                                                                                  |
+| +++multi_bank[42].bank             |           | 1/1           | 0/0           | 2/2           | 2/2           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Prom_Master/multi_bank[42].bank                                                                                  |
+| +++multi_bank[43].bank             |           | 1/1           | 0/0           | 2/2           | 2/2           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Prom_Master/multi_bank[43].bank                                                                                  |
+| +++multi_bank[44].bank             |           | 1/1           | 0/0           | 2/2           | 2/2           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Prom_Master/multi_bank[44].bank                                                                                  |
+| +++multi_bank[45].bank             |           | 1/1           | 0/0           | 2/2           | 2/2           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Prom_Master/multi_bank[45].bank                                                                                  |
+| +++multi_bank[46].bank             |           | 1/1           | 0/0           | 2/2           | 2/2           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Prom_Master/multi_bank[46].bank                                                                                  |
+| +++multi_bank[47].bank             |           | 1/1           | 0/0           | 2/2           | 2/2           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Prom_Master/multi_bank[47].bank                                                                                  |
+| +++multi_bank[48].bank             |           | 1/1           | 0/0           | 2/2           | 2/2           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Prom_Master/multi_bank[48].bank                                                                                  |
+| +++multi_bank[49].bank             |           | 1/1           | 0/0           | 2/2           | 2/2           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Prom_Master/multi_bank[49].bank                                                                                  |
+| +++multi_bank[4].bank              |           | 1/1           | 0/0           | 2/2           | 2/2           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Prom_Master/multi_bank[4].bank                                                                                   |
+| +++multi_bank[50].bank             |           | 1/1           | 0/0           | 2/2           | 2/2           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Prom_Master/multi_bank[50].bank                                                                                  |
+| +++multi_bank[51].bank             |           | 1/1           | 0/0           | 2/2           | 2/2           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Prom_Master/multi_bank[51].bank                                                                                  |
+| +++multi_bank[52].bank             |           | 1/1           | 0/0           | 2/2           | 2/2           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Prom_Master/multi_bank[52].bank                                                                                  |
+| +++multi_bank[53].bank             |           | 1/1           | 0/0           | 2/2           | 2/2           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Prom_Master/multi_bank[53].bank                                                                                  |
+| +++multi_bank[54].bank             |           | 1/1           | 0/0           | 2/2           | 2/2           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Prom_Master/multi_bank[54].bank                                                                                  |
+| +++multi_bank[55].bank             |           | 1/1           | 0/0           | 2/2           | 2/2           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Prom_Master/multi_bank[55].bank                                                                                  |
+| +++multi_bank[56].bank             |           | 1/1           | 0/0           | 2/2           | 2/2           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Prom_Master/multi_bank[56].bank                                                                                  |
+| +++multi_bank[57].bank             |           | 1/1           | 0/0           | 2/2           | 2/2           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Prom_Master/multi_bank[57].bank                                                                                  |
+| +++multi_bank[58].bank             |           | 1/1           | 0/0           | 2/2           | 2/2           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Prom_Master/multi_bank[58].bank                                                                                  |
+| +++multi_bank[59].bank             |           | 1/1           | 0/0           | 2/2           | 2/2           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Prom_Master/multi_bank[59].bank                                                                                  |
+| +++multi_bank[5].bank              |           | 1/1           | 0/0           | 2/2           | 2/2           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Prom_Master/multi_bank[5].bank                                                                                   |
+| +++multi_bank[60].bank             |           | 1/1           | 0/0           | 2/2           | 2/2           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Prom_Master/multi_bank[60].bank                                                                                  |
+| +++multi_bank[61].bank             |           | 1/1           | 0/0           | 2/2           | 2/2           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Prom_Master/multi_bank[61].bank                                                                                  |
+| +++multi_bank[62].bank             |           | 1/1           | 0/0           | 2/2           | 2/2           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Prom_Master/multi_bank[62].bank                                                                                  |
+| +++multi_bank[63].bank             |           | 1/1           | 0/0           | 2/2           | 2/2           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Prom_Master/multi_bank[63].bank                                                                                  |
+| +++multi_bank[6].bank              |           | 1/1           | 0/0           | 2/2           | 2/2           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Prom_Master/multi_bank[6].bank                                                                                   |
+| +++multi_bank[7].bank              |           | 1/1           | 0/0           | 2/2           | 2/2           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Prom_Master/multi_bank[7].bank                                                                                   |
+| +++multi_bank[8].bank              |           | 1/1           | 0/0           | 2/2           | 2/2           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Prom_Master/multi_bank[8].bank                                                                                   |
+| +++multi_bank[9].bank              |           | 1/1           | 0/0           | 2/2           | 2/2           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Prom_Master/multi_bank[9].bank                                                                                   |
+| ++Stack_Master                     |           | 5/322         | 0/134         | 5/421         | 0/64          | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Stack_Master                                                                                                     |
+| +++R0                              |           | 16/16         | 32/32         | 0/0           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Stack_Master/R0                                                                                                  |
+| +++R1                              |           | 16/16         | 32/32         | 0/0           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Stack_Master/R1                                                                                                  |
+| +++R2                              |           | 16/16         | 32/32         | 0/0           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Stack_Master/R2                                                                                                  |
+| +++R3                              |           | 16/16         | 32/32         | 0/0           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Stack_Master/R3                                                                                                  |
+| +++muxR0                           |           | 16/16         | 0/0           | 16/16         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Stack_Master/muxR0                                                                                               |
+| +++muxR1                           |           | 16/16         | 0/0           | 16/16         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Stack_Master/muxR1                                                                                               |
+| +++muxR2                           |           | 16/16         | 0/0           | 16/16         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Stack_Master/muxR2                                                                                               |
+| +++muxR3                           |           | 16/16         | 0/0           | 16/16         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Stack_Master/muxR3                                                                                               |
+| +++muxi0                           |           | 16/16         | 0/0           | 32/32         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Stack_Master/muxi0                                                                                               |
+| +++muxi1                           |           | 16/16         | 0/0           | 32/32         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Stack_Master/muxi1                                                                                               |
+| +++muxi2                           |           | 16/16         | 0/0           | 32/32         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Stack_Master/muxi2                                                                                               |
+| +++muxi3                           |           | 16/16         | 0/0           | 32/32         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Stack_Master/muxi3                                                                                               |
+| +++muxoutN                         |           | 27/27         | 0/0           | 32/32         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Stack_Master/muxoutN                                                                                             |
+| +++muxoutN2                        |           | 29/29         | 0/0           | 32/32         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Stack_Master/muxoutN2                                                                                            |
+| +++muxoutT                         |           | 19/19         | 0/0           | 32/32         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Stack_Master/muxoutT                                                                                             |
+| +++pred                            |           | 6/6           | 0/0           | 7/7           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Stack_Master/pred                                                                                                |
+| +++ram0                            |           | 4/4           | 0/0           | 16/16         | 16/16         | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Stack_Master/ram0                                                                                                |
+| +++ram1                            |           | 4/4           | 0/0           | 16/16         | 16/16         | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Stack_Master/ram1                                                                                                |
+| +++ram2                            |           | 4/4           | 0/0           | 16/16         | 16/16         | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Stack_Master/ram2                                                                                                |
+| +++ram3                            |           | 4/4           | 0/0           | 16/16         | 16/16         | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Stack_Master/ram3                                                                                                |
+| +++sel_in                          |           | 25/25         | 0/0           | 50/50         | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Stack_Master/sel_in                                                                                              |
+| +++sel_out                         |           | 1/1           | 0/0           | 1/1           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Stack_Master/sel_out                                                                                             |
+| +++update_counter                  |           | 2/2           | 6/6           | 6/6           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/Stack_Master/update_counter                                                                                      |
+| ++rst_mem                          |           | 2/2           | 2/2           | 1/1           | 0/0           | 0/0       | 0/0     | 0/0   | 0/0   | 0/0   | 0/0   | 0/0       | Nexys3v5/my_Master/rst_mem                                                                                                          |
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+* Slices can be packed with basic elements from multiple hierarchies.
+  Therefore, a slice will be counted in every hierarchical module
+  that each of its packed basic elements belong to.
+** For each column, there are two numbers reported <A>/<B>.
+   <A> is the number of elements that belong to that specific hierarchical module.
+   <B> is the total number of elements from that hierarchical module and any lower level
+   hierarchical modules below.
+*** The LUTRAM column counts all LUTs used as memory including RAM, ROM, and shift registers.

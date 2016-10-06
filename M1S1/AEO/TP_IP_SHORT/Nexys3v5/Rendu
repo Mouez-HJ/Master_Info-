@@ -1,0 +1,35 @@
+NOM: BALUZOLANGA Antoine - JOSIAS David
+
+Rendu TP 5:
+
+Question 1:
+Le code A402 correspond à un waitbtn, comme indiqué dans la bibliothèque des IPs, elle sert de masque permettant de valider les boutons détectés.
+
+Decodage des instructions:
+
+0C00 0000 000C: correspond à un JUMP et les 2 quadruplés d'octets qui suivent (un jump s'écrit sur 3 quadruplés) octets correspondent à la position de l'instruction call dans le programme, ici elle se trouve en position 12 (12ème block d'octets)
+
+FFFF: ne correspond à rien ou du moins est présent pour combler le vide (après les 3 blocs précédents il reste 4 octets à ecrire)
+
+201F: correspond à l'instruction LIT, en effet le programme empile la valeur 1F
+
+A402: correspond au waitBtn
+
+8804: correspond à l'IP switch qui lit une valeur de 8 bits sur les switches de la carte et l'ajoute à la pile, ici on lit la valeur 4
+
+8003:  correspond à l'IP leDUP qui affiche une valeur sur les led, ici on affiche la valeur 3
+
+A002: correspond à Bufout qui est chargé d'afficher une valeur sur les 4 afficheurs et dépile, en même temps, la valeur en sommet de pile
+
+03FB: correspond à un branchement relatif et va, dans notre cas, contrôler le sommet de pile 3 instructions en arrière (celui-ci a été modifié suite à l'appel l'instruction switch)
+
+1400: correspond à l'instruction Return (signale la fin de la fonction)
+
+FFFF: comble l'espace vide
+
+1000 0000 0004: correspond à l'instruction Call (qui s'écrit sur 3 quadruplés) et indique que la fonction débute au 4 quadruplé d'octets
+
+1C00: correspond à l'instruction Halt qui signale la fin du programme.
+
+
+

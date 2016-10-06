@@ -1,0 +1,13 @@
+Release 12.4 ngdbuild M.81d (nt)
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+
+Command Line: C:\Xilinx\12.4\ISE_DS\ISE\bin\nt\unwrapped\ngdbuild.exe -intstyle
+ise -dd _ngo -nt timestamp -i -p xc6slx16-csg324-3 rdm.ngc rdm.ngd
+
+Reading NGO file "E:/Travail/TP Informatique/M1S1/AEO/TP_IP_SHORT/rdm/rdm.ngc"
+...
+FATAL_ERROR:XdmHelpers:Xdh_LibLoader.c:116:1.8 - Failed to open library
+   C:/Xilinx/12.4/ISE_DS/ISE/data/xilinxun.xda: Xdm_Exception::InvalidFileFormat
+   format=binary file='C:/Xilinx/12.4/ISE_DS/ISE/data/xilinxun.xda'    Process
+   will terminate. For technical support on this issue, please open a WebCase
+   with this project attached at http://www.xilinx.com/support.

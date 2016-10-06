@@ -1,0 +1,62 @@
+----------------------------------------------------------------------------------
+-- Company: 
+-- Engineer: 
+-- 
+-- Create Date:    15:24:43 11/22/2014 
+-- Design Name: 
+-- Module Name:    IP_rdm - Behavioral 
+-- Project Name: 
+-- Target Devices: 
+-- Tool versions: 
+-- Description: 
+--
+-- Dependencies: 
+--
+-- Revision: 
+-- Revision 0.01 - File Created
+-- Additional Comments: 
+--
+----------------------------------------------------------------------------------
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+-- Uncomment the following library declaration if using
+-- arithmetic functions with Signed or Unsigned values
+--use IEEE.NUMERIC_STD.ALL;
+
+-- Uncomment the following library declaration if instantiating
+-- any Xilinx primitives in this code.
+--library UNISIM;
+--use UNISIM.VComponents.all;
+
+entity IP_Rdm is
+	GENERIC (Mycode : std_logic_vector(10 downto 0) ); 
+	port (
+		clk , reset : in std_logic; 
+		IPcode : in std_logic_vector (10 downto 0);
+		Tout : out std_logic_vector (31 downto 0)
+	); 
+end IP_Rdm;
+
+architecture Behavioral of IP_rdm is
+	signal width : std_logic_vector(5 downto 0);
+	COMPONENT rdm
+	generic (N : integer := 32);
+	PORT(
+			clk , reset : in std_logic;
+			enable : in std_logic;
+			random_num : out std_logic_vector (width-1 downto 0)      
+	);
+	END COMPONENT;
+begin
+
+	Random: rdm
+	generic map (N=>32)
+	PORT MAP(
+		clk => clk,
+		reset => reset,
+		enable => '1',
+		random_num => Tout
+	);
+	
+end Behavioral;

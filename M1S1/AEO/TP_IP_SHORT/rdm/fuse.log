@@ -1,0 +1,19 @@
+Running: C:\Xilinx\12.4\ISE_DS\ISE\bin\nt\unwrapped\fuse.exe -intstyle ise -incremental -lib secureip -o E:/Travail/TP Informatique/M1S1/AEO/TP_IP_SHORT/rdm/rdm_isim_beh.exe -prj E:/Travail/TP Informatique/M1S1/AEO/TP_IP_SHORT/rdm/rdm_beh.prj work.rdm 
+ISim M.81d (signature 0xcb73ee62)
+Number of CPUs detected in this system: 2
+Turning on mult-threading, number of parallel sub-compilation jobs: 4 
+Determining compilation order of HDL files
+Parsing VHDL file "E:/Travail/TP Informatique/M1S1/AEO/TP_IP_SHORT/rdm/rdm.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 111960 KB
+Fuse CPU Usage: 280 ms
+Using precompiled package standard from library std
+Using precompiled package std_logic_1164 from library ieee
+Compiling architecture random of entity rdm
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 3 VHDL Units
+Built simulation executable E:/Travail/TP Informatique/M1S1/AEO/TP_IP_SHORT/rdm/rdm_isim_beh.exe
+Fuse Memory Usage: 118728 KB
+Fuse CPU Usage: 421 ms

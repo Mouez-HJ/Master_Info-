@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<symbol version="7" name="stacknew">
+    <symboltype>BLOCK</symboltype>
+    <timestamp>2014-3-28T21:43:47</timestamp>
+    <pin polarity="Input" x="0" y="-672" name="Nin(31:0)" />
+    <pin polarity="Input" x="0" y="-608" name="N2in(31:0)" />
+    <pin polarity="Input" x="0" y="-544" name="clk" />
+    <pin polarity="Input" x="0" y="-480" name="reset" />
+    <pin polarity="Input" x="0" y="-416" name="Litload" />
+    <pin polarity="Input" x="0" y="-352" name="Tin(31:0)" />
+    <pin polarity="Input" x="0" y="-288" name="Lit(11:0)" />
+    <pin polarity="Input" x="0" y="-224" name="ipdone" />
+    <pin polarity="Input" x="0" y="-160" name="shortIP" />
+    <pin polarity="Input" x="0" y="-96" name="X(1:0)" />
+    <pin polarity="Input" x="0" y="-32" name="Y(1:0)" />
+    <pin polarity="Output" x="416" y="-672" name="Tout(31:0)" />
+    <pin polarity="Output" x="416" y="-512" name="Nout(31:0)" />
+    <pin polarity="Output" x="416" y="-352" name="N2out(31:0)" />
+    <pin polarity="Output" x="416" y="-192" name="oversized(31:0)" />
+    <pin polarity="Output" x="416" y="-32" name="offset" />
+    <graph>
+        <rect width="288" x="64" y="-704" height="704" />
+        <attrtext style="alignment:BCENTER;fontsize:56;fontname:Arial" attrname="SymbolName" x="208" y="-712" type="symbol" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-672" type="pin Nin(31:0)" />
+        <rect width="64" x="0" y="-684" height="24" />
+        <line x2="0" y1="-672" y2="-672" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-608" type="pin N2in(31:0)" />
+        <rect width="64" x="0" y="-620" height="24" />
+        <line x2="0" y1="-608" y2="-608" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-544" type="pin clk" />
+        <line x2="0" y1="-544" y2="-544" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-480" type="pin reset" />
+        <line x2="0" y1="-480" y2="-480" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-416" type="pin Litload" />
+        <line x2="0" y1="-416" y2="-416" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-352" type="pin Tin(31:0)" />
+        <rect width="64" x="0" y="-364" height="24" />
+        <line x2="0" y1="-352" y2="-352" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-288" type="pin Lit(11:0)" />
+        <rect width="64" x="0" y="-300" height="24" />
+        <line x2="0" y1="-288" y2="-288" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-224" type="pin ipdone" />
+        <line x2="0" y1="-224" y2="-224" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-160" type="pin shortIP" />
+        <line x2="0" y1="-160" y2="-160" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-96" type="pin X(1:0)" />
+        <rect width="64" x="0" y="-108" height="24" />
+        <line x2="0" y1="-96" y2="-96" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-32" type="pin Y(1:0)" />
+        <rect width="64" x="0" y="-44" height="24" />
+        <line x2="0" y1="-32" y2="-32" x1="64" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="344" y="-672" type="pin Tout(31:0)" />
+        <rect width="64" x="352" y="-684" height="24" />
+        <line x2="416" y1="-672" y2="-672" x1="352" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="344" y="-512" type="pin Nout(31:0)" />
+        <rect width="64" x="352" y="-524" height="24" />
+        <line x2="416" y1="-512" y2="-512" x1="352" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="344" y="-352" type="pin N2out(31:0)" />
+        <rect width="64" x="352" y="-364" height="24" />
+        <line x2="416" y1="-352" y2="-352" x1="352" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="344" y="-192" type="pin oversized(31:0)" />
+        <rect width="64" x="352" y="-204" height="24" />
+        <line x2="416" y1="-192" y2="-192" x1="352" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="344" y="-32" type="pin offset" />
+        <line x2="416" y1="-32" y2="-32" x1="352" />
+    </graph>
+</symbol>

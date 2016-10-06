@@ -1,0 +1,3 @@
+NET "reset" LOC = C4;
+NET "enable" LOC = D9;
+NET "clk" LOC = V10;

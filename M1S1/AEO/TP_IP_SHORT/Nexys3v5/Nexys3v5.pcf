@@ -1,0 +1,869 @@
+//! **************************************************************************
+// Written by: Map M.81d on Tue Oct 21 17:20:35 2014
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "sw<0>" LOCATE = SITE "T10" LEVEL 1;
+COMP "sw<1>" LOCATE = SITE "T9" LEVEL 1;
+COMP "sw<2>" LOCATE = SITE "V9" LEVEL 1;
+COMP "sw<3>" LOCATE = SITE "M8" LEVEL 1;
+COMP "sw<4>" LOCATE = SITE "N8" LEVEL 1;
+COMP "sw<5>" LOCATE = SITE "U8" LEVEL 1;
+COMP "sw<6>" LOCATE = SITE "V8" LEVEL 1;
+COMP "sw<7>" LOCATE = SITE "T5" LEVEL 1;
+COMP "led<0>" LOCATE = SITE "U16" LEVEL 1;
+COMP "btn<0>" LOCATE = SITE "D9" LEVEL 1;
+COMP "led<1>" LOCATE = SITE "V16" LEVEL 1;
+COMP "btn<1>" LOCATE = SITE "C9" LEVEL 1;
+COMP "led<2>" LOCATE = SITE "U15" LEVEL 1;
+COMP "btn<2>" LOCATE = SITE "C4" LEVEL 1;
+COMP "led<3>" LOCATE = SITE "V15" LEVEL 1;
+COMP "btn<3>" LOCATE = SITE "A8" LEVEL 1;
+COMP "led<4>" LOCATE = SITE "M11" LEVEL 1;
+COMP "btn<4>" LOCATE = SITE "B8" LEVEL 1;
+COMP "led<5>" LOCATE = SITE "N11" LEVEL 1;
+COMP "led<6>" LOCATE = SITE "R11" LEVEL 1;
+COMP "led<7>" LOCATE = SITE "T11" LEVEL 1;
+COMP "mclk" LOCATE = SITE "V10" LEVEL 1;
+COMP "a_to_g<0>" LOCATE = SITE "T17" LEVEL 1;
+COMP "a_to_g<1>" LOCATE = SITE "T18" LEVEL 1;
+COMP "a_to_g<2>" LOCATE = SITE "U17" LEVEL 1;
+COMP "a_to_g<3>" LOCATE = SITE "U18" LEVEL 1;
+COMP "a_to_g<4>" LOCATE = SITE "M14" LEVEL 1;
+COMP "a_to_g<5>" LOCATE = SITE "N14" LEVEL 1;
+COMP "a_to_g<6>" LOCATE = SITE "L14" LEVEL 1;
+COMP "rx_in" LOCATE = SITE "N17" LEVEL 1;
+COMP "an<0>" LOCATE = SITE "N16" LEVEL 1;
+COMP "an<1>" LOCATE = SITE "N15" LEVEL 1;
+COMP "an<2>" LOCATE = SITE "P18" LEVEL 1;
+COMP "an<3>" LOCATE = SITE "P17" LEVEL 1;
+PIN my_Master/HCU_Master/etat_FSMROM_pins<11> = BEL
+        "my_Master/HCU_Master/etat_FSMROM" PINNAME CLKAWRCLK;
+PIN my_Master/Mdelay.Inst_IP_delay/current_statew_FSMROM_pins<10> = BEL
+        "my_Master/Mdelay.Inst_IP_delay/current_statew_FSMROM" PINNAME
+        CLKAWRCLK;
+PIN my_Master/Mwaitbtn.Inst_IPwaitBt/current_state_FSMROM_pins<11> = BEL
+        "my_Master/Mwaitbtn.Inst_IPwaitBt/current_state_FSMROM" PINNAME
+        CLKAWRCLK;
+PIN UART_Wrapper/Inst_uart_dispatch/Mram_count[2]_PWR_14_o_Mux_1_o_pins<13> =
+        BEL "UART_Wrapper/Inst_uart_dispatch/Mram_count[2]_PWR_14_o_Mux_1_o"
+        PINNAME CLKAWRCLK;
+PIN UART_Wrapper/Inst_uart_dispatch/current_state_FSMROM_pins<10> = BEL
+        "UART_Wrapper/Inst_uart_dispatch/current_state_FSMROM" PINNAME
+        CLKAWRCLK;
+TIMEGRP clk_gen_clkdv = BEL "next_state" BEL "reset_Homade" BEL
+        "my_Master/BufSwitch_reg/q_0" BEL "my_Master/BufSwitch_reg/q_1" BEL
+        "my_Master/BufSwitch_reg/q_2" BEL "my_Master/BufSwitch_reg/q_3" BEL
+        "my_Master/BufSwitch_reg/q_4" BEL "my_Master/BufSwitch_reg/q_5" BEL
+        "my_Master/BufSwitch_reg/q_6" BEL "my_Master/BufSwitch_reg/q_7" BEL
+        "my_Master/Mwaitbtn.Inst_IPwaitBt/pls0/XLXI_1" BEL
+        "my_Master/Mwaitbtn.Inst_IPwaitBt/pls0/XLXI_2" BEL
+        "my_Master/Mwaitbtn.Inst_IPwaitBt/pls0/XLXI_3" BEL
+        "my_Master/Mwaitbtn.Inst_IPwaitBt/pls1/XLXI_1" BEL
+        "my_Master/Mwaitbtn.Inst_IPwaitBt/pls1/XLXI_2" BEL
+        "my_Master/Mwaitbtn.Inst_IPwaitBt/pls1/XLXI_3" BEL
+        "my_Master/Mwaitbtn.Inst_IPwaitBt/pls2/XLXI_1" BEL
+        "my_Master/Mwaitbtn.Inst_IPwaitBt/pls2/XLXI_2" BEL
+        "my_Master/Mwaitbtn.Inst_IPwaitBt/pls2/XLXI_3" BEL
+        "my_Master/Mwaitbtn.Inst_IPwaitBt/pls3/XLXI_1" BEL
+        "my_Master/Mwaitbtn.Inst_IPwaitBt/pls3/XLXI_2" BEL
+        "my_Master/Mwaitbtn.Inst_IPwaitBt/pls3/XLXI_3" BEL
+        "my_Master/Mwaitbtn.Inst_IPwaitBt/pls4/XLXI_1" BEL
+        "my_Master/Mwaitbtn.Inst_IPwaitBt/pls4/XLXI_2" BEL
+        "my_Master/Mwaitbtn.Inst_IPwaitBt/pls4/XLXI_3" BEL
+        "my_Master/Mwaitbtn.Inst_IPwaitBt/BufO_reg/q_0" BEL
+        "my_Master/Mwaitbtn.Inst_IPwaitBt/BufO_reg/q_1" BEL
+        "my_Master/Mwaitbtn.Inst_IPwaitBt/BufO_reg/q_2" BEL
+        "my_Master/Mwaitbtn.Inst_IPwaitBt/BufO_reg/q_3" BEL
+        "my_Master/Mwaitbtn.Inst_IPwaitBt/BufO_reg/q_4" BEL
+        "my_Master/Inst_add_gen/count_0" BEL "my_Master/Inst_add_gen/count_1"
+        BEL "my_Master/Inst_add_gen/count_2" BEL
+        "my_Master/Inst_add_gen/count_3" BEL "my_Master/Inst_add_gen/count_4"
+        BEL "my_Master/Inst_add_gen/count_5" BEL
+        "my_Master/Inst_add_gen/count_6" BEL "my_Master/Inst_add_gen/count_7"
+        BEL "my_Master/Inst_add_gen/count_8" BEL
+        "my_Master/Inst_add_gen/count_9" BEL "my_Master/Inst_add_gen/count_10"
+        BEL "my_Master/Inst_add_gen/count_11" BEL "my_Master/rst_mem/XLXI_1"
+        BEL "my_Master/rst_mem/XLXI_2" BEL
+        "my_Master/Stack_Master/update_counter/count_out_0" BEL
+        "my_Master/Stack_Master/update_counter/count_out_1" BEL
+        "my_Master/Stack_Master/update_counter/count_out_2" BEL
+        "my_Master/Stack_Master/update_counter/count_out_3" BEL
+        "my_Master/Stack_Master/update_counter/count_out_4" BEL
+        "my_Master/Stack_Master/update_counter/count_out_5" BEL
+        "my_Master/Stack_Master/ram3/Mram_ram1" BEL
+        "my_Master/Stack_Master/ram3/Mram_ram2" BEL
+        "my_Master/Stack_Master/ram3/Mram_ram3" BEL
+        "my_Master/Stack_Master/ram3/Mram_ram4" BEL
+        "my_Master/Stack_Master/ram3/Mram_ram5" BEL
+        "my_Master/Stack_Master/ram3/Mram_ram6" BEL
+        "my_Master/Stack_Master/ram3/Mram_ram7" BEL
+        "my_Master/Stack_Master/ram3/Mram_ram8" BEL
+        "my_Master/Stack_Master/ram3/Mram_ram9" BEL
+        "my_Master/Stack_Master/ram3/Mram_ram10" BEL
+        "my_Master/Stack_Master/ram3/Mram_ram11" BEL
+        "my_Master/Stack_Master/ram3/Mram_ram12" BEL
+        "my_Master/Stack_Master/ram3/Mram_ram13" BEL
+        "my_Master/Stack_Master/ram3/Mram_ram14" BEL
+        "my_Master/Stack_Master/ram3/Mram_ram15" BEL
+        "my_Master/Stack_Master/ram3/Mram_ram16" BEL
+        "my_Master/Stack_Master/ram3/Mram_ram17" BEL
+        "my_Master/Stack_Master/ram3/Mram_ram18" BEL
+        "my_Master/Stack_Master/ram3/Mram_ram19" BEL
+        "my_Master/Stack_Master/ram3/Mram_ram20" BEL
+        "my_Master/Stack_Master/ram3/Mram_ram21" BEL
+        "my_Master/Stack_Master/ram3/Mram_ram22" BEL
+        "my_Master/Stack_Master/ram3/Mram_ram23" BEL
+        "my_Master/Stack_Master/ram3/Mram_ram24" BEL
+        "my_Master/Stack_Master/ram3/Mram_ram25" BEL
+        "my_Master/Stack_Master/ram3/Mram_ram26" BEL
+        "my_Master/Stack_Master/ram3/Mram_ram27" BEL
+        "my_Master/Stack_Master/ram3/Mram_ram28" BEL
+        "my_Master/Stack_Master/ram3/Mram_ram29" BEL
+        "my_Master/Stack_Master/ram3/Mram_ram30" BEL
+        "my_Master/Stack_Master/ram3/Mram_ram31" BEL
+        "my_Master/Stack_Master/ram3/Mram_ram32" BEL
+        "my_Master/Stack_Master/ram2/Mram_ram1" BEL
+        "my_Master/Stack_Master/ram2/Mram_ram2" BEL
+        "my_Master/Stack_Master/ram2/Mram_ram3" BEL
+        "my_Master/Stack_Master/ram2/Mram_ram4" BEL
+        "my_Master/Stack_Master/ram2/Mram_ram5" BEL
+        "my_Master/Stack_Master/ram2/Mram_ram6" BEL
+        "my_Master/Stack_Master/ram2/Mram_ram7" BEL
+        "my_Master/Stack_Master/ram2/Mram_ram8" BEL
+        "my_Master/Stack_Master/ram2/Mram_ram9" BEL
+        "my_Master/Stack_Master/ram2/Mram_ram10" BEL
+        "my_Master/Stack_Master/ram2/Mram_ram11" BEL
+        "my_Master/Stack_Master/ram2/Mram_ram12" BEL
+        "my_Master/Stack_Master/ram2/Mram_ram13" BEL
+        "my_Master/Stack_Master/ram2/Mram_ram14" BEL
+        "my_Master/Stack_Master/ram2/Mram_ram15" BEL
+        "my_Master/Stack_Master/ram2/Mram_ram16" BEL
+        "my_Master/Stack_Master/ram2/Mram_ram17" BEL
+        "my_Master/Stack_Master/ram2/Mram_ram18" BEL
+        "my_Master/Stack_Master/ram2/Mram_ram19" BEL
+        "my_Master/Stack_Master/ram2/Mram_ram20" BEL
+        "my_Master/Stack_Master/ram2/Mram_ram21" BEL
+        "my_Master/Stack_Master/ram2/Mram_ram22" BEL
+        "my_Master/Stack_Master/ram2/Mram_ram23" BEL
+        "my_Master/Stack_Master/ram2/Mram_ram24" BEL
+        "my_Master/Stack_Master/ram2/Mram_ram25" BEL
+        "my_Master/Stack_Master/ram2/Mram_ram26" BEL
+        "my_Master/Stack_Master/ram2/Mram_ram27" BEL
+        "my_Master/Stack_Master/ram2/Mram_ram28" BEL
+        "my_Master/Stack_Master/ram2/Mram_ram29" BEL
+        "my_Master/Stack_Master/ram2/Mram_ram30" BEL
+        "my_Master/Stack_Master/ram2/Mram_ram31" BEL
+        "my_Master/Stack_Master/ram2/Mram_ram32" BEL
+        "my_Master/Stack_Master/ram1/Mram_ram1" BEL
+        "my_Master/Stack_Master/ram1/Mram_ram2" BEL
+        "my_Master/Stack_Master/ram1/Mram_ram3" BEL
+        "my_Master/Stack_Master/ram1/Mram_ram4" BEL
+        "my_Master/Stack_Master/ram1/Mram_ram5" BEL
+        "my_Master/Stack_Master/ram1/Mram_ram6" BEL
+        "my_Master/Stack_Master/ram1/Mram_ram7" BEL
+        "my_Master/Stack_Master/ram1/Mram_ram8" BEL
+        "my_Master/Stack_Master/ram1/Mram_ram9" BEL
+        "my_Master/Stack_Master/ram1/Mram_ram10" BEL
+        "my_Master/Stack_Master/ram1/Mram_ram11" BEL
+        "my_Master/Stack_Master/ram1/Mram_ram12" BEL
+        "my_Master/Stack_Master/ram1/Mram_ram13" BEL
+        "my_Master/Stack_Master/ram1/Mram_ram14" BEL
+        "my_Master/Stack_Master/ram1/Mram_ram15" BEL
+        "my_Master/Stack_Master/ram1/Mram_ram16" BEL
+        "my_Master/Stack_Master/ram1/Mram_ram17" BEL
+        "my_Master/Stack_Master/ram1/Mram_ram18" BEL
+        "my_Master/Stack_Master/ram1/Mram_ram19" BEL
+        "my_Master/Stack_Master/ram1/Mram_ram20" BEL
+        "my_Master/Stack_Master/ram1/Mram_ram21" BEL
+        "my_Master/Stack_Master/ram1/Mram_ram22" BEL
+        "my_Master/Stack_Master/ram1/Mram_ram23" BEL
+        "my_Master/Stack_Master/ram1/Mram_ram24" BEL
+        "my_Master/Stack_Master/ram1/Mram_ram25" BEL
+        "my_Master/Stack_Master/ram1/Mram_ram26" BEL
+        "my_Master/Stack_Master/ram1/Mram_ram27" BEL
+        "my_Master/Stack_Master/ram1/Mram_ram28" BEL
+        "my_Master/Stack_Master/ram1/Mram_ram29" BEL
+        "my_Master/Stack_Master/ram1/Mram_ram30" BEL
+        "my_Master/Stack_Master/ram1/Mram_ram31" BEL
+        "my_Master/Stack_Master/ram1/Mram_ram32" BEL
+        "my_Master/Stack_Master/ram0/Mram_ram1" BEL
+        "my_Master/Stack_Master/ram0/Mram_ram2" BEL
+        "my_Master/Stack_Master/ram0/Mram_ram3" BEL
+        "my_Master/Stack_Master/ram0/Mram_ram4" BEL
+        "my_Master/Stack_Master/ram0/Mram_ram5" BEL
+        "my_Master/Stack_Master/ram0/Mram_ram6" BEL
+        "my_Master/Stack_Master/ram0/Mram_ram7" BEL
+        "my_Master/Stack_Master/ram0/Mram_ram8" BEL
+        "my_Master/Stack_Master/ram0/Mram_ram9" BEL
+        "my_Master/Stack_Master/ram0/Mram_ram10" BEL
+        "my_Master/Stack_Master/ram0/Mram_ram11" BEL
+        "my_Master/Stack_Master/ram0/Mram_ram12" BEL
+        "my_Master/Stack_Master/ram0/Mram_ram13" BEL
+        "my_Master/Stack_Master/ram0/Mram_ram14" BEL
+        "my_Master/Stack_Master/ram0/Mram_ram15" BEL
+        "my_Master/Stack_Master/ram0/Mram_ram16" BEL
+        "my_Master/Stack_Master/ram0/Mram_ram17" BEL
+        "my_Master/Stack_Master/ram0/Mram_ram18" BEL
+        "my_Master/Stack_Master/ram0/Mram_ram19" BEL
+        "my_Master/Stack_Master/ram0/Mram_ram20" BEL
+        "my_Master/Stack_Master/ram0/Mram_ram21" BEL
+        "my_Master/Stack_Master/ram0/Mram_ram22" BEL
+        "my_Master/Stack_Master/ram0/Mram_ram23" BEL
+        "my_Master/Stack_Master/ram0/Mram_ram24" BEL
+        "my_Master/Stack_Master/ram0/Mram_ram25" BEL
+        "my_Master/Stack_Master/ram0/Mram_ram26" BEL
+        "my_Master/Stack_Master/ram0/Mram_ram27" BEL
+        "my_Master/Stack_Master/ram0/Mram_ram28" BEL
+        "my_Master/Stack_Master/ram0/Mram_ram29" BEL
+        "my_Master/Stack_Master/ram0/Mram_ram30" BEL
+        "my_Master/Stack_Master/ram0/Mram_ram31" BEL
+        "my_Master/Stack_Master/ram0/Mram_ram32" BEL
+        "my_Master/Stack_Master/R3/q_0" BEL "my_Master/Stack_Master/R3/q_1"
+        BEL "my_Master/Stack_Master/R3/q_2" BEL
+        "my_Master/Stack_Master/R3/q_3" BEL "my_Master/Stack_Master/R3/q_4"
+        BEL "my_Master/Stack_Master/R3/q_5" BEL
+        "my_Master/Stack_Master/R3/q_6" BEL "my_Master/Stack_Master/R3/q_7"
+        BEL "my_Master/Stack_Master/R3/q_8" BEL
+        "my_Master/Stack_Master/R3/q_9" BEL "my_Master/Stack_Master/R3/q_10"
+        BEL "my_Master/Stack_Master/R3/q_11" BEL
+        "my_Master/Stack_Master/R3/q_12" BEL "my_Master/Stack_Master/R3/q_13"
+        BEL "my_Master/Stack_Master/R3/q_14" BEL
+        "my_Master/Stack_Master/R3/q_15" BEL "my_Master/Stack_Master/R3/q_16"
+        BEL "my_Master/Stack_Master/R3/q_17" BEL
+        "my_Master/Stack_Master/R3/q_18" BEL "my_Master/Stack_Master/R3/q_19"
+        BEL "my_Master/Stack_Master/R3/q_20" BEL
+        "my_Master/Stack_Master/R3/q_21" BEL "my_Master/Stack_Master/R3/q_22"
+        BEL "my_Master/Stack_Master/R3/q_23" BEL
+        "my_Master/Stack_Master/R3/q_24" BEL "my_Master/Stack_Master/R3/q_25"
+        BEL "my_Master/Stack_Master/R3/q_26" BEL
+        "my_Master/Stack_Master/R3/q_27" BEL "my_Master/Stack_Master/R3/q_28"
+        BEL "my_Master/Stack_Master/R3/q_29" BEL
+        "my_Master/Stack_Master/R3/q_30" BEL "my_Master/Stack_Master/R3/q_31"
+        BEL "my_Master/Stack_Master/R2/q_0" BEL
+        "my_Master/Stack_Master/R2/q_1" BEL "my_Master/Stack_Master/R2/q_2"
+        BEL "my_Master/Stack_Master/R2/q_3" BEL
+        "my_Master/Stack_Master/R2/q_4" BEL "my_Master/Stack_Master/R2/q_5"
+        BEL "my_Master/Stack_Master/R2/q_6" BEL
+        "my_Master/Stack_Master/R2/q_7" BEL "my_Master/Stack_Master/R2/q_8"
+        BEL "my_Master/Stack_Master/R2/q_9" BEL
+        "my_Master/Stack_Master/R2/q_10" BEL "my_Master/Stack_Master/R2/q_11"
+        BEL "my_Master/Stack_Master/R2/q_12" BEL
+        "my_Master/Stack_Master/R2/q_13" BEL "my_Master/Stack_Master/R2/q_14"
+        BEL "my_Master/Stack_Master/R2/q_15" BEL
+        "my_Master/Stack_Master/R2/q_16" BEL "my_Master/Stack_Master/R2/q_17"
+        BEL "my_Master/Stack_Master/R2/q_18" BEL
+        "my_Master/Stack_Master/R2/q_19" BEL "my_Master/Stack_Master/R2/q_20"
+        BEL "my_Master/Stack_Master/R2/q_21" BEL
+        "my_Master/Stack_Master/R2/q_22" BEL "my_Master/Stack_Master/R2/q_23"
+        BEL "my_Master/Stack_Master/R2/q_24" BEL
+        "my_Master/Stack_Master/R2/q_25" BEL "my_Master/Stack_Master/R2/q_26"
+        BEL "my_Master/Stack_Master/R2/q_27" BEL
+        "my_Master/Stack_Master/R2/q_28" BEL "my_Master/Stack_Master/R2/q_29"
+        BEL "my_Master/Stack_Master/R2/q_30" BEL
+        "my_Master/Stack_Master/R2/q_31" BEL "my_Master/Stack_Master/R1/q_0"
+        BEL "my_Master/Stack_Master/R1/q_1" BEL
+        "my_Master/Stack_Master/R1/q_2" BEL "my_Master/Stack_Master/R1/q_3"
+        BEL "my_Master/Stack_Master/R1/q_4" BEL
+        "my_Master/Stack_Master/R1/q_5" BEL "my_Master/Stack_Master/R1/q_6"
+        BEL "my_Master/Stack_Master/R1/q_7" BEL
+        "my_Master/Stack_Master/R1/q_8" BEL "my_Master/Stack_Master/R1/q_9"
+        BEL "my_Master/Stack_Master/R1/q_10" BEL
+        "my_Master/Stack_Master/R1/q_11" BEL "my_Master/Stack_Master/R1/q_12"
+        BEL "my_Master/Stack_Master/R1/q_13" BEL
+        "my_Master/Stack_Master/R1/q_14" BEL "my_Master/Stack_Master/R1/q_15"
+        BEL "my_Master/Stack_Master/R1/q_16" BEL
+        "my_Master/Stack_Master/R1/q_17" BEL "my_Master/Stack_Master/R1/q_18"
+        BEL "my_Master/Stack_Master/R1/q_19" BEL
+        "my_Master/Stack_Master/R1/q_20" BEL "my_Master/Stack_Master/R1/q_21"
+        BEL "my_Master/Stack_Master/R1/q_22" BEL
+        "my_Master/Stack_Master/R1/q_23" BEL "my_Master/Stack_Master/R1/q_24"
+        BEL "my_Master/Stack_Master/R1/q_25" BEL
+        "my_Master/Stack_Master/R1/q_26" BEL "my_Master/Stack_Master/R1/q_27"
+        BEL "my_Master/Stack_Master/R1/q_28" BEL
+        "my_Master/Stack_Master/R1/q_29" BEL "my_Master/Stack_Master/R1/q_30"
+        BEL "my_Master/Stack_Master/R1/q_31" BEL
+        "my_Master/Stack_Master/R0/q_0" BEL "my_Master/Stack_Master/R0/q_1"
+        BEL "my_Master/Stack_Master/R0/q_2" BEL
+        "my_Master/Stack_Master/R0/q_3" BEL "my_Master/Stack_Master/R0/q_4"
+        BEL "my_Master/Stack_Master/R0/q_5" BEL
+        "my_Master/Stack_Master/R0/q_6" BEL "my_Master/Stack_Master/R0/q_7"
+        BEL "my_Master/Stack_Master/R0/q_8" BEL
+        "my_Master/Stack_Master/R0/q_9" BEL "my_Master/Stack_Master/R0/q_10"
+        BEL "my_Master/Stack_Master/R0/q_11" BEL
+        "my_Master/Stack_Master/R0/q_12" BEL "my_Master/Stack_Master/R0/q_13"
+        BEL "my_Master/Stack_Master/R0/q_14" BEL
+        "my_Master/Stack_Master/R0/q_15" BEL "my_Master/Stack_Master/R0/q_16"
+        BEL "my_Master/Stack_Master/R0/q_17" BEL
+        "my_Master/Stack_Master/R0/q_18" BEL "my_Master/Stack_Master/R0/q_19"
+        BEL "my_Master/Stack_Master/R0/q_20" BEL
+        "my_Master/Stack_Master/R0/q_21" BEL "my_Master/Stack_Master/R0/q_22"
+        BEL "my_Master/Stack_Master/R0/q_23" BEL
+        "my_Master/Stack_Master/R0/q_24" BEL "my_Master/Stack_Master/R0/q_25"
+        BEL "my_Master/Stack_Master/R0/q_26" BEL
+        "my_Master/Stack_Master/R0/q_27" BEL "my_Master/Stack_Master/R0/q_28"
+        BEL "my_Master/Stack_Master/R0/q_29" BEL
+        "my_Master/Stack_Master/R0/q_30" BEL "my_Master/Stack_Master/R0/q_31"
+        BEL "my_Master/HCU_Master/PC_adr_0" BEL
+        "my_Master/HCU_Master/PC_adr_1" BEL "my_Master/HCU_Master/PC_adr_2"
+        BEL "my_Master/HCU_Master/PC_adr_3" BEL
+        "my_Master/HCU_Master/PC_adr_4" BEL "my_Master/HCU_Master/PC_adr_5"
+        BEL "my_Master/HCU_Master/PC_adr_6" BEL
+        "my_Master/HCU_Master/PC_adr_7" BEL "my_Master/HCU_Master/stpush" BEL
+        "my_Master/HCU_Master/stpop" BEL "my_Master/HCU_Master/wr_adr_0" BEL
+        "my_Master/HCU_Master/wr_adr_1" BEL "my_Master/HCU_Master/wr_adr_2"
+        BEL "my_Master/HCU_Master/wr_adr_3" BEL
+        "my_Master/HCU_Master/wr_adr_4" BEL "my_Master/HCU_Master/wr_adr_5"
+        BEL "my_Master/HCU_Master/wr_data_0" BEL
+        "my_Master/HCU_Master/wr_data_1" BEL "my_Master/HCU_Master/wr_data_2"
+        BEL "my_Master/HCU_Master/wr_data_3" BEL
+        "my_Master/HCU_Master/wr_data_4" BEL "my_Master/HCU_Master/wr_data_5"
+        BEL "my_Master/HCU_Master/wr_data_6" BEL
+        "my_Master/HCU_Master/wr_data_7" BEL "my_Master/HCU_Master/wr_data_8"
+        BEL "my_Master/HCU_Master/wr_data_9" BEL
+        "my_Master/HCU_Master/wr_data_10" BEL
+        "my_Master/HCU_Master/wr_data_11" BEL
+        "my_Master/HCU_Master/wr_data_12" BEL
+        "my_Master/HCU_Master/wr_data_13" BEL
+        "my_Master/HCU_Master/wr_data_14" BEL
+        "my_Master/HCU_Master/wr_data_15" BEL
+        "my_Master/HCU_Master/wr_data_16" BEL
+        "my_Master/HCU_Master/wr_data_17" BEL
+        "my_Master/HCU_Master/wr_data_18" BEL
+        "my_Master/HCU_Master/wr_data_19" BEL
+        "my_Master/HCU_Master/wr_data_20" BEL
+        "my_Master/HCU_Master/wr_data_21" BEL
+        "my_Master/HCU_Master/wr_data_22" BEL
+        "my_Master/HCU_Master/wr_data_23" BEL
+        "my_Master/HCU_Master/wr_data_24" BEL
+        "my_Master/HCU_Master/wr_data_25" BEL
+        "my_Master/HCU_Master/wr_data_26" BEL
+        "my_Master/HCU_Master/wr_data_27" BEL
+        "my_Master/HCU_Master/wr_data_28" BEL
+        "my_Master/HCU_Master/wr_data_29" BEL
+        "my_Master/HCU_Master/wr_data_30" BEL
+        "my_Master/HCU_Master/wr_data_31" BEL
+        "my_Master/HCU_Master/wr_data_32" BEL
+        "my_Master/HCU_Master/wr_data_33" BEL
+        "my_Master/HCU_Master/wr_data_34" BEL
+        "my_Master/HCU_Master/wr_data_35" BEL
+        "my_Master/HCU_Master/wr_data_36" BEL
+        "my_Master/HCU_Master/wr_data_37" BEL
+        "my_Master/HCU_Master/wr_data_38" BEL
+        "my_Master/HCU_Master/wr_data_39" BEL
+        "my_Master/HCU_Master/wr_data_40" BEL
+        "my_Master/HCU_Master/wr_data_41" BEL
+        "my_Master/HCU_Master/wr_data_42" BEL
+        "my_Master/HCU_Master/wr_data_43" BEL
+        "my_Master/HCU_Master/wr_data_44" BEL
+        "my_Master/HCU_Master/wr_data_45" BEL
+        "my_Master/HCU_Master/wr_data_46" BEL
+        "my_Master/HCU_Master/wr_data_47" BEL "my_Master/HCU_Master/W48" BEL
+        "my_Master/HCU_Master/LITload" BEL "my_Master/HCU_Master/PC_ret_0" BEL
+        "my_Master/HCU_Master/PC_ret_1" BEL "my_Master/HCU_Master/PC_ret_2"
+        BEL "my_Master/HCU_Master/PC_ret_3" BEL
+        "my_Master/HCU_Master/PC_ret_4" BEL "my_Master/HCU_Master/PC_ret_5"
+        BEL "my_Master/HCU_Master/PC_ret_6" BEL
+        "my_Master/HCU_Master/PC_ret_7" BEL "my_Master/HCU_Master/inslocal_11"
+        BEL "my_Master/HCU_Master/inslocal_12" BEL
+        "my_Master/HCU_Master/inslocal_13" BEL
+        "my_Master/HCU_Master/inslocal_14" BEL "my_Master/HCU_Master/shortIP"
+        BEL "my_Master/HCU_Master/Y_0" BEL "my_Master/HCU_Master/Y_1" BEL
+        "my_Master/HCU_Master/X_0" BEL "my_Master/HCU_Master/X_1" BEL
+        "my_Master/HCU_Master/Tlit_0" BEL "my_Master/HCU_Master/Tlit_1" BEL
+        "my_Master/HCU_Master/Tlit_2" BEL "my_Master/HCU_Master/Tlit_3" BEL
+        "my_Master/HCU_Master/Tlit_4" BEL "my_Master/HCU_Master/Tlit_5" BEL
+        "my_Master/HCU_Master/Tlit_6" BEL "my_Master/HCU_Master/Tlit_7" BEL
+        "my_Master/HCU_Master/Tlit_8" BEL "my_Master/HCU_Master/Tlit_9" BEL
+        "my_Master/HCU_Master/Tlit_10" BEL "my_Master/HCU_Master/Tlit_11" BEL
+        "my_Master/HCU_Master/Ipcode_0" BEL "my_Master/HCU_Master/Ipcode_1"
+        BEL "my_Master/HCU_Master/Ipcode_2" BEL
+        "my_Master/HCU_Master/Ipcode_3" BEL "my_Master/HCU_Master/Ipcode_4"
+        BEL "my_Master/HCU_Master/Ipcode_5" BEL
+        "my_Master/HCU_Master/Ipcode_6" BEL "my_Master/HCU_Master/Ipcode_7"
+        BEL "my_Master/HCU_Master/Ipcode_8" BEL
+        "my_Master/HCU_Master/Ipcode_9" BEL "my_Master/HCU_Master/Ipcode_10"
+        BEL "my_Master/HCU_Master/Inst_returnstack/stack_ptr_0" BEL
+        "my_Master/HCU_Master/Inst_returnstack/stack_ptr_1" BEL
+        "my_Master/HCU_Master/Inst_returnstack/stack_ptr_2" BEL
+        "my_Master/HCU_Master/Inst_returnstack/stack_ptr_3" PIN
+        "my_Master/HCU_Master/etat_FSMROM_pins<11>" BEL
+        "my_Master/BufO_reg/q_0" BEL "my_Master/BufO_reg/q_1" BEL
+        "my_Master/BufO_reg/q_2" BEL "my_Master/BufO_reg/q_3" BEL
+        "my_Master/BufO_reg/q_4" BEL "my_Master/BufO_reg/q_5" BEL
+        "my_Master/BufO_reg/q_6" BEL "my_Master/BufO_reg/q_7" BEL
+        "my_Master/BufO_reg/q_8" BEL "my_Master/BufO_reg/q_9" BEL
+        "my_Master/BufO_reg/q_10" BEL "my_Master/BufO_reg/q_11" BEL
+        "my_Master/BufO_reg/q_12" BEL "my_Master/BufO_reg/q_13" BEL
+        "my_Master/BufO_reg/q_14" BEL "my_Master/BufO_reg/q_15" BEL
+        "my_Master/BufLed_reg/q_0" BEL "my_Master/BufLed_reg/q_1" BEL
+        "my_Master/BufLed_reg/q_2" BEL "my_Master/BufLed_reg/q_3" BEL
+        "my_Master/BufLed_reg/q_4" BEL "my_Master/BufLed_reg/q_5" BEL
+        "my_Master/BufLed_reg/q_6" BEL "my_Master/BufLed_reg/q_7" BEL
+        "my_Master/Mdelay.Inst_IP_delay/IPdone" BEL
+        "my_Master/Mdelay.Inst_IP_delay/Wait_reg/q_0" BEL
+        "my_Master/Mdelay.Inst_IP_delay/Wait_reg/q_1" BEL
+        "my_Master/Mdelay.Inst_IP_delay/Wait_reg/q_2" BEL
+        "my_Master/Mdelay.Inst_IP_delay/Wait_reg/q_3" BEL
+        "my_Master/Mdelay.Inst_IP_delay/Wait_reg/q_4" BEL
+        "my_Master/Mdelay.Inst_IP_delay/Wait_reg/q_5" BEL
+        "my_Master/Mdelay.Inst_IP_delay/Wait_reg/q_6" BEL
+        "my_Master/Mdelay.Inst_IP_delay/Wait_reg/q_7" BEL
+        "my_Master/Mdelay.Inst_IP_delay/Wait_reg/q_8" BEL
+        "my_Master/Mdelay.Inst_IP_delay/Wait_reg/q_9" BEL
+        "my_Master/Mdelay.Inst_IP_delay/Wait_reg/q_10" BEL
+        "my_Master/Mdelay.Inst_IP_delay/Wait_reg/q_11" BEL
+        "my_Master/Mdelay.Inst_IP_delay/Wait_reg/q_12" BEL
+        "my_Master/Mdelay.Inst_IP_delay/Wait_reg/q_13" BEL
+        "my_Master/Mdelay.Inst_IP_delay/Wait_reg/q_14" BEL
+        "my_Master/Mdelay.Inst_IP_delay/Wait_reg/q_15" BEL
+        "my_Master/Mdelay.Inst_IP_delay/Wait_reg/q_16" BEL
+        "my_Master/Mdelay.Inst_IP_delay/Wait_reg/q_17" BEL
+        "my_Master/Mdelay.Inst_IP_delay/Wait_reg/q_18" BEL
+        "my_Master/Mdelay.Inst_IP_delay/Wait_reg/q_19" BEL
+        "my_Master/Mdelay.Inst_IP_delay/Wait_reg/q_20" BEL
+        "my_Master/Mdelay.Inst_IP_delay/Wait_reg/q_21" BEL
+        "my_Master/Mdelay.Inst_IP_delay/Wait_reg/q_22" BEL
+        "my_Master/Mdelay.Inst_IP_delay/Wait_reg/q_23" BEL
+        "my_Master/Mdelay.Inst_IP_delay/Wait_reg/q_24" BEL
+        "my_Master/Mdelay.Inst_IP_delay/Wait_reg/q_25" BEL
+        "my_Master/Mdelay.Inst_IP_delay/Wait_reg/q_26" BEL
+        "my_Master/Mdelay.Inst_IP_delay/Wait_reg/q_27" BEL
+        "my_Master/Mdelay.Inst_IP_delay/Wait_reg/q_28" BEL
+        "my_Master/Mdelay.Inst_IP_delay/Wait_reg/q_29" BEL
+        "my_Master/Mdelay.Inst_IP_delay/Wait_reg/q_30" BEL
+        "my_Master/Mdelay.Inst_IP_delay/Wait_reg/q_31" PIN
+        "my_Master/Mdelay.Inst_IP_delay/current_statew_FSMROM_pins<10>" BEL
+        "my_Master/Mdatastack.Inst_IPdataStack/Inst_datastack/stack_ptr_0" BEL
+        "my_Master/Mdatastack.Inst_IPdataStack/Inst_datastack/stack_ptr_1" BEL
+        "my_Master/Mdatastack.Inst_IPdataStack/Inst_datastack/stack_ptr_2" BEL
+        "my_Master/Mdatastack.Inst_IPdataStack/Inst_datastack/stack_ptr_3" BEL
+        "my_Master/Mdatastack.Inst_IPdataStack/DatastackTop_reg/q_0" BEL
+        "my_Master/Mdatastack.Inst_IPdataStack/DatastackTop_reg/q_1" BEL
+        "my_Master/Mdatastack.Inst_IPdataStack/DatastackTop_reg/q_2" BEL
+        "my_Master/Mdatastack.Inst_IPdataStack/DatastackTop_reg/q_3" BEL
+        "my_Master/Mdatastack.Inst_IPdataStack/DatastackTop_reg/q_4" BEL
+        "my_Master/Mdatastack.Inst_IPdataStack/DatastackTop_reg/q_5" BEL
+        "my_Master/Mdatastack.Inst_IPdataStack/DatastackTop_reg/q_6" BEL
+        "my_Master/Mdatastack.Inst_IPdataStack/DatastackTop_reg/q_7" BEL
+        "my_Master/Mdatastack.Inst_IPdataStack/DatastackTop_reg/q_8" BEL
+        "my_Master/Mdatastack.Inst_IPdataStack/DatastackTop_reg/q_9" BEL
+        "my_Master/Mdatastack.Inst_IPdataStack/DatastackTop_reg/q_10" BEL
+        "my_Master/Mdatastack.Inst_IPdataStack/DatastackTop_reg/q_11" BEL
+        "my_Master/Mdatastack.Inst_IPdataStack/DatastackTop_reg/q_12" BEL
+        "my_Master/Mdatastack.Inst_IPdataStack/DatastackTop_reg/q_13" BEL
+        "my_Master/Mdatastack.Inst_IPdataStack/DatastackTop_reg/q_14" BEL
+        "my_Master/Mdatastack.Inst_IPdataStack/DatastackTop_reg/q_15" BEL
+        "my_Master/Mdatastack.Inst_IPdataStack/DatastackTop_reg/q_16" BEL
+        "my_Master/Mdatastack.Inst_IPdataStack/DatastackTop_reg/q_17" BEL
+        "my_Master/Mdatastack.Inst_IPdataStack/DatastackTop_reg/q_18" BEL
+        "my_Master/Mdatastack.Inst_IPdataStack/DatastackTop_reg/q_19" BEL
+        "my_Master/Mdatastack.Inst_IPdataStack/DatastackTop_reg/q_20" BEL
+        "my_Master/Mdatastack.Inst_IPdataStack/DatastackTop_reg/q_21" BEL
+        "my_Master/Mdatastack.Inst_IPdataStack/DatastackTop_reg/q_22" BEL
+        "my_Master/Mdatastack.Inst_IPdataStack/DatastackTop_reg/q_23" BEL
+        "my_Master/Mdatastack.Inst_IPdataStack/DatastackTop_reg/q_24" BEL
+        "my_Master/Mdatastack.Inst_IPdataStack/DatastackTop_reg/q_25" BEL
+        "my_Master/Mdatastack.Inst_IPdataStack/DatastackTop_reg/q_26" BEL
+        "my_Master/Mdatastack.Inst_IPdataStack/DatastackTop_reg/q_27" BEL
+        "my_Master/Mdatastack.Inst_IPdataStack/DatastackTop_reg/q_28" BEL
+        "my_Master/Mdatastack.Inst_IPdataStack/DatastackTop_reg/q_29" BEL
+        "my_Master/Mdatastack.Inst_IPdataStack/DatastackTop_reg/q_30" BEL
+        "my_Master/Mdatastack.Inst_IPdataStack/DatastackTop_reg/q_31" BEL
+        "my_Master/MTic.Inst_IP_Tic/Tic_count/q_0" BEL
+        "my_Master/MTic.Inst_IP_Tic/Tic_count/q_1" BEL
+        "my_Master/MTic.Inst_IP_Tic/Tic_count/q_2" BEL
+        "my_Master/MTic.Inst_IP_Tic/Tic_count/q_3" BEL
+        "my_Master/MTic.Inst_IP_Tic/Tic_count/q_4" BEL
+        "my_Master/MTic.Inst_IP_Tic/Tic_count/q_5" BEL
+        "my_Master/MTic.Inst_IP_Tic/Tic_count/q_6" BEL
+        "my_Master/MTic.Inst_IP_Tic/Tic_count/q_7" BEL
+        "my_Master/MTic.Inst_IP_Tic/Tic_count/q_8" BEL
+        "my_Master/MTic.Inst_IP_Tic/Tic_count/q_9" BEL
+        "my_Master/MTic.Inst_IP_Tic/Tic_count/q_10" BEL
+        "my_Master/MTic.Inst_IP_Tic/Tic_count/q_11" BEL
+        "my_Master/MTic.Inst_IP_Tic/Tic_count/q_12" BEL
+        "my_Master/MTic.Inst_IP_Tic/Tic_count/q_13" BEL
+        "my_Master/MTic.Inst_IP_Tic/Tic_count/q_14" BEL
+        "my_Master/MTic.Inst_IP_Tic/Tic_count/q_15" BEL
+        "my_Master/MTic.Inst_IP_Tic/Tic_count/q_16" BEL
+        "my_Master/MTic.Inst_IP_Tic/Tic_count/q_17" BEL
+        "my_Master/MTic.Inst_IP_Tic/Tic_count/q_18" BEL
+        "my_Master/MTic.Inst_IP_Tic/Tic_count/q_19" BEL
+        "my_Master/MTic.Inst_IP_Tic/Tic_count/q_20" BEL
+        "my_Master/MTic.Inst_IP_Tic/Tic_count/q_21" BEL
+        "my_Master/MTic.Inst_IP_Tic/Tic_count/q_22" BEL
+        "my_Master/MTic.Inst_IP_Tic/Tic_count/q_23" BEL
+        "my_Master/MTic.Inst_IP_Tic/Tic_count/q_24" BEL
+        "my_Master/MTic.Inst_IP_Tic/Tic_count/q_25" BEL
+        "my_Master/MTic.Inst_IP_Tic/Tic_count/q_26" BEL
+        "my_Master/MTic.Inst_IP_Tic/Tic_count/q_27" BEL
+        "my_Master/MTic.Inst_IP_Tic/Tic_count/q_28" BEL
+        "my_Master/MTic.Inst_IP_Tic/Tic_count/q_29" BEL
+        "my_Master/MTic.Inst_IP_Tic/Tic_count/q_30" BEL
+        "my_Master/MTic.Inst_IP_Tic/Tic_count/q_31" PIN
+        "my_Master/Mwaitbtn.Inst_IPwaitBt/current_state_FSMROM_pins<11>" BEL
+        "clk_gen/clkout2_buf" BEL "UART_Wrapper/pulse_shift/XLXI_1" BEL
+        "UART_Wrapper/pulse_shift/XLXI_2" BEL
+        "UART_Wrapper/pulse_shift/XLXI_3" BEL
+        "UART_Wrapper/Inst_uart_rx/pulse_shift/XLXI_1" BEL
+        "UART_Wrapper/Inst_uart_rx/pulse_shift/XLXI_2" BEL
+        "UART_Wrapper/Inst_uart_rx/pulse_shift/XLXI_3" BEL
+        "UART_Wrapper/Inst_uart_rx/buf8/q_tmp_0" BEL
+        "UART_Wrapper/Inst_uart_rx/buf8/q_tmp_1" BEL
+        "UART_Wrapper/Inst_uart_rx/buf8/q_tmp_2" BEL
+        "UART_Wrapper/Inst_uart_rx/buf8/q_tmp_3" BEL
+        "UART_Wrapper/Inst_uart_rx/buf8/q_tmp_4" BEL
+        "UART_Wrapper/Inst_uart_rx/buf8/q_tmp_5" BEL
+        "UART_Wrapper/Inst_uart_rx/buf8/q_tmp_6" BEL
+        "UART_Wrapper/Inst_uart_rx/buf8/q_tmp_7" BEL
+        "UART_Wrapper/Inst_uart_dispatch/buf64_0" BEL
+        "UART_Wrapper/Inst_uart_dispatch/buf64_1" BEL
+        "UART_Wrapper/Inst_uart_dispatch/buf64_2" BEL
+        "UART_Wrapper/Inst_uart_dispatch/buf64_3" BEL
+        "UART_Wrapper/Inst_uart_dispatch/buf64_4" BEL
+        "UART_Wrapper/Inst_uart_dispatch/buf64_5" BEL
+        "UART_Wrapper/Inst_uart_dispatch/buf64_6" BEL
+        "UART_Wrapper/Inst_uart_dispatch/buf64_7" BEL
+        "UART_Wrapper/Inst_uart_dispatch/buf64_8" BEL
+        "UART_Wrapper/Inst_uart_dispatch/buf64_9" BEL
+        "UART_Wrapper/Inst_uart_dispatch/buf64_10" BEL
+        "UART_Wrapper/Inst_uart_dispatch/buf64_11" BEL
+        "UART_Wrapper/Inst_uart_dispatch/buf64_12" BEL
+        "UART_Wrapper/Inst_uart_dispatch/buf64_13" BEL
+        "UART_Wrapper/Inst_uart_dispatch/buf64_14" BEL
+        "UART_Wrapper/Inst_uart_dispatch/buf64_15" BEL
+        "UART_Wrapper/Inst_uart_dispatch/buf64_16" BEL
+        "UART_Wrapper/Inst_uart_dispatch/buf64_17" BEL
+        "UART_Wrapper/Inst_uart_dispatch/buf64_18" BEL
+        "UART_Wrapper/Inst_uart_dispatch/buf64_19" BEL
+        "UART_Wrapper/Inst_uart_dispatch/buf64_20" BEL
+        "UART_Wrapper/Inst_uart_dispatch/buf64_21" BEL
+        "UART_Wrapper/Inst_uart_dispatch/buf64_22" BEL
+        "UART_Wrapper/Inst_uart_dispatch/buf64_23" BEL
+        "UART_Wrapper/Inst_uart_dispatch/buf64_24" BEL
+        "UART_Wrapper/Inst_uart_dispatch/buf64_25" BEL
+        "UART_Wrapper/Inst_uart_dispatch/buf64_26" BEL
+        "UART_Wrapper/Inst_uart_dispatch/buf64_27" BEL
+        "UART_Wrapper/Inst_uart_dispatch/buf64_28" BEL
+        "UART_Wrapper/Inst_uart_dispatch/buf64_29" BEL
+        "UART_Wrapper/Inst_uart_dispatch/buf64_30" BEL
+        "UART_Wrapper/Inst_uart_dispatch/buf64_31" BEL
+        "UART_Wrapper/Inst_uart_dispatch/buf64_32" BEL
+        "UART_Wrapper/Inst_uart_dispatch/buf64_33" BEL
+        "UART_Wrapper/Inst_uart_dispatch/buf64_34" BEL
+        "UART_Wrapper/Inst_uart_dispatch/buf64_35" BEL
+        "UART_Wrapper/Inst_uart_dispatch/buf64_36" BEL
+        "UART_Wrapper/Inst_uart_dispatch/buf64_37" BEL
+        "UART_Wrapper/Inst_uart_dispatch/buf64_38" BEL
+        "UART_Wrapper/Inst_uart_dispatch/buf64_39" BEL
+        "UART_Wrapper/Inst_uart_dispatch/buf64_40" BEL
+        "UART_Wrapper/Inst_uart_dispatch/buf64_41" BEL
+        "UART_Wrapper/Inst_uart_dispatch/buf64_42" BEL
+        "UART_Wrapper/Inst_uart_dispatch/buf64_43" BEL
+        "UART_Wrapper/Inst_uart_dispatch/buf64_44" BEL
+        "UART_Wrapper/Inst_uart_dispatch/buf64_45" BEL
+        "UART_Wrapper/Inst_uart_dispatch/buf64_46" BEL
+        "UART_Wrapper/Inst_uart_dispatch/buf64_47" BEL
+        "UART_Wrapper/Inst_uart_dispatch/buf64_48" BEL
+        "UART_Wrapper/Inst_uart_dispatch/buf64_49" BEL
+        "UART_Wrapper/Inst_uart_dispatch/buf64_50" BEL
+        "UART_Wrapper/Inst_uart_dispatch/buf64_51" BEL
+        "UART_Wrapper/Inst_uart_dispatch/buf64_52" BEL
+        "UART_Wrapper/Inst_uart_dispatch/buf64_53" BEL
+        "UART_Wrapper/Inst_uart_dispatch/buf64_54" BEL
+        "UART_Wrapper/Inst_uart_dispatch/buf64_55" BEL
+        "UART_Wrapper/Inst_uart_dispatch/buf64_56" BEL
+        "UART_Wrapper/Inst_uart_dispatch/buf64_57" BEL
+        "UART_Wrapper/Inst_uart_dispatch/buf64_58" BEL
+        "UART_Wrapper/Inst_uart_dispatch/buf64_59" BEL
+        "UART_Wrapper/Inst_uart_dispatch/buf64_60" BEL
+        "UART_Wrapper/Inst_uart_dispatch/buf64_61" BEL
+        "UART_Wrapper/Inst_uart_dispatch/buf64_62" BEL
+        "UART_Wrapper/Inst_uart_dispatch/buf64_63" BEL
+        "UART_Wrapper/Inst_uart_dispatch/nextbit_0" BEL
+        "UART_Wrapper/Inst_uart_dispatch/nextbit_1" BEL
+        "UART_Wrapper/Inst_uart_dispatch/nextbit_2" BEL
+        "UART_Wrapper/Inst_uart_dispatch/nextbit_3" BEL
+        "UART_Wrapper/Inst_uart_dispatch/nextbit_4" BEL
+        "UART_Wrapper/Inst_uart_dispatch/nextbit_5" BEL
+        "UART_Wrapper/Inst_uart_dispatch/nextbit_6" BEL
+        "UART_Wrapper/Inst_uart_dispatch/count_0" BEL
+        "UART_Wrapper/Inst_uart_dispatch/count_1" BEL
+        "UART_Wrapper/Inst_uart_dispatch/count_2" PIN
+        "UART_Wrapper/Inst_uart_dispatch/Mram_count[2]_PWR_14_o_Mux_1_o_pins<13>"
+        PIN "UART_Wrapper/Inst_uart_dispatch/current_state_FSMROM_pins<10>"
+        BEL "my_Master/Prom_Master/multi_bank[63].bank/Mram_RAM64bit/SP" BEL
+        "my_Master/Prom_Master/multi_bank[63].bank/Mram_RAM64bit/DP" BEL
+        "my_Master/Prom_Master/multi_bank[62].bank/Mram_RAM64bit/SP" BEL
+        "my_Master/Prom_Master/multi_bank[62].bank/Mram_RAM64bit/DP" BEL
+        "my_Master/Prom_Master/multi_bank[61].bank/Mram_RAM64bit/SP" BEL
+        "my_Master/Prom_Master/multi_bank[61].bank/Mram_RAM64bit/DP" BEL
+        "my_Master/Prom_Master/multi_bank[60].bank/Mram_RAM64bit/SP" BEL
+        "my_Master/Prom_Master/multi_bank[60].bank/Mram_RAM64bit/DP" BEL
+        "my_Master/Prom_Master/multi_bank[59].bank/Mram_RAM64bit/SP" BEL
+        "my_Master/Prom_Master/multi_bank[59].bank/Mram_RAM64bit/DP" BEL
+        "my_Master/Prom_Master/multi_bank[58].bank/Mram_RAM64bit/SP" BEL
+        "my_Master/Prom_Master/multi_bank[58].bank/Mram_RAM64bit/DP" BEL
+        "my_Master/Prom_Master/multi_bank[57].bank/Mram_RAM64bit/SP" BEL
+        "my_Master/Prom_Master/multi_bank[57].bank/Mram_RAM64bit/DP" BEL
+        "my_Master/Prom_Master/multi_bank[56].bank/Mram_RAM64bit/SP" BEL
+        "my_Master/Prom_Master/multi_bank[56].bank/Mram_RAM64bit/DP" BEL
+        "my_Master/Prom_Master/multi_bank[55].bank/Mram_RAM64bit/SP" BEL
+        "my_Master/Prom_Master/multi_bank[55].bank/Mram_RAM64bit/DP" BEL
+        "my_Master/Prom_Master/multi_bank[54].bank/Mram_RAM64bit/SP" BEL
+        "my_Master/Prom_Master/multi_bank[54].bank/Mram_RAM64bit/DP" BEL
+        "my_Master/Prom_Master/multi_bank[53].bank/Mram_RAM64bit/SP" BEL
+        "my_Master/Prom_Master/multi_bank[53].bank/Mram_RAM64bit/DP" BEL
+        "my_Master/Prom_Master/multi_bank[52].bank/Mram_RAM64bit/SP" BEL
+        "my_Master/Prom_Master/multi_bank[52].bank/Mram_RAM64bit/DP" BEL
+        "my_Master/Prom_Master/multi_bank[51].bank/Mram_RAM64bit/SP" BEL
+        "my_Master/Prom_Master/multi_bank[51].bank/Mram_RAM64bit/DP" BEL
+        "my_Master/Prom_Master/multi_bank[50].bank/Mram_RAM64bit/SP" BEL
+        "my_Master/Prom_Master/multi_bank[50].bank/Mram_RAM64bit/DP" BEL
+        "my_Master/Prom_Master/multi_bank[49].bank/Mram_RAM64bit/SP" BEL
+        "my_Master/Prom_Master/multi_bank[49].bank/Mram_RAM64bit/DP" BEL
+        "my_Master/Prom_Master/multi_bank[48].bank/Mram_RAM64bit/SP" BEL
+        "my_Master/Prom_Master/multi_bank[48].bank/Mram_RAM64bit/DP" BEL
+        "my_Master/Prom_Master/multi_bank[47].bank/Mram_RAM64bit/SP" BEL
+        "my_Master/Prom_Master/multi_bank[47].bank/Mram_RAM64bit/DP" BEL
+        "my_Master/Prom_Master/multi_bank[46].bank/Mram_RAM64bit/SP" BEL
+        "my_Master/Prom_Master/multi_bank[46].bank/Mram_RAM64bit/DP" BEL
+        "my_Master/Prom_Master/multi_bank[45].bank/Mram_RAM64bit/SP" BEL
+        "my_Master/Prom_Master/multi_bank[45].bank/Mram_RAM64bit/DP" BEL
+        "my_Master/Prom_Master/multi_bank[44].bank/Mram_RAM64bit/SP" BEL
+        "my_Master/Prom_Master/multi_bank[44].bank/Mram_RAM64bit/DP" BEL
+        "my_Master/Prom_Master/multi_bank[43].bank/Mram_RAM64bit/SP" BEL
+        "my_Master/Prom_Master/multi_bank[43].bank/Mram_RAM64bit/DP" BEL
+        "my_Master/Prom_Master/multi_bank[42].bank/Mram_RAM64bit/SP" BEL
+        "my_Master/Prom_Master/multi_bank[42].bank/Mram_RAM64bit/DP" BEL
+        "my_Master/Prom_Master/multi_bank[41].bank/Mram_RAM64bit/SP" BEL
+        "my_Master/Prom_Master/multi_bank[41].bank/Mram_RAM64bit/DP" BEL
+        "my_Master/Prom_Master/multi_bank[40].bank/Mram_RAM64bit/SP" BEL
+        "my_Master/Prom_Master/multi_bank[40].bank/Mram_RAM64bit/DP" BEL
+        "my_Master/Prom_Master/multi_bank[39].bank/Mram_RAM64bit/SP" BEL
+        "my_Master/Prom_Master/multi_bank[39].bank/Mram_RAM64bit/DP" BEL
+        "my_Master/Prom_Master/multi_bank[38].bank/Mram_RAM64bit/SP" BEL
+        "my_Master/Prom_Master/multi_bank[38].bank/Mram_RAM64bit/DP" BEL
+        "my_Master/Prom_Master/multi_bank[37].bank/Mram_RAM64bit/SP" BEL
+        "my_Master/Prom_Master/multi_bank[37].bank/Mram_RAM64bit/DP" BEL
+        "my_Master/Prom_Master/multi_bank[36].bank/Mram_RAM64bit/SP" BEL
+        "my_Master/Prom_Master/multi_bank[36].bank/Mram_RAM64bit/DP" BEL
+        "my_Master/Prom_Master/multi_bank[35].bank/Mram_RAM64bit/SP" BEL
+        "my_Master/Prom_Master/multi_bank[35].bank/Mram_RAM64bit/DP" BEL
+        "my_Master/Prom_Master/multi_bank[34].bank/Mram_RAM64bit/SP" BEL
+        "my_Master/Prom_Master/multi_bank[34].bank/Mram_RAM64bit/DP" BEL
+        "my_Master/Prom_Master/multi_bank[33].bank/Mram_RAM64bit/SP" BEL
+        "my_Master/Prom_Master/multi_bank[33].bank/Mram_RAM64bit/DP" BEL
+        "my_Master/Prom_Master/multi_bank[32].bank/Mram_RAM64bit/SP" BEL
+        "my_Master/Prom_Master/multi_bank[32].bank/Mram_RAM64bit/DP" BEL
+        "my_Master/Prom_Master/multi_bank[31].bank/Mram_RAM64bit/SP" BEL
+        "my_Master/Prom_Master/multi_bank[31].bank/Mram_RAM64bit/DP" BEL
+        "my_Master/Prom_Master/multi_bank[30].bank/Mram_RAM64bit/SP" BEL
+        "my_Master/Prom_Master/multi_bank[30].bank/Mram_RAM64bit/DP" BEL
+        "my_Master/Prom_Master/multi_bank[29].bank/Mram_RAM64bit/SP" BEL
+        "my_Master/Prom_Master/multi_bank[29].bank/Mram_RAM64bit/DP" BEL
+        "my_Master/Prom_Master/multi_bank[28].bank/Mram_RAM64bit/SP" BEL
+        "my_Master/Prom_Master/multi_bank[28].bank/Mram_RAM64bit/DP" BEL
+        "my_Master/Prom_Master/multi_bank[27].bank/Mram_RAM64bit/SP" BEL
+        "my_Master/Prom_Master/multi_bank[27].bank/Mram_RAM64bit/DP" BEL
+        "my_Master/Prom_Master/multi_bank[26].bank/Mram_RAM64bit/SP" BEL
+        "my_Master/Prom_Master/multi_bank[26].bank/Mram_RAM64bit/DP" BEL
+        "my_Master/Prom_Master/multi_bank[25].bank/Mram_RAM64bit/SP" BEL
+        "my_Master/Prom_Master/multi_bank[25].bank/Mram_RAM64bit/DP" BEL
+        "my_Master/Prom_Master/multi_bank[24].bank/Mram_RAM64bit/SP" BEL
+        "my_Master/Prom_Master/multi_bank[24].bank/Mram_RAM64bit/DP" BEL
+        "my_Master/Prom_Master/multi_bank[23].bank/Mram_RAM64bit/SP" BEL
+        "my_Master/Prom_Master/multi_bank[23].bank/Mram_RAM64bit/DP" BEL
+        "my_Master/Prom_Master/multi_bank[22].bank/Mram_RAM64bit/SP" BEL
+        "my_Master/Prom_Master/multi_bank[22].bank/Mram_RAM64bit/DP" BEL
+        "my_Master/Prom_Master/multi_bank[21].bank/Mram_RAM64bit/SP" BEL
+        "my_Master/Prom_Master/multi_bank[21].bank/Mram_RAM64bit/DP" BEL
+        "my_Master/Prom_Master/multi_bank[20].bank/Mram_RAM64bit/SP" BEL
+        "my_Master/Prom_Master/multi_bank[20].bank/Mram_RAM64bit/DP" BEL
+        "my_Master/Prom_Master/multi_bank[19].bank/Mram_RAM64bit/SP" BEL
+        "my_Master/Prom_Master/multi_bank[19].bank/Mram_RAM64bit/DP" BEL
+        "my_Master/Prom_Master/multi_bank[18].bank/Mram_RAM64bit/SP" BEL
+        "my_Master/Prom_Master/multi_bank[18].bank/Mram_RAM64bit/DP" BEL
+        "my_Master/Prom_Master/multi_bank[17].bank/Mram_RAM64bit/SP" BEL
+        "my_Master/Prom_Master/multi_bank[17].bank/Mram_RAM64bit/DP" BEL
+        "my_Master/Prom_Master/multi_bank[16].bank/Mram_RAM64bit/SP" BEL
+        "my_Master/Prom_Master/multi_bank[16].bank/Mram_RAM64bit/DP" BEL
+        "my_Master/Prom_Master/multi_bank[15].bank/Mram_RAM64bit/SP" BEL
+        "my_Master/Prom_Master/multi_bank[15].bank/Mram_RAM64bit/DP" BEL
+        "my_Master/Prom_Master/multi_bank[14].bank/Mram_RAM64bit/SP" BEL
+        "my_Master/Prom_Master/multi_bank[14].bank/Mram_RAM64bit/DP" BEL
+        "my_Master/Prom_Master/multi_bank[13].bank/Mram_RAM64bit/SP" BEL
+        "my_Master/Prom_Master/multi_bank[13].bank/Mram_RAM64bit/DP" BEL
+        "my_Master/Prom_Master/multi_bank[12].bank/Mram_RAM64bit/SP" BEL
+        "my_Master/Prom_Master/multi_bank[12].bank/Mram_RAM64bit/DP" BEL
+        "my_Master/Prom_Master/multi_bank[11].bank/Mram_RAM64bit/SP" BEL
+        "my_Master/Prom_Master/multi_bank[11].bank/Mram_RAM64bit/DP" BEL
+        "my_Master/Prom_Master/multi_bank[10].bank/Mram_RAM64bit/SP" BEL
+        "my_Master/Prom_Master/multi_bank[10].bank/Mram_RAM64bit/DP" BEL
+        "my_Master/Prom_Master/multi_bank[9].bank/Mram_RAM64bit/SP" BEL
+        "my_Master/Prom_Master/multi_bank[9].bank/Mram_RAM64bit/DP" BEL
+        "my_Master/Prom_Master/multi_bank[8].bank/Mram_RAM64bit/SP" BEL
+        "my_Master/Prom_Master/multi_bank[8].bank/Mram_RAM64bit/DP" BEL
+        "my_Master/Prom_Master/multi_bank[7].bank/Mram_RAM64bit/SP" BEL
+        "my_Master/Prom_Master/multi_bank[7].bank/Mram_RAM64bit/DP" BEL
+        "my_Master/Prom_Master/multi_bank[6].bank/Mram_RAM64bit/SP" BEL
+        "my_Master/Prom_Master/multi_bank[6].bank/Mram_RAM64bit/DP" BEL
+        "my_Master/Prom_Master/multi_bank[5].bank/Mram_RAM64bit/SP" BEL
+        "my_Master/Prom_Master/multi_bank[5].bank/Mram_RAM64bit/DP" BEL
+        "my_Master/Prom_Master/multi_bank[4].bank/Mram_RAM64bit/SP" BEL
+        "my_Master/Prom_Master/multi_bank[4].bank/Mram_RAM64bit/DP" BEL
+        "my_Master/Prom_Master/multi_bank[3].bank/Mram_RAM64bit/SP" BEL
+        "my_Master/Prom_Master/multi_bank[3].bank/Mram_RAM64bit/DP" BEL
+        "my_Master/Prom_Master/multi_bank[2].bank/Mram_RAM64bit/SP" BEL
+        "my_Master/Prom_Master/multi_bank[2].bank/Mram_RAM64bit/DP" BEL
+        "my_Master/Prom_Master/multi_bank[1].bank/Mram_RAM64bit/SP" BEL
+        "my_Master/Prom_Master/multi_bank[1].bank/Mram_RAM64bit/DP" BEL
+        "my_Master/Prom_Master/multi_bank[0].bank/Mram_RAM64bit/SP" BEL
+        "my_Master/Prom_Master/multi_bank[0].bank/Mram_RAM64bit/DP" BEL
+        "my_Master/Mdatastack.Inst_IPdataStack/Inst_datastack/Mram_RAM62/SP"
+        BEL
+        "my_Master/Mdatastack.Inst_IPdataStack/Inst_datastack/Mram_RAM62/DP"
+        BEL
+        "my_Master/Mdatastack.Inst_IPdataStack/Inst_datastack/Mram_RAM61/SP"
+        BEL
+        "my_Master/Mdatastack.Inst_IPdataStack/Inst_datastack/Mram_RAM61/DP"
+        BEL "my_Master/HCU_Master/Inst_returnstack/Mram_RAM1_RAMA_D1" BEL
+        "my_Master/HCU_Master/Inst_returnstack/Mram_RAM1_RAMA" BEL
+        "my_Master/HCU_Master/Inst_returnstack/Mram_RAM1_RAMB_D1" BEL
+        "my_Master/HCU_Master/Inst_returnstack/Mram_RAM1_RAMB" BEL
+        "my_Master/HCU_Master/Inst_returnstack/Mram_RAM1_RAMC_D1" BEL
+        "my_Master/HCU_Master/Inst_returnstack/Mram_RAM1_RAMC" BEL
+        "my_Master/HCU_Master/Inst_returnstack/Mram_RAM1_RAMD_D1" BEL
+        "my_Master/HCU_Master/Inst_returnstack/Mram_RAM1_RAMD" BEL
+        "my_Master/HCU_Master/Inst_returnstack/Mram_RAM2_RAMA_D1" BEL
+        "my_Master/HCU_Master/Inst_returnstack/Mram_RAM2_RAMA" BEL
+        "my_Master/HCU_Master/Inst_returnstack/Mram_RAM2_RAMD_D1" BEL
+        "my_Master/HCU_Master/Inst_returnstack/Mram_RAM2_RAMD" BEL
+        "my_Master/Mdatastack.Inst_IPdataStack/Inst_datastack/Mram_RAM1_RAMA_D1"
+        BEL
+        "my_Master/Mdatastack.Inst_IPdataStack/Inst_datastack/Mram_RAM1_RAMA"
+        BEL
+        "my_Master/Mdatastack.Inst_IPdataStack/Inst_datastack/Mram_RAM1_RAMB_D1"
+        BEL
+        "my_Master/Mdatastack.Inst_IPdataStack/Inst_datastack/Mram_RAM1_RAMB"
+        BEL
+        "my_Master/Mdatastack.Inst_IPdataStack/Inst_datastack/Mram_RAM1_RAMC_D1"
+        BEL
+        "my_Master/Mdatastack.Inst_IPdataStack/Inst_datastack/Mram_RAM1_RAMC"
+        BEL
+        "my_Master/Mdatastack.Inst_IPdataStack/Inst_datastack/Mram_RAM1_RAMD_D1"
+        BEL
+        "my_Master/Mdatastack.Inst_IPdataStack/Inst_datastack/Mram_RAM1_RAMD"
+        BEL
+        "my_Master/Mdatastack.Inst_IPdataStack/Inst_datastack/Mram_RAM2_RAMA_D1"
+        BEL
+        "my_Master/Mdatastack.Inst_IPdataStack/Inst_datastack/Mram_RAM2_RAMA"
+        BEL
+        "my_Master/Mdatastack.Inst_IPdataStack/Inst_datastack/Mram_RAM2_RAMB_D1"
+        BEL
+        "my_Master/Mdatastack.Inst_IPdataStack/Inst_datastack/Mram_RAM2_RAMB"
+        BEL
+        "my_Master/Mdatastack.Inst_IPdataStack/Inst_datastack/Mram_RAM2_RAMC_D1"
+        BEL
+        "my_Master/Mdatastack.Inst_IPdataStack/Inst_datastack/Mram_RAM2_RAMC"
+        BEL
+        "my_Master/Mdatastack.Inst_IPdataStack/Inst_datastack/Mram_RAM2_RAMD_D1"
+        BEL
+        "my_Master/Mdatastack.Inst_IPdataStack/Inst_datastack/Mram_RAM2_RAMD"
+        BEL
+        "my_Master/Mdatastack.Inst_IPdataStack/Inst_datastack/Mram_RAM3_RAMA_D1"
+        BEL
+        "my_Master/Mdatastack.Inst_IPdataStack/Inst_datastack/Mram_RAM3_RAMA"
+        BEL
+        "my_Master/Mdatastack.Inst_IPdataStack/Inst_datastack/Mram_RAM3_RAMB_D1"
+        BEL
+        "my_Master/Mdatastack.Inst_IPdataStack/Inst_datastack/Mram_RAM3_RAMB"
+        BEL
+        "my_Master/Mdatastack.Inst_IPdataStack/Inst_datastack/Mram_RAM3_RAMC_D1"
+        BEL
+        "my_Master/Mdatastack.Inst_IPdataStack/Inst_datastack/Mram_RAM3_RAMC"
+        BEL
+        "my_Master/Mdatastack.Inst_IPdataStack/Inst_datastack/Mram_RAM3_RAMD_D1"
+        BEL
+        "my_Master/Mdatastack.Inst_IPdataStack/Inst_datastack/Mram_RAM3_RAMD"
+        BEL
+        "my_Master/Mdatastack.Inst_IPdataStack/Inst_datastack/Mram_RAM4_RAMA_D1"
+        BEL
+        "my_Master/Mdatastack.Inst_IPdataStack/Inst_datastack/Mram_RAM4_RAMA"
+        BEL
+        "my_Master/Mdatastack.Inst_IPdataStack/Inst_datastack/Mram_RAM4_RAMB_D1"
+        BEL
+        "my_Master/Mdatastack.Inst_IPdataStack/Inst_datastack/Mram_RAM4_RAMB"
+        BEL
+        "my_Master/Mdatastack.Inst_IPdataStack/Inst_datastack/Mram_RAM4_RAMC_D1"
+        BEL
+        "my_Master/Mdatastack.Inst_IPdataStack/Inst_datastack/Mram_RAM4_RAMC"
+        BEL
+        "my_Master/Mdatastack.Inst_IPdataStack/Inst_datastack/Mram_RAM4_RAMD_D1"
+        BEL
+        "my_Master/Mdatastack.Inst_IPdataStack/Inst_datastack/Mram_RAM4_RAMD"
+        BEL
+        "my_Master/Mdatastack.Inst_IPdataStack/Inst_datastack/Mram_RAM5_RAMA_D1"
+        BEL
+        "my_Master/Mdatastack.Inst_IPdataStack/Inst_datastack/Mram_RAM5_RAMA"
+        BEL
+        "my_Master/Mdatastack.Inst_IPdataStack/Inst_datastack/Mram_RAM5_RAMB_D1"
+        BEL
+        "my_Master/Mdatastack.Inst_IPdataStack/Inst_datastack/Mram_RAM5_RAMB"
+        BEL
+        "my_Master/Mdatastack.Inst_IPdataStack/Inst_datastack/Mram_RAM5_RAMC_D1"
+        BEL
+        "my_Master/Mdatastack.Inst_IPdataStack/Inst_datastack/Mram_RAM5_RAMC"
+        BEL
+        "my_Master/Mdatastack.Inst_IPdataStack/Inst_datastack/Mram_RAM5_RAMD_D1"
+        BEL
+        "my_Master/Mdatastack.Inst_IPdataStack/Inst_datastack/Mram_RAM5_RAMD";
+PIN SP6_INS_BUFIO2FB_DCM_ML_BUFIO2FB_1_pins<1> = BEL
+        "SP6_INS_BUFIO2FB_DCM_ML_BUFIO2FB_1" PINNAME O;
+PIN clk_gen/dcm_sp_inst_pins<2> = BEL "clk_gen/dcm_sp_inst" PINNAME CLKFB;
+TIMEGRP clk_gen_clk0 = BEL "Inst_debounce4/delay1_0" BEL
+        "Inst_debounce4/delay1_1" BEL "Inst_debounce4/delay1_2" BEL
+        "Inst_debounce4/delay1_3" BEL "Inst_debounce4/delay1_4" BEL
+        "Inst_debounce4/delay2_0" BEL "Inst_debounce4/delay2_1" BEL
+        "Inst_debounce4/delay2_2" BEL "Inst_debounce4/delay2_3" BEL
+        "Inst_debounce4/delay2_4" BEL "Inst_debounce4/delay3_0" BEL
+        "Inst_debounce4/delay3_1" BEL "Inst_debounce4/delay3_2" BEL
+        "Inst_debounce4/delay3_3" BEL "Inst_debounce4/delay3_4" BEL
+        "UART_Wrapper/uart_baudClock_inst/baud_clk" BEL
+        "UART_Wrapper/uart_baudClock_inst/baudRate_process.count_0" BEL
+        "UART_Wrapper/uart_baudClock_inst/baudRate_process.count_1" BEL
+        "UART_Wrapper/uart_baudClock_inst/baudRate_process.count_2" BEL
+        "UART_Wrapper/uart_baudClock_inst/baudRate_process.count_3" BEL
+        "UART_Wrapper/uart_baudClock_inst/baudRate_process.count_4" BEL
+        "UART_Wrapper/uart_baudClock_inst/baudRate_process.count_5" BEL
+        "UART_Wrapper/uart_baudClock_inst/baudRate_process.count_6" BEL
+        "UART_Wrapper/uart_baudClock_inst/baudRate_process.count_7" BEL
+        "UART_Wrapper/uart_baudClock_inst/baudRate_process.count_8" BEL
+        "UART_Wrapper/uart_baudClock_inst/baudRate_process.count_9" BEL
+        "UART_Wrapper/uart_baudClock_inst/baudRate_process.count_10" BEL
+        "D7seg_display/XLXI_2/COUNT_0" BEL "D7seg_display/XLXI_2/COUNT_1" BEL
+        "D7seg_display/XLXI_34/XLXI_1" BEL "D7seg_display/XLXI_34/XLXI_2" BEL
+        "D7seg_display/XLXI_34/XLXI_3" BEL "D7seg_display/XLXI_34/XLXI_4" BEL
+        "My_E190/XLXI_21" BEL "My_E190/XLXI_22" BEL "My_E190/XLXI_1/COUNT_0"
+        BEL "My_E190/XLXI_1/COUNT_1" BEL "My_E190/XLXI_1/COUNT_2" BEL
+        "My_E190/XLXI_1/COUNT_3" BEL "My_E190/XLXI_1/COUNT_4" BEL
+        "My_E190/XLXI_1/COUNT_5" BEL "My_E190/XLXI_1/COUNT_6" BEL
+        "My_E190/XLXI_1/COUNT_7" BEL "My_E190/XLXI_1/COUNT_8" BEL
+        "My_E190/XLXI_1/COUNT_9" BEL "My_E190/XLXI_1/COUNT_10" BEL
+        "My_E190/XLXI_1/COUNT_11" BEL "My_E190/XLXI_1/COUNT_12" BEL
+        "My_E190/XLXI_1/COUNT_13" BEL "My_E190/XLXI_1/COUNT_14" BEL
+        "My_E190/XLXI_1/COUNT_15" BEL "My_E190/XLXI_29/COUNT_0" BEL
+        "My_E190/XLXI_29/COUNT_1" BEL "My_E190/XLXI_29/COUNT_2" BEL
+        "clk_gen/clkout1_buf" PIN "SP6_INS_BUFIO2FB_DCM_ML_BUFIO2FB_1_pins<1>"
+        PIN "clk_gen/dcm_sp_inst_pins<2>";
+PIN SP6_BUFIO_INSERT_ML_BUFIO2_0_pins<0> = BEL "SP6_BUFIO_INSERT_ML_BUFIO2_0"
+        PINNAME DIVCLK;
+PIN clk_gen/dcm_sp_inst_pins<3> = BEL "clk_gen/dcm_sp_inst" PINNAME CLKIN;
+TIMEGRP clk_pin = PIN "SP6_BUFIO_INSERT_ML_BUFIO2_0_pins<0>" PIN
+        "clk_gen/dcm_sp_inst_pins<3>";
+TS_clk_pin = PERIOD TIMEGRP "clk_pin" 10 ns HIGH 50%;
+TS_clk_gen_clk0 = PERIOD TIMEGRP "clk_gen_clk0" TS_clk_pin HIGH 50%;
+TS_clk_gen_clkdv = PERIOD TIMEGRP "clk_gen_clkdv" TS_clk_pin * 2 HIGH 50%;
+SCHEMATIC END;
+

@@ -1,0 +1,120 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:background="@mipmap/ic_launcher"
+    tools:context="com.example.applicationview.CreateBook"
+    android:id="@+id/country">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Titre : "
+        android:id="@+id/bookTitle"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="100dp"
+        android:layout_marginTop="50dp"
+        android:textSize="25dp"/>
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editTitle"
+        android:layout_marginLeft="90dp"
+        android:layout_marginBottom="100dp"
+        android:layout_marginTop="50dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Genre : "
+        android:id="@+id/bookGenre"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="100dp"
+        android:layout_marginTop="100dp"
+        android:textSize="25dp"/>
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinnerGenre"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginLeft="90dp"
+        android:layout_marginBottom="100dp"
+        android:layout_marginTop="100dp"/>
+    //////
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Année : "
+        android:id="@+id/bookAnnée"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="100dp"
+        android:layout_marginTop="150dp"
+        android:textSize="25dp"/>
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinnerAnnee"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginLeft="90dp"
+        android:layout_marginBottom="150dp"
+        android:layout_marginTop="150dp"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Auteur : "
+        android:id="@+id/bookAuthor"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="200dp"
+        android:textSize="25dp"/>
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editAuthor"
+        android:layout_marginLeft="90dp"
+        android:layout_marginTop="200dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Editeur : "
+        android:id="@+id/bookEditeur"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="250dp"
+        android:textSize="25dp"/>
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editEditeur"
+        android:layout_marginLeft="90dp"
+        android:layout_marginTop="250dp" />
+    <Button
+        android:id="@+id/buttonAppliqué"
+        android:layout_width="match_parent"
+        android:text="Appliquer "
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="90dp"
+        android:layout_marginTop="300dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText"
+        android:layout_alignBottom="@+id/editTitle"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,15 @@
+# Output products list for <incdec>
+_xmsgs\pn_parser.xmsgs
+incdec.asy
+incdec.gise
+incdec.ngc
+incdec.sym
+incdec.v
+incdec.veo
+incdec.vhd
+incdec.vho
+incdec.xco
+incdec.xise
+incdec_flist.txt
+incdec_readme.txt
+incdec_xmdf.tcl

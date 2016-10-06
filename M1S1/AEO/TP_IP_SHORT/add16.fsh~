@@ -1,0 +1,27 @@
+slave
+start
+master
+
+: lectureswitch
+	$ 1f
+	btn
+	switch
+;
+
+: main
+	lectureswitch
+	$ 8
+	lshift
+	lectureswitch
+	add
+	lectureswitch
+	$ 8
+	lshift
+	lectureswitch
+	add
+	add
+	BufoutDup
+;
+start
+	main
+end program

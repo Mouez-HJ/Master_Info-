@@ -1,0 +1,25 @@
+# depslib dependency file v1.0
+1443285471 source:c:\users\moez90\documents\travail\tp\2015_2016\m1s1\ase\tp02\init_ctx.c
+	<stdio.h>
+	<stdlib.h>
+	<assert.h>
+	"init_ctx.h"
+
+1443286128 c:\users\moez90\documents\travail\tp\2015_2016\m1s1\ase\tp02\init_ctx.h
+
+1443284801 source:c:\users\moez90\documents\travail\tp\2015_2016\m1s1\ase\tp02\ping_pong.c
+	<stdio.h>
+	<stdlib.h>
+	<assert.h>
+	"init_ctx.h"
+	"switch_to.h"
+
+1443392770 c:\users\moez90\documents\travail\tp\2015_2016\m1s1\ase\tp02\switch_to.h
+
+1443299075 source:c:\users\moez90\documents\travail\tp\2015_2016\m1s1\ase\tp02\switch_to.c
+	<stdio.h>
+	<stdlib.h>
+	<assert.h>
+	"init_ctx.h"
+	"switch_to.h"
+

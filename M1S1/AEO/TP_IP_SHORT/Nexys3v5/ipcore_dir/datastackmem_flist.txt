@@ -1,0 +1,16 @@
+# Output products list for <datastackmem>
+_xmsgs\pn_parser.xmsgs
+blk_mem_gen_ds512.pdf
+blk_mem_gen_readme.txt
+datastackmem.asy
+datastackmem.gise
+datastackmem.ngc
+datastackmem.sym
+datastackmem.v
+datastackmem.veo
+datastackmem.vhd
+datastackmem.vho
+datastackmem.xco
+datastackmem.xise
+datastackmem_flist.txt
+datastackmem_xmdf.tcl

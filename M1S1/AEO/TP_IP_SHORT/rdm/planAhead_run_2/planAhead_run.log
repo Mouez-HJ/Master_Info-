@@ -1,0 +1,16 @@
+
+****** PlanAhead v12.4
+  **** Build 108585 by hdbuild on Tue Nov  9 17:32:56 MST 2010
+    ** Copyright 1986-1999, 2001-2010 Xilinx, Inc. All Rights Reserved.
+
+Release 12.4 - ngc2edif M.81d (nt64)
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+Reading design rdm.ngc ...
+WARNING:NetListWriters:298 - No output is written to rdm.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file rdm.edif ...
+ngc2edif: Total memory usage is 70960 kilobytes
+

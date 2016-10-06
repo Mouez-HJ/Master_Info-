@@ -1,0 +1,108 @@
+Release 12.4 ngdbuild M.81d (lin)
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+
+Command Line: /usr/local/Xilinx/12.4/ISE_DS/ISE/bin/lin/unwrapped/ngdbuild
+-intstyle ise -dd _ngo -sd ipcore_dir -aul -nt timestamp -uc Nexys3.ucf -p
+xc6slx16-csg324-3 Nexys3v5.ngc Nexys3v5.ngd
+
+Reading NGO file "/home/m1/josias/Documents/AEO/TP5/Nexys3v5/Nexys3v5.ngc" ...
+Loading design module "ipcore_dir/incdec.ngc"...
+Applying constraints in "ipcore_dir/incdec.ncf" to module
+"ipcore_dir/incdec.ngc"...
+Checking Constraint Associations...
+Loading design module "ipcore_dir/addsub.ngc"...
+Applying constraints in "ipcore_dir/addsub.ncf" to module
+"ipcore_dir/addsub.ngc"...
+Checking Constraint Associations...
+Loading design module "ipcore_dir/muladd.ngc"...
+Applying constraints in "ipcore_dir/muladd.ncf" to module
+"ipcore_dir/muladd.ngc"...
+Checking Constraint Associations...
+Gathering constraint information from source properties...
+Done.
+
+Annotating constraints to design from ucf file "Nexys3.ucf" ...
+Resolving constraint associations...
+Checking Constraint Associations...
+INFO:ConstraintSystem:178 - TNM 'clk_pin', used in period specification
+   'TS_clk_pin', was traced into DCM_SP instance dcm_sp_inst. The following new
+   TNM groups and period specifications were generated at the DCM_SP output(s): 
+   CLK0: <TIMESPEC TS_clk_gen_clk0 = PERIOD "clk_gen_clk0" TS_clk_pin HIGH 50%>
+
+INFO:ConstraintSystem:178 - TNM 'clk_pin', used in period specification
+   'TS_clk_pin', was traced into DCM_SP instance dcm_sp_inst. The following new
+   TNM groups and period specifications were generated at the DCM_SP output(s): 
+   CLKDV: <TIMESPEC TS_clk_gen_clkdv = PERIOD "clk_gen_clkdv" TS_clk_pin * 2
+   HIGH 50%>
+
+Done...
+
+INFO:NgdBuild:1222 - Setting CLKIN_PERIOD attribute associated with DCM instance
+   dcm_sp_inst to 10.000000 ns based on the period specification (<TIMESPEC
+   TS_clk_pin = PERIOD "clk_pin" 10 ns;> [Nexys3.ucf(12)]).
+Checking expanded design ...
+WARNING:NgdBuild:452 - logical net 'slave_data' has no driver
+WARNING:NgdBuild:452 - logical net 'slave_W' has no driver
+WARNING:NgdBuild:452 - logical net 'my_Master/Stack_Master/XLXN_269<31>' has no
+   driver
+WARNING:NgdBuild:452 - logical net 'my_Master/Stack_Master/XLXN_269<30>' has no
+   driver
+WARNING:NgdBuild:452 - logical net 'my_Master/Stack_Master/XLXN_269<29>' has no
+   driver
+WARNING:NgdBuild:452 - logical net 'my_Master/Stack_Master/XLXN_269<28>' has no
+   driver
+WARNING:NgdBuild:452 - logical net 'my_Master/Stack_Master/XLXN_269<27>' has no
+   driver
+WARNING:NgdBuild:452 - logical net 'my_Master/Stack_Master/XLXN_269<26>' has no
+   driver
+WARNING:NgdBuild:452 - logical net 'my_Master/Stack_Master/XLXN_269<25>' has no
+   driver
+WARNING:NgdBuild:452 - logical net 'my_Master/Stack_Master/XLXN_269<24>' has no
+   driver
+WARNING:NgdBuild:452 - logical net 'my_Master/Stack_Master/XLXN_269<23>' has no
+   driver
+WARNING:NgdBuild:452 - logical net 'my_Master/Stack_Master/XLXN_269<22>' has no
+   driver
+WARNING:NgdBuild:452 - logical net 'my_Master/Stack_Master/XLXN_269<21>' has no
+   driver
+WARNING:NgdBuild:452 - logical net 'my_Master/Stack_Master/XLXN_269<20>' has no
+   driver
+WARNING:NgdBuild:452 - logical net 'my_Master/Stack_Master/XLXN_269<19>' has no
+   driver
+WARNING:NgdBuild:452 - logical net 'my_Master/Stack_Master/XLXN_269<18>' has no
+   driver
+WARNING:NgdBuild:452 - logical net 'my_Master/Stack_Master/XLXN_269<17>' has no
+   driver
+WARNING:NgdBuild:452 - logical net 'my_Master/Stack_Master/XLXN_269<16>' has no
+   driver
+WARNING:NgdBuild:452 - logical net 'my_Master/Stack_Master/XLXN_269<15>' has no
+   driver
+WARNING:NgdBuild:452 - logical net 'my_Master/Stack_Master/XLXN_269<14>' has no
+   driver
+WARNING:NgdBuild:452 - logical net 'my_Master/Stack_Master/XLXN_269<13>' has no
+   driver
+WARNING:NgdBuild:452 - logical net 'my_Master/Stack_Master/XLXN_269<12>' has no
+   driver
+WARNING:NgdBuild:452 - logical net 'my_Master/Stack_Master/count<7>' has no
+   driver
+WARNING:NgdBuild:452 - logical net 'my_Master/Stack_Master/count<6>' has no
+   driver
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGDBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:  24
+
+Total memory usage is 98200 kilobytes
+
+Writing NGD file "Nexys3v5.ngd" ...
+Total REAL time to NGDBUILD completion:  4 sec
+Total CPU time to NGDBUILD completion:   3 sec
+
+Writing NGDBUILD log file "Nexys3v5.bld"...
